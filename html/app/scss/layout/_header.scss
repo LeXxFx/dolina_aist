@@ -1,0 +1,103 @@
+.header {
+    margin-bottom: 50px;
+    &-top {
+        background: $primary-color;
+        .col-delivary {
+            color: #90bd0f;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .col-phone {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            span {
+                font-size: 26px;
+            }
+            a {
+                margin-left: 25px;
+                font-size: 15px;
+                color: #90bd0f;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .col-account {
+            display: flex;
+            justify-self: flex-end;
+            align-items: center;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    &-main {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .site-name {
+            font-size: 36px;
+            color: $primary-color;
+        }
+    }
+    &-navi {
+        display: flex;
+        align-items: center;
+        background: $primary-color;
+        border-bottom: 3px solid #76c9ff;
+        .header {
+            &-search {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.navi {
+    .toggle-menu {
+        display: none;
+    }
+    .dd {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        > li {
+            position: relative;
+            > a {
+                display: block;
+                padding: 15px 18px;
+                text-transform: uppercase;
+                color: #fff;
+                &:after {
+                    content: "";
+                    display: block;
+                    height: 5px;
+                    background: #fca207;
+                    position: absolute;
+                    bottom: -3px;
+                    transition: .2s;
+                    left: 50%;
+                    right: 50%;
+                    opacity: 0;
+                    visibility: hidden;
+                }
+                &:hover {
+                    text-decoration: none;
+                    &:after {
+                        left: 0;
+                        right: 0;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+        .sub-menu {
+            display: none;
+        }
+    }
+}

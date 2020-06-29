@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'icomoon';
-  src: url('../fonts/iconmoon/icomoon.eot?uln1m8');
-  src: url('../fonts/iconmoon/icomoon.eot?uln1m8#iefix') format('embedded-opentype'),
-    url('../fonts/iconmoon/icomoon.ttf?uln1m8') format('truetype'),
-    url('../fonts/iconmoon/icomoon.woff?uln1m8') format('woff'),
-    url('../fonts/iconmoon/icomoon.svg?uln1m8#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../fonts/iconmoon/icomoon.eot?uln1m8");
+  src: url("../fonts/iconmoon/icomoon.eot?uln1m8#iefix") format("embedded-opentype"),
+    url("../fonts/iconmoon/icomoon.ttf?uln1m8") format("truetype"),
+    url("../fonts/iconmoon/icomoon.woff?uln1m8") format("woff"),
+    url("../fonts/iconmoon/icomoon.svg?uln1m8#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,8 +13,7 @@
 [class^="icomoon-"],
 [class*=" icomoon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
+  font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -85,111 +84,45 @@
   text-indent: -9999em;
   background: url(../images/sprite.png) no-repeat;
 
-  &-map {
-    background-position: -18px 0;
-    width: 10px;
-    height: 14px;
+  &-facebook {
+    background-position: -77px 0;
+    width: 29px;
+    height: 29px;
   }
-
-  &-phone {
-    background-position: -30px -1px;
-    width: 16px;
-    height: 16px;
+  &-vk {
+    background-position: -115px 0;
+    width: 29px;
+    height: 29px;
   }
-
-  &-user {
-    background-position: -47px 0;
-    width: 12px;
-    height: 12px;
+  &-twitter {
+    background-position: -154px 0;
+    width: 29px;
+    height: 29px;
   }
-
-  &-search {
-    background-position: -61px -1px;
-    width: 14px;
-    height: 15px;
+  &-youtube {
+    background-position: -192px 0;
+    width: 29px;
+    height: 29px;
   }
-
-  &-compare {
-    background-position: -1px -18px;
-    width: 14px;
-    height: 11px;
-  }
-
-  &-heart {
-    background-position: -18px -19px;
-    width: 16px;
-    height: 14px;
-  }
-
-  &-cart {
-    background-position: -36px -17px;
-    width: 20px;
-    height: 21px;
-  }
-
-  &-list {
-    background-position: 0 0;
-    width: 15px;
-    height: 13px;
-  }
-
-  &-instagram {
-    background-position: -80px -2px;
+  &-ok {
+    background-position: -230px 0;
     width: 29px;
     height: 29px;
   }
 
-  &-vk {
-    background-position: -110px -2px;
-    width: 30px;
-    height: 30px;
+  &-user {
+    background-position: -54px 0;
+    width: 20px;
+    height: 20px;
   }
-
-  &-tag {
-    background-position: -61px -23px;
-    width: 19px;
-    height: 14px;
+  &-phone {
+    background-position: -33px 0;
+    width: 17px;
+    height: 23px;
   }
-
   &-truck {
-    background-position: -84px -38px;
-    width: 27px;
-    height: 21px;
-  }
-
-  &-map-alt {
-    background-position: -117px -33px;
-    width: 24px;
-    height: 32px;
-  }
-
-  &-delivary {
-    background-position: -145px -36px;
-    width: 33px;
-    height: 27px;
-  }
-
-  &-wallet {
-    background-position: -182px -33px;
-    width: 27px;
-    height: 27px;
-  }
-
-  &-user-alt {
-    background-position: -215px -32px;
-    width: 32px;
-    height: 32px;
-  }
-
-  &-basket {
-    background-position: -251px -32px;
-    width: 32px;
-    height: 32px;
-  }
-
-  &-map-min {
-    background-position: -204px -10px;
-    width: 12px;
-    height: 16px;
+    background-position: 0 0;
+    width: 28px;
+    height: 18px;
   }
 }

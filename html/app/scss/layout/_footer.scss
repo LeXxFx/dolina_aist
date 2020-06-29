@@ -1,0 +1,41 @@
+.footer {
+    &-main {
+        background: rgba(255, 255, 255, 0.93);
+        color: #414141;
+        border-top: 21px solid #cee3a8;
+        padding: 40px 0;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &-heading {
+        text-transform: uppercase;
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 0 0 30px 0;
+        padding: 0;
+    }
+    &-bottom {
+        background: $primary-color;
+        color: #abb8c2;
+        padding: 10px 0;
+
+        a {
+            color: #abb8c2;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+    }
+    .payments {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
