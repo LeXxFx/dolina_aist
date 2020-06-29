@@ -1,0 +1,92 @@
+.modal-backdrop~.modal-backdrop {
+    z-index: 1051;
+}
+
+.modal-backdrop~.modal-backdrop~.modal-backdrop {
+    z-index: 1052;
+}
+
+.modal-backdrop~.modal-backdrop~.modal-backdrop~.modal-backdrop {
+    z-index: 1053;
+}
+
+.modal-open {
+    padding-right: 17px;
+
+    .shop-panel {
+        right: 17px;
+    }
+}
+
+.modal-open .navbar-fixed-top,
+.modal-open .navbar-fixed-bottom {
+    padding-right: 17px;
+}
+
+.modal-open .main-bg {
+    margin-right: 17px;
+}
+
+.modal-scrollable {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+}
+
+.modal {
+    &-dialog {
+        width: 100%;
+        max-width: 430px;
+        margin: 6% auto;
+    }
+
+    &-content {
+        border-radius: 0;
+        padding: 0;
+
+        .modal-header {
+            color: $text-color;
+            font-size: 24px;
+            line-height: 1.2;
+            display: block;
+            padding: 0;
+            border: none;
+            margin: 0;
+            padding: 15px 60px 15px 30px;
+            position: relative;
+            border-bottom: 1px solid $border-color;
+
+            p {
+                font-size: 12px;
+                line-height: 1;
+                margin: 10px 0 0;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 5px;
+            top: 10px;
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            font-size: 34px;
+            line-height: 34px;
+            width: 34px;
+            color: #717171;
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            transition: .2s;
+
+            &:hover {
+                color: $second-color;
+                transform: rotate(10deg);
+            }
+        }
+    }
+}

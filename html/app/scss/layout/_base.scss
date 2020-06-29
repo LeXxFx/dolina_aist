@@ -1,0 +1,117 @@
+* {
+    min-height: 0;
+    min-width: 0;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $primary-color;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+body {
+    font-family: $font;
+    font-size: 14px;
+    background: url(../images/bg.jpg) no-repeat center top / cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: $container-width + 30px;
+}
+
+.slick-slider {
+    .slick-slide {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        border-radius: 50%;
+        z-index: 10;
+        background: #fff;
+        color: $text-color;
+        cursor: pointer;
+        font-size: 18px;
+        padding: 2px 11px 0 11px;
+        line-height: 30px;
+        transition: .3s;
+        outline: none;
+
+        &.slick-next {
+            right: 10px;
+        }
+
+        &.slick-prev {
+            left: 10px;
+        }
+
+        &:hover {
+            color: $second-color;
+            background: darken(#fff, 3%);
+        }
+    }
+
+    .slick-dots {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        position: absolute;
+        right: 0;
+        bottom: 5px;
+        left: 0;
+
+        li {
+            display: inline-block;
+            margin: 0 3px;
+
+            button {
+                background: none;
+                border: 2px solid #fff;
+                border-radius: 50%;
+                width: 12px;
+                height: 12px;
+                text-indent: -999em;
+                padding: 0;
+                outline: none;
+                box-shadow: none;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background: #fff;
+                }
+            }
+        }
+    }
+}
+
+button {
+    outline: none !important;
+}

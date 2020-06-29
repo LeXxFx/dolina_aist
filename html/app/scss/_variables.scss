@@ -1,0 +1,35 @@
+$font: 'Roboto',
+sans-serif;
+$text-color: #222222;
+$primary-color: #458a2b;
+$second-color: #ef8808;
+$hover-link-color: #E7A219;
+$border-color: #e2e1e1;
+$grey-color: #717171;
+$container-width: 1200px;
+$header-height: 80px;
+$side-padding: 15px;
+$sidebar-width: 220px;
+/*	Media Queries: ;*/
+
+$desktop: 1200px;
+$tablet: 992px;
+$mobile: 767px;
+$small-mobile: 520px;
+
+// Media step breakpoint mixin based on Angular Material lib
+$breakpoints: (xs: 'screen and (max-width: 766px)', sm: 'screen and (min-width: 767px) and (max-width: 991px)', md: 'screen and (min-width: 992px) and (max-width: 1199px)', lg: 'screen and (min-width: 1200px) and (max-width: 1919px)', xl: 'screen and (min-width: 1920px) and (max-width: 5000px)', lt-sm: 'screen and (max-width: 766px)', lt-md: 'screen and (max-width: 991px)', lt-lg: 'screen and (max-width: 1199px)', lt-xl: 'screen and (max-width: 1919px)', gt-xs: 'screen and (min-width: 767px)', gt-sm: 'screen and (min-width: 992px)', gt-md: 'screen and (min-width: 1200px)', gt-lg: 'screen and (min-width: 1920px)' ) !default;
+
+@mixin media-breakpoint($breakpointName) {
+
+    $mediaQuery: map-get($breakpoints, $breakpointName);
+
+    @if ($mediaQuery == null) {
+        @content
+    }
+    @else {
+        @media #{$mediaQuery} {
+            @content
+        }
+    }
+}
