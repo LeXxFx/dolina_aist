@@ -1,56 +1,197 @@
 .header {
     margin-bottom: 50px;
+
     &-top {
         background: $primary-color;
+        font-family: $font-consolas;
+
+        &__inner {
+            padding: 19px 15px;
+        }
+
         .col-delivary {
             color: #90bd0f;
             font-size: 20px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 15px;
+            }
         }
+
         .col-phone {
             color: #fff;
             display: flex;
             align-items: center;
+
             span {
                 font-size: 26px;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-right: 7px;
+                }
             }
+
             a {
                 margin-left: 25px;
                 font-size: 15px;
                 color: #90bd0f;
                 text-decoration: underline;
+
                 &:hover {
                     text-decoration: none;
                 }
             }
         }
+
         .col-account {
             display: flex;
             justify-self: flex-end;
             align-items: center;
+            margin-left: auto;
+
             a {
                 color: #fff;
             }
+
+            .socials {
+                a {
+                    opacity: .54;
+                    transition: .3s;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .link-account {
+                display: flex;
+                align-items: center;
+                margin-left: 26px;
+
+                i {
+                    margin-right: 7px;
+                }
+            }
         }
     }
+
     &-main {
-        padding: 15px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        position: relative;
+
+        &__inner {
+            position: relative;
+            z-index: 1;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            background: url(../images/cloud.png) no-repeat 0 0;
+            width: 449px;
+            height: 205px;
+            position: absolute;
+            left: -120px;
+            bottom: -80px;
+            z-index: 0;
+        }
+
         .site-name {
+            font-family: $font-UkrainianIzhitsa;
             font-size: 36px;
+            text-transform: uppercase;
             color: $primary-color;
         }
     }
+
     &-navi {
+        position: relative;
+        z-index: 10;
         display: flex;
         align-items: center;
         background: $primary-color;
         border-bottom: 3px solid #76c9ff;
+
         .header {
             &-search {
                 margin-left: auto;
+
+                .form-input {
+                    position: relative;
+
+                    input {
+                        background: #fff;
+                        border: none;
+                        height: 32px;
+                        border-radius: 16px;
+                        width: 100%;
+                        max-width: 190px;
+                        padding: 5px 40px 5px 20px;
+                        transition: .3s;
+
+                        &:focus {
+                            outline: none;
+                            background: darken(#fff, 10%);
+                        }
+                    }
+
+                    button {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        background: none;
+                        border: none;
+                    }
+                }
+            }
+
+            &-cart {
+                margin-left: 12px;
+                padding: 15px;
+                background: $second-color;
+                color: #fff;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                transition: .2s;
+
+                &:hover {
+                    background: darken($second-color, 5%);
+                }
+
+                &-counter {
+                    margin-right: 12px;
+                    position: relative;
+
+                    .badge {
+                        position: absolute;
+                        right: -4px;
+                        top: -7px;
+                        height: 16px;
+                        min-width: 16px;
+                        text-align: center;
+                        background: #f9eea6;
+                        border-radius: 12px;
+                        color: $primary-color;
+                        font-size: 13px;
+                        line-height: 1;
+                        padding: 1px 3px;
+                    }
+                }
+
+                &-sum {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
             }
         }
     }
@@ -60,33 +201,56 @@
     .toggle-menu {
         display: none;
     }
+
     .dd {
         display: flex;
         list-style: none;
         padding: 0;
         margin: 0;
-        > li {
+        font-family: $font-consolas;
+
+        >li {
             position: relative;
-            > a {
+            margin-right: 25px;
+
+            &.has-child {
+                &:after {
+                    @extend %fontawesome;
+                    content: "\f107";
+                    color: #fff;
+                    position: absolute;
+                    font-size: 18px;
+                    right: 0;
+                    top: 16px;
+                    transition: .1s;
+                }
+            }
+
+            >a {
+                font-size: 20px;
                 display: block;
                 padding: 15px 18px;
+                height: 57px;
                 text-transform: uppercase;
                 color: #fff;
+
                 &:after {
                     content: "";
                     display: block;
                     height: 5px;
                     background: #fca207;
                     position: absolute;
-                    bottom: -3px;
+                    bottom: -5px;
                     transition: .2s;
                     left: 50%;
                     right: 50%;
                     opacity: 0;
                     visibility: hidden;
                 }
+
                 &:hover {
                     text-decoration: none;
+
                     &:after {
                         left: 0;
                         right: 0;
@@ -96,6 +260,7 @@
                 }
             }
         }
+
         .sub-menu {
             display: none;
         }

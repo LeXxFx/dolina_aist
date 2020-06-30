@@ -1,5 +1,8 @@
-$font: 'Roboto',
-sans-serif;
+$font: 'Roboto Slab',
+serif;
+$font-segoe: 'Segoe Print';
+$font-consolas: 'Consolas';
+$font-UkrainianIzhitsa: 'UkrainianIzhitsa';
 $text-color: #222222;
 $primary-color: #135992;
 $second-color: #90bd0f;
@@ -18,15 +21,16 @@ $mobile: 767px;
 $small-mobile: 520px;
 
 // Media step breakpoint mixin based on Angular Material lib
-$breakpoints: (xs: 'screen and (max-width: 766px)', sm: 'screen and (min-width: 767px) and (max-width: 991px)', md: 'screen and (min-width: 992px) and (max-width: 1199px)', lg: 'screen and (min-width: 1200px) and (max-width: 1919px)', xl: 'screen and (min-width: 1920px) and (max-width: 5000px)', lt-sm: 'screen and (max-width: 766px)', lt-md: 'screen and (max-width: 991px)', lt-lg: 'screen and (max-width: 1199px)', lt-xl: 'screen and (max-width: 1919px)', gt-xs: 'screen and (min-width: 767px)', gt-sm: 'screen and (min-width: 992px)', gt-md: 'screen and (min-width: 1200px)', gt-lg: 'screen and (min-width: 1920px)' ) !default;
+$breakpoints: (xs: 'screen and (max-width: 766px)', sm: 'screen and (min-width: 767px) and (max-width: 991px)', md: 'screen and (min-width: 992px) and (max-width: 1199px)', lg: 'screen and (min-width: 1200px) and (max-width: 1919px)', xl: 'screen and (min-width: 1920px) and (max-width: 5000px)', lt-sm: 'screen and (max-width: 766px)', lt-md: 'screen and (max-width: 991px)', lt-lg: 'screen and (max-width: 1199px)', lt-xl: 'screen and (max-width: 1919px)', gt-xs: 'screen and (min-width: 767px)', gt-sm: 'screen and (min-width: 992px)', gt-md: 'screen and (min-width: 1200px)', gt-lg: 'screen and (min-width: 1920px)') !default;
 
 @mixin media-breakpoint($breakpointName) {
 
     $mediaQuery: map-get($breakpoints, $breakpointName);
 
-    @if ($mediaQuery == null) {
+    @if ($mediaQuery==null) {
         @content
     }
+
     @else {
         @media #{$mediaQuery} {
             @content
