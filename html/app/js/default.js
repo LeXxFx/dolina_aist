@@ -92,10 +92,48 @@ var Home = function () {
 		};
 	}
 
+	var specialList = function () {
+		$('.special-list').slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: false,
+			arrows: false,
+			dots: true,
+			prevArrow: '<a class="slick-prev"><i class="fa fa-long-arrow-alt-left"></i></a>',
+			nextArrow: '<a class="slick-next"><i class="fa fa-long-arrow-alt-right"></i></a>',
+			adaptiveHeight: true
+		});
+	}
+
+	var digits = function () {
+		var $stat = $(".stat-count");
+		if ($stat.length > 0) {
+			function count($this) {
+				var current = parseInt($this.html(), 10);
+				current = current + 1;
+
+				$this.html(++current);
+				if (current > $this.data('count')) {
+					$this.html($this.data('count'));
+				} else {
+					setTimeout(function () { count($this) }, 50);
+				}
+			}
+
+			$stat.each(function () {
+				$(this).data('count', parseInt($(this).html(), 10));
+				$(this).html('0');
+				count($(this));
+			});
+		}
+	}
+
 	return {
 		init: function () {
 			scrolling();
 			shopCatalog();
+			specialList();
+			digits();
 		}
 	};
 }();

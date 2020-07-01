@@ -8,21 +8,25 @@
     width: 29px;
     height: 29px;
   }
+
   &-vk {
     background-position: -115px 0;
     width: 29px;
     height: 29px;
   }
+
   &-twitter {
     background-position: -154px 0;
     width: 29px;
     height: 29px;
   }
+
   &-youtube {
     background-position: -192px 0;
     width: 29px;
     height: 29px;
   }
+
   &-ok {
     background-position: -230px 0;
     width: 29px;
@@ -34,11 +38,19 @@
     width: 20px;
     height: 20px;
   }
+
   &-phone {
     background-position: -33px 0;
     width: 17px;
     height: 23px;
   }
+
+  &-phone-white {
+    background-position: -124px -30px;
+    width: 23px;
+    height: 32px;
+  }
+
   &-truck {
     background-position: 0 0;
     width: 28px;
@@ -50,9 +62,22 @@
     width: 19px;
     height: 18px;
   }
+
   &-cart {
     background-position: -22px -27px;
     width: 23px;
     height: 27px;
+  }
+
+  &-time {
+    background-position: -68px -31px;
+    width: 23px;
+    height: 22px;
+  }
+
+  &-mail {
+    background-position: -94px -33px;
+    width: 23px;
+    height: 17px;
   }
 }

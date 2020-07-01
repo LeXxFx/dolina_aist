@@ -91,6 +91,7 @@ img {
                 padding: 0;
                 outline: none;
                 box-shadow: none;
+                line-height: 1;
 
                 &:hover {
                     background: #fff;
@@ -108,4 +109,8 @@ img {
 
 button {
     outline: none !important;
+}
+
+.form-control {
+    box-shadow: none !important;
 }

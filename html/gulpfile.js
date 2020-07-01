@@ -65,12 +65,14 @@ var configPath = {
     path.nodeModules + "jquery/dist/jquery.js",
     path.nodeModules + "popper.js/dist/umd/popper.js",
     path.nodeModules + "bootstrap/dist/js/bootstrap.js",
-    path.nodeModules + "slick-carousel/slick/slick.js"
+    path.nodeModules + "slick-carousel/slick/slick.js",
+    path.nodeModules + "swiper/js/swiper.js"
   ],
   cssLibs: [
     path.nodeModules + "bootstrap/dist/css/bootstrap.css",
     path.nodeModules + "slick-carousel/slick/slick.css",
-    path.nodeModules + "animate.css/animate.css"
+    path.nodeModules + "animate.css/animate.css",
+    path.nodeModules + "swiper/css/swiper.css"
   ],
   fontLibs: [path.nodeModules + "@fortawesome/fontawesome-free/webfonts/*"]
 };

@@ -1,14 +1,280 @@
 .section-slogan {
-    margin-top: -100px;
     margin-bottom: 80px;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        z-index: 10;
+        font: $font-consolas;
+
+        .slogan {
+            &-heading {
+                padding: 5px 48px;
+                font-size: 36px;
+                line-height: 1.3;
+                color: #fff;
+                background: rgba(144, 189, 15, .84);
+            }
+
+            &-text {
+                background: #b9e636;
+                padding: 5px 48px;
+                font-size: 16px;
+                color: #0c4f45;
+                max-width: 520px;
+            }
+        }
+    }
 }
 
 .section-special {
     margin-bottom: 95px;
+
+    .special {
+        &-item {
+            position: relative;
+            font-family: $font-consolas;
+            padding-top: 12px;
+        }
+
+        &-name {
+            background: $orange-color;
+            width: 400px;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            padding: 4px;
+            clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+
+            &__inner {
+                background: #fff;
+                padding: 2px;
+                clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+
+                span {
+                    display: block;
+                    padding: 10px 15px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    color: #fff;
+                    background: $orange-color;
+                    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+                }
+            }
+        }
+
+        &__content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: 70px 90px 60px 90px;
+        }
+
+        &-discont {
+            display: flex;
+            align-items: center;
+            color: $orange-color;
+            font-size: 30px;
+            margin-bottom: 10px;
+
+            span {
+                display: block;
+                width: 162px;
+                height: 127px;
+                background: url(../images/discont_bg.png) no-repeat 0 0;
+                font-size: 60px;
+                margin-right: 10px;
+                padding: 15px 0;
+            }
+        }
+
+        &-form {
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .col-text {
+                font-size: 22px;
+                line-height: 1.3;
+                color: #fff;
+                margin-bottom: 15px;
+                margin-right: 35px;
+            }
+
+            .form-input {
+                flex: 0 0 380px;
+                position: relative;
+                margin-bottom: 15px;
+
+                .form-control {
+                    display: block;
+                    width: 100%;
+                    height: 56px;
+                    padding: 12px 190px 12px 20px;
+                    border: none;
+                    background: rgba(255, 255, 255, .75);
+                    border-radius: 32px;
+                    color: $primary-color;
+                    font-size: 18px;
+                    transition: .3s;
+                    outline: none;
+
+                    &:focus {
+                        background: rgba(255, 255, 255, 1);
+                    }
+                }
+
+                button {
+                    background: $second-color;
+                    text-align: center;
+                    width: 175px;
+                    height: 56px;
+                    border-radius: 32px;
+                    border: none;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 10px;
+                    right: 7px;
+                    font-size: 18px;
+                    color: #fff;
+                    transition: .3s;
+
+                    &:hover {
+                        background: darken($second-color, 10%);
+                    }
+                }
+            }
+        }
+
+        &-phone {
+            display: flex;
+            align-items: center;
+
+            span {
+                font-size: 24px;
+                color: $second-color;
+                margin-right: 30px;
+            }
+
+            a {
+                color: #fff;
+                font-size: 30px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                transition: .3s;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+
+    .slick-dots {
+        bottom: 20px;
+
+        li {
+            margin: 0 6px;
+
+            button {
+                background: rgba(255, 255, 255, .17);
+                border: 2px solid rgba(255, 255, 255, .54);
+                width: 17px;
+                height: 17px;
+
+                &:hover {
+                    background: rgba(255, 255, 255, .17);
+                    border: 2px solid rgba(255, 255, 255, 1);
+                }
+            }
+
+            &.slick-active {
+                button {
+                    background: $second-color;
+                    border: 2px solid rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
 }
 
 .section-digits {
     margin-bottom: 45px;
+    position: relative;
+
+    .digits {
+        &-list {
+            position: absolute;
+            top: -25px;
+            left: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .digit {
+                flex: 0 0 190px;
+                margin: 0 11px;
+                padding: 15px;
+                background: $second-color;
+                display: flex;
+                flex-direction: column;
+                justify-self: center;
+                align-items: center;
+                color: #fff;
+                border-radius: 6px;
+
+                strong {
+                    font-size: 48px;
+                    line-height: 1;
+                }
+
+                p {
+                    font-size: 27px;
+                    margin: 0;
+                }
+            }
+        }
+
+        &__content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 460px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            padding-top: 60px;
+
+            p {
+                font: 30px/1.2 $font-segoe;
+                margin-bottom: 15px;
+            }
+
+            span {
+                display: block;
+                font-size: 38px;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 .section-about {
