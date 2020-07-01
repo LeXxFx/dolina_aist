@@ -146,12 +146,10 @@
     text-align: center;
     flex: 0 0 310px;
     height: 510px;
-    padding-top: 15px;
-    margin-top: -15px;
     transition: .3s;
 
     &:hover {
-        padding-top: 0;
+        transform: translateY(-10px);
 
         .product {
             &-price {
@@ -194,7 +192,7 @@
             padding: 3px 3px 4px 3px;
             clip-path: polygon(0 0, 100% 0%, 100% 34px, 50% 100%, 0 34px);
 
-            &.stiker-akcia {
+            &.stiсker-akcia {
                 background: #fca207;
 
                 span {
@@ -245,6 +243,16 @@
         height: 250px;
         display: flex;
         justify-content: center;
+
+        &.image-preview--loading {
+            background: url(../images/ajax-loader.gif) no-repeat center center;
+        }
+
+        &.image-preview--init {
+            img {
+                display: inline-block;
+            }
+        }
 
         img {
             object-fit: contain;
@@ -396,7 +404,15 @@
     &-gallery {
         padding: 0 25px;
         margin-bottom: 15px;
-        display: flex;
+
+        &:not(.slick-slider) {
+            display: flex;
+            justify-content: center;
+
+            .gallery-item {
+                flex: 0 0 25%;
+            }
+        }
 
         .gallery-item {
             text-align: center;
@@ -404,13 +420,19 @@
             align-items: center;
             justify-content: center;
             background: #e6e6e6;
-            border: 1px solid #e6e6e6;
+            border: 2px solid #e6e6e6;
+            height: 35px;
 
             img {
                 object-fit: cover;
                 max-width: 100%;
-                max-height: 35px;
+                max-height: 100%;
                 margin: 0 auto;
+            }
+
+            &:hover,
+            &.current {
+                border-color: $second-color;
             }
         }
 
@@ -419,13 +441,6 @@
 
             >div {
                 display: flex;
-            }
-
-            &:hover,
-            &.slick-current {
-                .gallery-item {
-                    border-color: $second-color;
-                }
             }
         }
     }

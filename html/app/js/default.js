@@ -2,22 +2,35 @@
 var Home = function () {
 
 	let shopCatalog = function () {
-		let $itemsGallery = $('.product-gallery');
+		let $itemsGallery = $('.product-gallery'),
+			imageItems = $itemsGallery.find('.gallery-item');
+
+		imageItems.hover(function () {
+			let that = $(this);
+			switchImage(that);
+		});
+
+		imageItems.on("click", function (e) {
+			e.preventDefault();
+			let that = $(this);
+
+			switchImage(that);
+		});
 
 		if ($itemsGallery.length) {
 			$.each($itemsGallery, function () {
-				let that = $(this),
-					imageItem = that.find('.gallery-item');
+				let gallery = $(this),
+					items = gallery.find('.gallery-item');
 
-				that.on('afterChange', function (event, slick, currentSlide) {
+				gallery.on('afterChange', function (event, slick, currentSlide) {
 					let slide = slick.$slides.get(currentSlide),
 						item = $(slide).find('.gallery-item');
 
 					switchImage(item);
 				});
 
-				if (imageItem.length > 0) {
-					that.slick({
+				if (items.length > 4) {
+					gallery.slick({
 						slidesToShow: 4,
 						slidesToScroll: 1,
 						autoplay: false,
@@ -28,13 +41,6 @@ var Home = function () {
 						adaptiveHeight: true
 					});
 				}
-
-				imageItem.on("click", function (e) {
-					e.preventDefault();
-					let that = $(this);
-
-					switchImage(that);
-				});
 			});
 		}
 
@@ -54,6 +60,9 @@ var Home = function () {
 		if (zoom_size !== undefined) {
 			$zoom = zoom_size;
 		}
+
+		that.closest('.product-gallery').find('.gallery-item').removeClass("current");
+		that.addClass("current");
 
 		if (that.data('source') == 'image') {
 			const zoomId = that.data('zoom-id');
