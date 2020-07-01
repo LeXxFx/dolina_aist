@@ -1,0 +1,59 @@
+.section-slogan {
+    margin-top: -100px;
+    margin-bottom: 80px;
+}
+
+.section-special {
+    margin-bottom: 95px;
+}
+
+.section-digits {
+    margin-bottom: 45px;
+}
+
+.section-about {
+    height: 475px;
+    background: url(../images/about_bg.png) no-repeat calc(50% - 50px) top;
+    position: relative;
+
+    .about {
+        &-text {
+            position: relative;
+            z-index: 10;
+            padding: 170px 550px 0 25px;
+
+            &__heading {
+                color: $primary-color;
+                font: 30px/1.4 $font-segoe;
+                margin: 0 0 20px 0;
+            }
+
+            .post {
+                font: 18px $font-consolas;
+                margin-bottom: 20px;
+
+                p {
+                    margin-bottom: 15px;
+                }
+            }
+
+            >a {
+                font-family: $font-consolas;
+                color: $second-color;
+
+                i {
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &-image {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: 40px;
+            z-index: 0;
+        }
+    }
+
+}

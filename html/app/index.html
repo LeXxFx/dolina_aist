@@ -11,6 +11,7 @@
     <title>Welcome | Dolina Aistov</title>
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -86,349 +87,379 @@
     </header>
 
 <div class="container">
-  <div class="products">
-    <div class="catalog">
-      <div class="catalog-nav">
-        <a class="active" href="#">
-          <div class="catalog-nav-content">
-            <div class="nav-subtitle">Йогурты и</div>
-            <div class="nav-title">Молоко</div>
-          </div>
-          <img src="images/demo/img1.jpg" alt="">
-        </a>
-        <a href="#">
-          <div class="catalog-nav-content">
-            <div class="nav-subtitle">Мягкие сыры и</div>
-            <div class="nav-title">Творог</div>
-          </div><img src="images/demo/img2.jpg" alt="">
-        </a>
-        <a href="#">
-          <div class="catalog-nav-content">
-            <div class="nav-subtitle"></div>
-            <div class="nav-title">Сыры</div>
-          </div><img src="images/demo/img3.jpg" alt="">
-        </a>
-        <a href="#">
-          <div class="catalog-nav-content">
-            <div class="nav-subtitle"></div>
-            <div class="nav-title">Деликатесы</div>
-          </div><img src="images/demo/img4.jpg" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="products-top">
-      <div class="products-title">Наша продукция</div>
-      <ul class="products-filter">
-        <li><a href="#">Все</a></li>
-        <li class="active"><a href="#">Йогурты и молоко</a></li>
-        <li><a href="#">Мягкие сыры и творого</a></li>
-        <li><a href="#">Сыры</a></li>
-        <li><a href="#">Деликатесы</a></li>
-      </ul>
-    </div>
-    <div class="products-list">
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="stiсker-akcia">
-              <p><span>Акция</span></p>
-            </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product1.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Брынза</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
+  <div class="catalog">
+    <div class="catalog-nav">
+      <a class="active" href="#">
+        <div class="catalog-nav-content">
+          <div class="nav-subtitle">Йогурты и</div>
+          <div class="nav-title">Молоко</div>
         </div>
-      </div>
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="sticker-novinka">
-              <p><span>Новинка</span></p>
-            </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product2.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
-                  alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product3.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 858 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="stiсker-akcia">
-              <p><span>Акция</span></p>
-            </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product1.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Брынза</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="sticker-novinka">
-              <p><span>Новинка</span></p>
-            </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product2.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
-                  alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="product__wrapper">
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product3.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 858 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
+        <img src="images/demo/img1.jpg" alt="">
+      </a>
+      <a href="#">
+        <div class="catalog-nav-content">
+          <div class="nav-subtitle">Мягкие сыры и</div>
+          <div class="nav-title">Творог</div>
+        </div><img src="images/demo/img2.jpg" alt="">
+      </a>
+      <a href="#">
+        <div class="catalog-nav-content">
+          <div class="nav-subtitle"></div>
+          <div class="nav-title">Сыры</div>
+        </div><img src="images/demo/img3.jpg" alt="">
+      </a>
+      <a href="#">
+        <div class="catalog-nav-content">
+          <div class="nav-subtitle"></div>
+          <div class="nav-title">Деликатесы</div>
+        </div><img src="images/demo/img4.jpg" alt="">
+      </a>
     </div>
   </div>
+  <div class="products-top">
+    <div class="products-title">Наша продукция</div>
+    <ul class="products-filter">
+      <li><a href="#">Все</a></li>
+      <li class="active"><a href="#">Йогурты и молоко</a></li>
+      <li><a href="#">Мягкие сыры и творого</a></li>
+      <li><a href="#">Сыры</a></li>
+      <li><a href="#">Деликатесы</a></li>
+    </ul>
+  </div>
+  <div class="products swiper-container">
+    <div class="products-list swiper-wrapper">
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-sticker">
+            <div class="stiсker-akcia">
+              <p><span>Акция</span></p>
+            </div>
+          </div>
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product1.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Брынза</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 725 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-sticker">
+            <div class="sticker-novinka">
+              <p><span>Новинка</span></p>
+            </div>
+          </div>
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product2.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Твоврог</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 725 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
+                  src="images/demo/product3.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
+                  alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
+                  alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
+                  alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product3.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Твоврог</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 858 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
+                  src="images/demo/product3.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-sticker">
+            <div class="stiсker-akcia">
+              <p><span>Акция</span></p>
+            </div>
+          </div>
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product1.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Брынза</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 725 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-sticker">
+            <div class="sticker-novinka">
+              <p><span>Новинка</span></p>
+            </div>
+          </div>
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product2.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Твоврог</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 725 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
+                  src="images/demo/product2.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
+                  src="images/demo/product3.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
+                  alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
+                  alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
+                  alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product swiper-slide">
+        <div class="product__wrapper">
+          <div class="product-tools">
+            <a href="#"><i class="fa fa-heart-o"></i></a>
+            <a href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="product-image">
+            <img src="images/demo/product3.png" alt="">
+          </div>
+          <div class="product-name"><a href="#">Твоврог</a></div>
+          <div class="product-text">
+            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+          </div>
+          <div class="product-price">
+            <span>до 858 руб.</span>
+            <div class="price-hint">
+              <a><i class="fa fa-info"></i></a>
+              <div class="price-hint-content">
+                <div class="price-hint-content__inner">
+                  <p>Цены оптовым покупателям доступны после авторизации</p>
+                  <a href="#" class="btn">Авторизироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product__bottom">
+            <div class="product-buttons">
+              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+            </div>
+            <div class="product-gallery">
+              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
+                  src="images/demo/product3.png" alt=""></a>
+              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
+                  src="images/demo/product1.png" alt=""></a>
+            </div>
+            <div class="product-links">
+              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <section class="section-slogan">
+    <img src="images/demo/bb1.jpg" alt="">
+  </section>
+  <section class="section-special">
+    <img src="images/demo/akc1.png" alt="">
+  </section>
+  <section class="section-digits">
+    <img src="images/demo/digits_img.jpg" alt="">
+  </section>
 </div>
 
+<section class="section-about">
+  <div class="container">
+    <div class="about-text">
+      <h2 class="about-text__heading">Путешествие по нашей ФЕРМЕ</h2>
+      <div class="post">
+        <p>ЭкоФЕРМА “Долина аистов” — это экологически чистые угодья, с собственным производством самых вкусных
+          фермерских
+          продуктов.</p>
+        <p>Мы готовим свою продукцию под заказ в небольших объемах, но при этом соблюдают все стандарты качества.
+          Дополнительный лабораторный контроль продукция проходит перед поступлением на продажу.</p>
+      </div>
+      <a href="#">Фотогалерея <i class="fa fa-long-arrow-alt-right"></i></a>
+    </div>
+  </div>
+  <div class="about-image">
+    <img src="images/demo/about_img.png" alt="">
+  </div>
+</section>
 <footer id="footer" class="footer">
     <div class="footer-main">
         <div class="container">
@@ -507,9 +538,12 @@
         </div>
     </div>
 </footer>
-</div>
 
+<a id="scroll-top"><i class="fas fa-long-arrow-alt-up"></i>
+    Наверх</a>
+    
 <script type="text/javascript" src="js/libs.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script type="text/javascript" src="js/default.js"></script>
 
 </body>

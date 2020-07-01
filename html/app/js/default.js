@@ -1,5 +1,23 @@
 'use strict';
 var Home = function () {
+	var scrolling = function () {
+		$(window).on('scroll', function () {
+			var scroll = $(window).scrollTop(),
+				mainHeader = $('#header'),
+				mainHeaderHeight = mainHeader.innerHeight();
+
+			if (scroll > 500) {
+				$('#scroll-top').addClass('shown')
+			} else {
+				$('#scroll-top').removeClass('shown')
+			}
+		});
+		$('#scroll-top').on('click', function (e) {
+			e.preventDefault();
+			$("html, body").animate({ scrollTop: 0 }, 250);
+		});
+
+	};
 
 	let shopCatalog = function () {
 		let $itemsGallery = $('.product-gallery'),
@@ -76,6 +94,7 @@ var Home = function () {
 
 	return {
 		init: function () {
+			scrolling();
 			shopCatalog();
 		}
 	};
@@ -83,4 +102,22 @@ var Home = function () {
 
 $(document).ready(function ($) {
 	Home.init();
+});
+
+var swiper = new Swiper('.products', {
+	slidesPerView: 4,
+	loop: true,
+	centeredSlides: true,
+	centeredSlidesBounds: true,
+	scrollbar: {
+		el: '.swiper-scrollbar',
+		hide: false,
+		draggable: false,
+		dragSize: 42
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	mousewheel: true
 });
