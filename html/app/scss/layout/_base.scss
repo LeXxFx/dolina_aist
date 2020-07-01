@@ -47,29 +47,23 @@ img {
     .slick-arrow {
         position: absolute;
         top: 50%;
-        margin-top: -16px;
+        margin-top: -7px;
         border-radius: 50%;
         z-index: 10;
-        background: #fff;
-        color: $text-color;
+        color: #c6c6c6;
         cursor: pointer;
-        font-size: 18px;
-        padding: 2px 11px 0 11px;
-        line-height: 30px;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0;
         transition: .3s;
         outline: none;
 
         &.slick-next {
-            right: 10px;
+            right: 0;
         }
 
         &.slick-prev {
-            left: 10px;
-        }
-
-        &:hover {
-            color: $second-color;
-            background: darken(#fff, 3%);
+            left: 0;
         }
     }
 
