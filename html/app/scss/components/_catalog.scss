@@ -172,12 +172,12 @@ $product-height: 425px;
 
             &-next,
             &-prev {
-                padding: 10px 65px;
+                padding: 10px 25px;
                 top: 10px;
                 bottom: auto;
                 margin: 0;
                 width: auto;
-                height: $product-height;
+                height: calc(#{$product-height} - 3px);
                 z-index: 101;
                 transition: .3s;
                 outline: none;
@@ -188,14 +188,15 @@ $product-height: 425px;
                 &:after {
                     transition: .3s;
                     opacity: 0;
-                    background: rgba(255, 255, 255, 0.3);
                 }
 
                 &:hover {
-                    opacity: 0.8;
+                    opacity: 1;
+                    background: rgba(255, 255, 255, 0.3);
 
                     &:after {
                         transform: none;
+                        opacity: 1;
                     }
                 }
             }
