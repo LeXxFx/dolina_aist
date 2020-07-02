@@ -4,10 +4,6 @@ $product-height: 425px;
     margin-bottom: 20px;
     $image-height: 418px;
 
-    @include media-breakpoint('lt-sm') {
-        $image-height: 120px;
-    }
-
     &-nav {
         display: flex;
         justify-content: space-between;
@@ -31,7 +27,7 @@ $product-height: 425px;
                 flex: 0 0 calc(50% - 16px);
                 margin-bottom: 10px;
                 display: flex;
-                height: calc(#{$image-height} + 20px);
+                height: 140px;
                 border: 2px solid $primary-color;
             }
 
@@ -73,12 +69,16 @@ $product-height: 425px;
 
                 @include media-breakpoint('lt-sm') {
                     border: 2px solid $primary-color;
-                    height: calc(#{$image-height} + 20px);
-                    clip-path: polygon(0 0, 100% 0%, 100% calc(#{$image-height} - 4px), 50% 100%, 0 calc(#{$image-height} - 4px));
+                    height: 140px;
+                    clip-path: polygon(0 0, 100% 0%, 100% 116px, 50% 100%, 0 116px);
                 }
 
                 img {
                     clip-path: polygon(0 0, 100% 0%, 100% calc(#{$image-height} - 8px), 50% 100%, 0 calc(#{$image-height} - 8px));
+
+                    @include media-breakpoint('lt-sm') {
+                        clip-path: polygon(0 0, 100% 0%, 100% 112px, 50% 100%, 0 112px);
+                    }
                 }
             }
         }
