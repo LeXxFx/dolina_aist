@@ -4,11 +4,20 @@ $product-height: 425px;
     margin-bottom: 20px;
     $image-height: 418px;
 
+    @include media-breakpoint('lt-sm') {
+        $image-height: 120px;
+    }
+
     &-nav {
         display: flex;
         justify-content: space-between;
         margin: 0 -8px;
         height: calc(#{$image-height} + 32px);
+
+        @include media-breakpoint('lt-sm') {
+            flex-wrap: wrap;
+            height: auto;
+        }
 
         a {
             margin: 0 8px;
@@ -18,9 +27,22 @@ $product-height: 425px;
             overflow: hidden;
             transition: .2s;
 
+            @include media-breakpoint('lt-sm') {
+                flex: 0 0 calc(50% - 16px);
+                margin-bottom: 10px;
+                display: flex;
+                height: calc(#{$image-height} + 20px);
+                border: 2px solid $primary-color;
+            }
+
             img {
                 width: 100%;
                 transition: .3s;
+
+                @include media-breakpoint('lt-sm') {
+                    object-fit: cover;
+                    width: 100%;
+                }
             }
 
             &:nth-child(2n+2) {
@@ -49,6 +71,12 @@ $product-height: 425px;
                 background: $primary-color;
                 clip-path: polygon(0 0, 100% 0%, 100% $image-height, 50% 100%, 0 $image-height);
 
+                @include media-breakpoint('lt-sm') {
+                    border: 2px solid $primary-color;
+                    height: calc(#{$image-height} + 20px);
+                    clip-path: polygon(0 0, 100% 0%, 100% calc(#{$image-height} - 4px), 50% 100%, 0 calc(#{$image-height} - 4px));
+                }
+
                 img {
                     clip-path: polygon(0 0, 100% 0%, 100% calc(#{$image-height} - 8px), 50% 100%, 0 calc(#{$image-height} - 8px));
                 }
@@ -75,6 +103,10 @@ $product-height: 425px;
                     align-items: center;
                     justify-content: center;
                     transition: .3s;
+
+                    @include media-breakpoint('lt-sm') {
+                        font-size: 13px;
+                    }
                 }
 
                 &-title {
@@ -83,6 +115,10 @@ $product-height: 425px;
                     line-height: 1;
                     text-transform: uppercase;
                     transition: .3s;
+
+                    @include media-breakpoint('lt-sm') {
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -91,11 +127,25 @@ $product-height: 425px;
 
 .products {
     margin-top: -10px;
+    position: relative;
+
+    @include media-breakpoint('lt-sm') {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    &:hover {
+        z-index: 100;
+    }
 
     &-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media-breakpoint('lt-sm') {
+            display: block;
+        }
     }
 
     &-title {
@@ -105,6 +155,12 @@ $product-height: 425px;
         background: $primary-color;
         color: #fff;
         border-radius: 0 40px 0 0;
+
+        @include media-breakpoint('lt-sm') {
+            border-radius: 0 20px 0 0;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
     }
 
     &-filter {
@@ -113,8 +169,23 @@ $product-height: 425px;
         padding: 0;
         display: flex;
 
+        @include media-breakpoint('lt-sm') {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
         li {
             margin-left: 20px;
+
+            @include media-breakpoint('lt-sm') {
+                margin: 0 0 10px 0;
+                flex: 0 0 calc(50% - 5px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                border: 1px solid #fff;
+            }
 
             a {
                 font-family: $font-consolas;
@@ -125,6 +196,12 @@ $product-height: 425px;
                 padding: 0 15px;
                 text-decoration: none;
                 text-shadow: 0 0 16px #fff;
+
+                @include media-breakpoint('lt-sm') {
+                    font-size: 16px;
+                    line-height: 1.2;
+                    padding: 5px;
+                }
 
                 &:hover {
                     color: #fca207;
@@ -144,6 +221,10 @@ $product-height: 425px;
         padding-top: 10px;
         margin-bottom: 150px;
 
+        @include media-breakpoint('lt-sm') {
+            margin-bottom: 0;
+        }
+
         &:hover {
             z-index: 100;
         }
@@ -159,6 +240,10 @@ $product-height: 425px;
             width: auto;
             height: 3px;
             background: $primary-color;
+
+            @include media-breakpoint('lt-sm') {
+                top: calc(100% - 9px);
+            }
 
             .swiper-scrollbar-drag {
                 background: $primary-color;
@@ -184,6 +269,11 @@ $product-height: 425px;
                 border: none;
                 background: rgba(255, 255, 255, 0);
                 transition: .3s;
+
+                @include media-breakpoint('lt-md') {
+                    padding: 10px 5px;
+                    display: none;
+                }
 
                 &:after {
                     transition: .3s;
@@ -230,6 +320,32 @@ $product-height: 425px;
     position: relative;
     z-index: 1;
 
+    @include media-breakpoint('lt-sm') {
+        height: auto;
+    }
+
+    @include media-breakpoint('lt-sm') {
+
+        &-sticker,
+        &-tools,
+        &-name,
+        &-text,
+        &-price {
+            opacity: 1;
+
+            .price-hint {
+
+                &:hover {
+                    .price-hint-content {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+
     &.swiper-slide-active,
     &.swiper-slide-next,
     &.swiper-slide-prev {
@@ -259,7 +375,15 @@ $product-height: 425px;
             transform: translateY(-10px);
             z-index: 100;
 
+            @include media-breakpoint('lt-sm') {
+                transform: none;
+            }
+
             .product {
+                &__wrapper {
+                    box-shadow: 8px 0 19px rgba(0, 0, 0, .19);
+                }
+
                 &-price {
                     >span {
                         color: #5e9423;
@@ -289,6 +413,11 @@ $product-height: 425px;
         height: 0;
         overflow: hidden;
         transition: .3s;
+
+        @include media-breakpoint('lt-sm') {
+            height: auto;
+            overflow: initial;
+        }
     }
 
     &-sticker {
@@ -422,6 +551,10 @@ $product-height: 425px;
                 transition: .3s;
                 transform: translateY(5px);
 
+                @include media-breakpoint('lt-sm') {
+                    left: -120px;
+                }
+
                 &__inner {
                     width: 200px;
                     background: #fff;
@@ -447,6 +580,10 @@ $product-height: 425px;
                         border-color: #fca207 transparent transparent transparent;
                         bottom: -14px;
                         left: 12px;
+
+                        @include media-breakpoint('lt-sm') {
+                            left: 120px;
+                        }
                     }
 
                     &:after {
@@ -454,6 +591,10 @@ $product-height: 425px;
                         border-color: #fff transparent transparent transparent;
                         bottom: -6px;
                         left: 14px;
+
+                        @include media-breakpoint('lt-sm') {
+                            left: 122px;
+                        }
                     }
 
                     a {

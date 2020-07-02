@@ -1,5 +1,23 @@
 'use strict';
 var Home = function () {
+	var initNavi = function () {
+		$(".toggle-dd").on('click', function (e) {
+			e.preventDefault();
+			var $item = $(this).closest('.dd-item');
+			$item.toggleClass('active').siblings().removeClass('active');
+		});
+		$(document).click(function (event) {
+			if (!$(event.target).closest('.dd-item').length) {
+				$('.dd-item').removeClass('active');
+			}
+		});
+
+		$('.link-katalog > a').on('click', function (e) {
+			e.preventDefault();
+			window.location.href = 'https://fabrikakart.ru/katalog';
+		});
+	}
+
 	var scrolling = function () {
 		$(window).on('scroll', function () {
 			var scroll = $(window).scrollTop(),
@@ -130,6 +148,7 @@ var Home = function () {
 
 	return {
 		init: function () {
+			initNavi();
 			scrolling();
 			shopCatalog();
 			specialList();
