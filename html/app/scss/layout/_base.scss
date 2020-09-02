@@ -38,6 +38,22 @@ img {
     max-width: $container-width + 30px;
 }
 
+.wrapper {
+    display: flex;
+    padding: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+
+    .sidebar {
+        flex: 0 0 290px;
+        margin-right: 35px;
+    }
+
+    .content {
+        flex: 0 1 auto;
+    }
+}
+
 .slick-slider {
     .slick-slide {
         outline: none;

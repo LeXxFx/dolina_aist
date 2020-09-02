@@ -1,0 +1,21 @@
+.recomend-products {
+    padding: 20px;
+    margin-bottom: 40px;
+    background: #fff;
+
+    .recomend-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        .product {
+            flex: 0 0 20%;
+            height: auto;
+
+            &__wrapper {
+                border: none;
+                padding: 5px;
+                width: auto;
+            }
+        }
+    }
+}
