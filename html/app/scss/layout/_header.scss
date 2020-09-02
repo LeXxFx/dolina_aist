@@ -1,5 +1,9 @@
 .header {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+
+    &.front-page {
+        margin-bottom: 50px;
+    }
 
     @include media-breakpoint('lt-sm') {
         margin-bottom: 20px;
@@ -19,90 +23,6 @@
 
             @include media-breakpoint('lt-sm') {
                 padding: 10px 15px;
-            }
-        }
-
-        .col-delivary {
-            color: #90bd0f;
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-
-            @include media-breakpoint('lt-sm') {
-                display: none;
-            }
-
-            i {
-                margin-right: 15px;
-            }
-        }
-
-        .col-phone {
-            color: #fff;
-            display: flex;
-            align-items: center;
-
-            @include media-breakpoint('lt-sm') {
-                display: none;
-            }
-
-            span {
-                font-size: 26px;
-                display: flex;
-                align-items: center;
-
-                i {
-                    margin-right: 7px;
-                }
-            }
-
-            a {
-                margin-left: 25px;
-                font-size: 15px;
-                color: #90bd0f;
-                text-decoration: underline;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .col-account {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            margin-left: auto;
-
-            @include media-breakpoint('lt-sm') {
-                flex: 0 0 100%;
-                justify-content: space-between;
-            }
-
-            a {
-                color: #fff;
-            }
-
-            .socials {
-                a {
-                    opacity: .54;
-                    transition: .3s;
-
-                    &:hover {
-                        opacity: 1;
-                    }
-                }
-            }
-
-            .link-account {
-                display: flex;
-                align-items: center;
-                margin-left: 26px;
-
-                i {
-                    margin-right: 7px;
-                }
             }
         }
     }
@@ -201,47 +121,231 @@
                 }
             }
 
+            &-wish {
+                margin-left: 12px;
+                display: flex;
+                height: 54px;
+                background: $orange-color;
+                position: relative;
+
+                &:hover {
+                    background: darken($orange-color, 5%);
+                }
+
+                >a {
+                    display: block;
+                    padding: 14px 12px;
+                    color: #fff;
+                    font-size: 25px;
+                    line-height: 1.2;
+                }
+            }
+
             &-cart {
                 display: flex;
-                margin-left: 12px;
                 padding: 15px 15px;
                 height: 54px;
                 background: $second-color;
                 color: #fff;
                 text-decoration: none;
                 transition: .2s;
+                font-size: 25px;
 
                 &:hover {
                     background: darken($second-color, 5%);
-                }
-
-                &-counter {
-                    margin-right: 12px;
-                    position: relative;
-
-                    .badge {
-                        position: absolute;
-                        right: -4px;
-                        top: -7px;
-                        height: 16px;
-                        min-width: 16px;
-                        text-align: center;
-                        background: #f9eea6;
-                        border-radius: 12px;
-                        color: $primary-color;
-                        font-size: 13px;
-                        line-height: 1;
-                        padding: 1px 3px;
-                    }
                 }
 
                 &-sum {
                     font-size: 18px;
                     font-weight: bold;
                 }
+
+                .icon-counter {
+                    margin-right: 12px;
+                }
+            }
+        }
+
+        .icon-counter {
+            display: block;
+            position: relative;
+
+            .badge {
+                position: absolute;
+                right: -4px;
+                top: -7px;
+                height: 16px;
+                min-width: 16px;
+                text-align: center;
+                background: #f9eea6;
+                border-radius: 12px;
+                color: $primary-color;
+                font-size: 13px;
+                line-height: 1;
+                padding: 1px 3px;
             }
         }
     }
+
+
+    .col-delivary {
+        color: #90bd0f;
+        font-size: 20px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint('lt-sm') {
+            display: none;
+        }
+
+        i {
+            margin-right: 15px;
+        }
+    }
+
+    .col-phone {
+        color: #fff;
+        display: flex;
+        align-items: center;
+
+        @include media-breakpoint('lt-sm') {
+            display: none;
+        }
+
+        span {
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 7px;
+            }
+        }
+
+        a {
+            margin-left: 25px;
+            font-size: 15px;
+            color: #90bd0f;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .col-account {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-left: auto;
+
+        @include media-breakpoint('lt-sm') {
+            flex: 0 0 100%;
+            justify-content: space-between;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        .socials {
+            a {
+                opacity: .7;
+                transition: .3s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .link-account {
+            display: flex;
+            align-items: center;
+            margin-left: 26px;
+
+            i {
+                margin-right: 7px;
+            }
+        }
+    }
+
+    &-site {
+        background: rgba(255, 255, 255, .3);
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, .1);
+
+        &__inner {
+            position: relative;
+            padding: 5px 17px;
+
+            &:before {
+                content: '';
+                display: block;
+                background: url(../images/cloud.png) no-repeat 0 0;
+                width: 449px;
+                height: 205px;
+                position: absolute;
+                left: -100px;
+                top: -10px;
+                z-index: 0;
+            }
+
+            .inner-row {
+                position: relative;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .logo {
+                    display: block;
+                    margin-right: 50px;
+
+                    img {
+                        height: 55px;
+                    }
+                }
+
+                .col-delivary {
+                    color: $primary-color;
+                    margin-right: 50px;
+                }
+
+                .col-phone {
+                    margin-right: 50px;
+
+                    .link-callback {
+                        color: $primary-color;
+                    }
+                }
+
+                .col-cart {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        text-decoration: underline;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+
+                        i {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .col-account {
+                    .link-account {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 .navi {

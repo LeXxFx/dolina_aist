@@ -1,0 +1,117 @@
+.popup-container {
+    &:hover {
+        .popup-content {
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.popup-content {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 342px;
+    background: #fefefe;
+    border: 1px solid #8f8f8f;
+    transform: translateY(5px);
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+
+    &__top {
+        border-top: 3px solid $green-color;
+        border-bottom: 1px solid #cfcfcf;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            font-weight: bold;
+            font-size: 16px;
+            color: #373737;
+        }
+
+        strong {
+            font-size: 24px;
+            color: $green-color;
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid #cfcfcf;
+        text-align: center;
+        padding: 17px 15px;
+
+        .btn {
+            display: inline-block;
+            width: 200px;
+            background: $green-color;
+            border: none;
+            border-radius: 22px;
+            font: 1.3em/1.8 $font-consolas;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
+.wish-popup {
+    .wish-list {
+        .wish-item {
+            margin: 0 17px;
+            padding: 17px 17px 17px 10px;
+            position: relative;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
+            align-items: center;
+
+            &:last-of-type {
+                border: none;
+            }
+
+            &__image {
+                flex: 0 0 70px;
+
+                img {
+                    filter: drop-shadow(1px 2px 3px lighten($grey-color, 10%));
+                }
+            }
+
+            &__main {
+                flex: 0 1 auto;
+                margin-left: 20px;
+                font-size: 12px;
+
+                p {
+                    margin: 0 0 5px 0;
+
+                    span {
+                        color: $primary-color;
+                    }
+                }
+
+                a {
+                    color: $text-color;
+                    text-transform: uppercase;
+                }
+            }
+
+            &__remove {
+                position: absolute;
+                right: 5px;
+                top: 0;
+                display: inline-block;
+                color: $grey-color;
+                font-size: 24px;
+                text-decoration: none;
+
+                &:hover {
+                    color: $orange-color;
+                }
+            }
+        }
+    }
+}

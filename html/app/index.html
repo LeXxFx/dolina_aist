@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header id="header" class="header">
+    <header id="header" class="header front-page">
         <div class="header-top">
             <div class="container">
                 <div class="header-top__inner">
@@ -47,41 +47,82 @@
                 </div>
             </div>
             <div class="header-navi">
-                <nav class="navi dd-item">
-                    <button class="toggle-menu toggle-dd"> <span class="lines"></span> </button>
-                    <ul class="dd">
-                        <li class="menu-item has-child">
-                            <a href="#">Продукция</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="#">Продукция</a></li>
-                                <li class="menu-item"><a href="#">Акции</a></li>
-                                <li class="menu-item"><a href="#">Доставка</a></li>
-                                <li class="menu-item"><a href="#">Отзывы</a></li>
-                                <li class="menu-item"><a href="#">Контакты</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="#">Акции</a></li>
-                        <li class="menu-item"><a href="#">Доставка</a></li>
-                        <li class="menu-item"><a href="#">Отзывы</a></li>
-                        <li class="menu-item"><a href="#">Контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="header-search">
-                    <form action="">
-                        <div class="form-input">
-                            <input type="text" />
-                            <button><i class="appicon appicon-search"></i></button>
-                        </div>
-                    </form>
-                </div>
-                <a href="#" class="header-cart">
-                    <span class="header-cart-counter">
-                        <i class="appicon appicon-cart"></i>
-                        <span class="badge badge-info">2</span>
-                    </span>
-                    <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
-                </a>
+    <nav class="navi dd-item">
+        <button class="toggle-menu toggle-dd"> <span class="lines"></span> </button>
+        <ul class="dd">
+            <li class="menu-item has-child">
+                <a href="#">Продукция</a>
+                <ul class="sub-menu">
+                    <li class="menu-item"><a href="#">Продукция</a></li>
+                    <li class="menu-item"><a href="#">Акции</a></li>
+                    <li class="menu-item"><a href="#">Доставка</a></li>
+                    <li class="menu-item"><a href="#">Отзывы</a></li>
+                    <li class="menu-item"><a href="#">Контакты</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Акции</a></li>
+            <li class="menu-item"><a href="#">Доставка</a></li>
+            <li class="menu-item"><a href="#">Отзывы</a></li>
+            <li class="menu-item"><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <div class="header-search">
+        <form action="">
+            <div class="form-input">
+                <input type="text" />
+                <button><i class="appicon appicon-search"></i></button>
             </div>
+        </form>
+    </div>
+    <div class="header-wish popup-container">
+        <a href="#">
+            <span class="icon-counter">
+                <i class="far fa-heart"></i>
+                <span class="badge badge-info">0</span>
+            </span>
+        </a>
+        <div class="popup-content wish-popup">
+            <div class="popup-content__top">
+                <span>2 продукта</span>
+                <strong>725 &#8381;</strong>
+            </div>
+            <div class="popup-content__body">
+                <div class="wish-list">
+                    <div class="wish-item">
+                        <div class="wish-item__image">
+                            <a href="product-single.html"><img src="images/demo/products/thumb1.png"></a>
+                        </div>
+                        <div class="wish-item__main">
+                            <p>1х <span>449 руб.</span></p>
+                            <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
+                        </div>
+                        <a href="#" class="wish-item__remove">&times;</a>
+                    </div>
+                    <div class="wish-item">
+                        <div class="wish-item__image">
+                            <a href="product-single.html"><img src="images/demo/products/thumb2.png"></a>
+                        </div>
+                        <div class="wish-item__main">
+                            <p>1х <span>449 руб.</span></p>
+                            <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
+                        </div>
+                        <a href="#" class="wish-item__remove">&times;</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-content__bottom">
+                <a href="#" class="btn btn-primary">Офорить заказ</a>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="header-cart">
+        <span class="icon-counter">
+            <i class="appicon appicon-cart"></i>
+            <span class="badge badge-info">2</span>
+        </span>
+        <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
+    </a>
+</div>
         </div>
     </header>
 

@@ -15,35 +15,37 @@
 </head>
 
 <body>
-    <header id="header" class="header@@headerClass">
-        <div class="header-site">
+    <header id="header" class="header front-page">
+        <div class="header-top">
             <div class="container">
-                <div class="header-site__inner">
-                    <div class="inner-row">
-                        <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
-                        <div class="col-delivary">
-                            <i class="appicon appicon-truck-dark"></i> 5 мая
+                <div class="header-top__inner">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 col-delivary">
+                            <i class="appicon appicon-truck"></i> Ближайшая доставка 5 мая
                         </div>
-                        <div class="col-phone">
-                            <span><i class="appicon appicon-phone-dark"></i> 8-800-968-58-87</span>
+                        <div class="col-md-5 col-phone">
+                            <span><i class="appicon appicon-phone"></i> 8-800-968-58-87</span>
                             <a href="#" class="link-callback">Заказать звонок</a>
                         </div>
-                        <div class="col-cart">
-                            <a href="#"><i class="appicon appicon-cart-dark"></i> <span>Сделать заказ</span></a>
-                        </div>
-                        <div class="col-account">
+                        <div class="col-auto col-account">
                             <ul class="socials">
                                 <li><a href="#"><i class="appicon appicon-twitter"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#"><i class="appicon appicon-exit"></i> Выйти</a>
+                            <a class="link-account" href="#"><i class="appicon appicon-user"></i> Войти</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
+            <div class="header-main">
+                <div class="header-main__inner">
+                    <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                    <div class="site-name">Фермерские продукты из козьего молока</div>
+                </div>
+            </div>
             @@include('../includes/navi.html')
         </div>
     </header>

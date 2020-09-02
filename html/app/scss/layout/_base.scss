@@ -111,6 +111,24 @@ button {
     outline: none !important;
 }
 
+.btn {
+    outline: none;
+    box-shadow: none !important;
+
+    &-primary {
+        background: $green-color;
+
+        &:focus,
+        &:hover {
+            background: darken($green-color, 5%) !important;
+        }
+    }
+}
+
 .form-control {
     box-shadow: none !important;
+}
+
+img {
+    max-width: 100%;
 }

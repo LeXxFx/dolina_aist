@@ -4,33 +4,21 @@
   background: url(../images/sprite.png) no-repeat;
 
   &-facebook {
-    background-position: -77px 0;
-    width: 29px;
-    height: 29px;
-  }
-
-  &-vk {
-    background-position: -115px 0;
-    width: 29px;
-    height: 29px;
+    background-position: -140px 0;
+    width: 26px;
+    height: 26px;
   }
 
   &-twitter {
-    background-position: -154px 0;
-    width: 29px;
-    height: 29px;
+    background-position: -79px 0;
+    width: 26px;
+    height: 26px;
   }
 
   &-youtube {
-    background-position: -192px 0;
-    width: 29px;
-    height: 29px;
-  }
-
-  &-ok {
-    background-position: -230px 0;
-    width: 29px;
-    height: 29px;
+    background-position: -110px 0;
+    width: 26px;
+    height: 26px;
   }
 
   &-user {
@@ -39,8 +27,20 @@
     height: 20px;
   }
 
+  &-user-dark {
+    background-position: -99px -60px;
+    width: 20px;
+    height: 20px;
+  }
+
   &-phone {
     background-position: -33px 0;
+    width: 17px;
+    height: 23px;
+  }
+
+  &-phone-dark {
+    background-position: -78px -60px;
     width: 17px;
     height: 23px;
   }
@@ -57,6 +57,12 @@
     height: 18px;
   }
 
+  &-truck-dark {
+    background-position: -45px -60px;
+    width: 28px;
+    height: 18px;
+  }
+
   &-search {
     background-position: -1px -26px;
     width: 19px;
@@ -69,6 +75,12 @@
     height: 27px;
   }
 
+  &-cart-dark {
+    background-position: -22px -55px;
+    width: 21px;
+    height: 25px;
+  }
+
   &-time {
     background-position: -68px -31px;
     width: 23px;
@@ -79,5 +91,11 @@
     background-position: -94px -33px;
     width: 23px;
     height: 17px;
+  }
+
+  &-exit {
+    background-position: -150px -34px;
+    width: 25px;
+    height: 24px;
   }
 }
