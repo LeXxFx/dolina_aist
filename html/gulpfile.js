@@ -66,13 +66,20 @@ var configPath = {
     path.nodeModules + "popper.js/dist/umd/popper.js",
     path.nodeModules + "bootstrap/dist/js/bootstrap.js",
     path.nodeModules + "slick-carousel/slick/slick.js",
-    path.nodeModules + "swiper/js/swiper.js"
+    path.nodeModules + "swiper/js/swiper.js",
+    path.nodeModules + "nouislider/distribute/nouislider.js",
+    path.nodeModules + "moment/moment.js",
+    path.nodeModules + "bootstrap-daterangepicker/daterangepicker.js",
+    path.plugins + "magiczoomplus/magiczoomplus.js"
   ],
   cssLibs: [
     path.nodeModules + "bootstrap/dist/css/bootstrap.css",
     path.nodeModules + "slick-carousel/slick/slick.css",
     path.nodeModules + "animate.css/animate.css",
-    path.nodeModules + "swiper/css/swiper.css"
+    path.nodeModules + "swiper/css/swiper.css",
+    path.nodeModules + "nouislider/distribute/nouislider.css",
+    path.nodeModules + "bootstrap-daterangepicker/daterangepicker.css",
+    path.plugins + "magiczoomplus/magiczoomplus.css"
   ],
   fontLibs: [path.nodeModules + "@fortawesome/fontawesome-free/webfonts/*"]
 };

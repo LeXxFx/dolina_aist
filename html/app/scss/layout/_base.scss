@@ -39,18 +39,23 @@ img {
 }
 
 .wrapper {
-    display: flex;
     padding: 20px;
     margin-bottom: 40px;
     background: #fff;
 
+    &__inner {
+        display: flex;
+    }
+
     .sidebar {
         flex: 0 0 280px;
         margin-right: 35px;
+        margin-bottom: 30px;
     }
 
     .content {
         flex: 0 1 auto;
+        margin-bottom: 30px;
     }
 }
 
@@ -121,30 +126,4 @@ img {
             }
         }
     }
-}
-
-button {
-    outline: none !important;
-}
-
-.btn {
-    outline: none;
-    box-shadow: none !important;
-
-    &-primary {
-        background: $green-color;
-
-        &:focus,
-        &:hover {
-            background: darken($green-color, 5%) !important;
-        }
-    }
-}
-
-.form-control {
-    box-shadow: none !important;
-}
-
-img {
-    max-width: 100%;
 }

@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;700&display=swap&subset=cyrillic-ext');
 
-$fa-font-path: "../fonts/fontawesome" !default;
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid";
-@import "../../node_modules/@fortawesome/fontawesome-free/scss/v4-shims";
-
 @font-face {
   font-family: 'Segoe Print';
   src: url('../fonts/SegoePrint/SegoePrint.woff2') format('woff2'),

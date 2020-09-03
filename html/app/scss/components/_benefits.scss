@@ -4,4 +4,76 @@
     padding: 20px;
     margin-bottom: 40px;
     background: #f1f1f1;
+
+    .benefit-item {
+        flex: 0 0 20%;
+        padding: 15px;
+        background: #fff;
+        border-right: 1px solid #e6e6e6;
+        text-align: center;
+
+        &__icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 90px;
+            margin-bottom: 15px;
+
+            img {
+                object-fit: contain;
+            }
+        }
+
+        &__text {
+            font: 16px $font-consolas;
+            margin-bottom: 15px;
+        }
+    }
+
+    .benefit-form {
+        flex: 0 0 20%;
+        padding: 20px 25px;
+        background: $green-color;
+        text-align: center;
+        color: #fff;
+
+        p {
+            font: bold 24px/1.2 $font-segoe;
+        }
+
+        .form-control {
+            width: 100%;
+            font-size: 18px;
+            color: #fff;
+            background: $green-color;
+            border: 1px solid #fff;
+            border-radius: 22px;
+            text-align: center;
+            margin-bottom: 10px;
+            transition: .3s;
+
+            &::placeholder {
+                color: #fff;
+            }
+
+            &:focus {
+                background: darken($green-color, 5%);
+            }
+        }
+
+        button {
+            width: 100%;
+            font-size: 18px;
+            line-height: 42px;
+            background: #fff;
+            border: none;
+            border-radius: 22px;
+            color: $green-color;
+            transition: .3s;
+
+            &:hover {
+                background: darken(#fff, 5%);
+            }
+        }
+    }
 }

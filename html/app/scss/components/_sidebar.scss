@@ -1,4 +1,11 @@
 .sidebar {
+    position: relative;
+
+    &__inner {
+        position: sticky;
+        top: 10px;
+    }
+
     &-title {
         margin-bottom: 25px;
         font-size: 24px;
@@ -15,7 +22,8 @@
             a {
                 color: #3d3d3d;
                 position: relative;
-                font: 18px/1.1 $font-consolas;
+                font: 17px/1.1 $font-consolas;
+                text-decoration: none;
             }
 
             >li {
@@ -23,31 +31,51 @@
 
                 &.has-child {
                     display: block;
-                    padding-right: 15px;
-                    position: relative;
 
-                    &:after {
-                        @extend %fontawesome;
-                        content: "\f107";
-                        display: block;
-                        position: absolute;
-                        right: 0;
-                        top: 10px;
-                        font-size: 16px;
-                        line-height: 1;
-                        color: #b1b1b1;
+                    >a {
+                        padding-right: 15px;
+                        position: relative;
+
+                        &:after {
+                            @extend %fontawesome;
+                            content: "\f107";
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            top: 10px;
+                            font-size: 16px;
+                            line-height: 1;
+                            color: #b1b1b1;
+                        }
                     }
                 }
 
                 &.active {
                     >a {
-                        color: #17618b;
+                        color: $primary-color;
+                    }
+
+                    &.has-child {
+                        >a {
+
+                            &:after {
+                                transform: rotate(180deg);
+                            }
+                        }
                     }
                 }
 
                 >a {
                     display: flex;
                     align-items: center;
+
+                    &:hover {
+                        color: $primary-color;
+
+                        &:after {
+                            color: $primary-color;
+                        }
+                    }
 
                     img {
                         width: 40px;
@@ -56,7 +84,10 @@
                     }
 
                     span {
+                        word-spacing: -5px;
+
                         span {
+                            letter-spacing: -2px;
                             color: $green-color;
                             display: inline;
                         }
@@ -70,7 +101,7 @@
                         margin: 0 0 10px 0;
 
                         >a {
-                            font-size: 16px;
+                            font-size: 15px;
                             padding-left: 22px;
 
                             &:before {
@@ -83,7 +114,7 @@
                                 border-radius: 4px;
                                 position: absolute;
                                 left: 0;
-                                top: 2px;
+                                top: 1px;
                             }
 
                             &:after {
@@ -98,11 +129,16 @@
                                 opacity: 0;
                                 visibility: hidden;
                             }
+
+                            &:hover {
+                                color: lighten(#679cba, 5%);
+                            }
+
                         }
 
                         &.active {
                             >a {
-                                color: #679cba;
+                                color: lighten(#679cba, 5%);
 
                                 &:after {
                                     opacity: 1;
