@@ -33,7 +33,8 @@
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#"><i class="appicon appicon-user"></i> Войти</a>
+                            <a class="link-account" href="#" data-dismiss="modal" data-toggle="modal"
+                            data-target="#signIn"><i class="appicon appicon-user"></i> Войти</a>
                         </div>
                     </div>
                 </div>
@@ -663,6 +664,60 @@
 
 <a id="scroll-top"><i class="fas fa-long-arrow-alt-up"></i>
     Наверх</a>
+
+<div class="modal fade modal-form modal-callback" id="signIn" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                Вход <span>(для розничных покупателей)</span>
+                <button class="modal-close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip"
+                    title="Закрыть">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-callback form-horizontal">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3"><label class="control-label">Логин</label></div>
+                            <div class="col-md-9"><input type="text" class="form-control" /></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3"><label class="control-label">Пароль</label></div>
+                            <div class="col-md-9"><input type="password" class="form-control" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 offset-md-3">
+                            <div class="form-baton">
+                                <button class="btn btn-primary"><i class="fa fa-sign-in-alt"></i> Войти</button>
+                                <a href="#">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-callback__bottom">
+                        <span class="required">*</span> - Обязательно для заполнения.
+                    </div>
+                </form>
+                <div class="account-form-social">
+                    <p>Войти через</p>
+                    <div class="social-batons">
+                        <button title="vk"><i class="fa fa-vk"></i></button>
+                        <button title="facebook"><i class="fa fa-facebook"></i></button>
+                        <button title="google"><i class="fa fa-google"></i></button>
+                        <button title="odnoklasniki"><i class="fa fa-odnoklassniki"></i></button>
+                    </div>
+                </div>
+                <div class="account-form-links">
+                    <span>Или</span>
+                    <a href="#"><i class="fa fa-user-plus"></i> Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://kit.fontawesome.com/c4c33ff97d.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/libs.min.js"></script>

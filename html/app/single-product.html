@@ -37,7 +37,8 @@
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#"><i class="appicon appicon-exit"></i> Выйти</a>
+                            <a class="link-account" href="#" href="#" data-dismiss="modal" data-toggle="modal"
+                                data-target="#signIn"><i class="appicon appicon-exit"></i> Выйти</a>
                         </div>
                     </div>
                 </div>
@@ -228,7 +229,7 @@
               </div>
             </div>
             <div class="col-md-6">
-              <ul class="nav nav-links">
+              <ul class="nav single-product__links">
                 <li class="nav-item">
                   <a class="nav-link active" href="#description">Описание</a>
                 </li>
@@ -243,38 +244,46 @@
                 </li>
               </ul>
               <div class="single-product__top">
-                <h1 class="single-product__title page-heading">Брынза 3,2 - 6 %</h1>
+                <div class="single-product__title">
+                  <h1 class="page-heading">Брынза 3,2 - 6 %</h1>
+                  <div class="product-rate">
+                    <div class="stars star-4"></div>
+                  </div>
+                </div>
                 <p class="single-product__text">из козьего молока “КУБИКИ В РАССОЛЕ”</p>
                 <div class="single-product__code">Артикул: 00-00002508</div>
               </div>
               <div class="single-product__price">
-                <div class="row">
-                  <div class="col-price col-md-6">
-                    <div class="product-price">725 &#8381; <span class="product-price-unit">уп.</span></div>
+                <div class="row align-items-center">
+                  <div class="col-price col-md-7">
+                    <div class="product-price">725 <span class="product-price-currency">&#8381;</span> <span
+                        class="product-price-unit">уп.</span></div>
                     <div class="col-price__text">
                       <p>10 и более: 650 руб.</p>
                       <p>20 и более: 590 руб.</p>
                     </div>
                   </div>
-                  <div class="col-options col-md-6">
+                  <div class="col-options col-md-5">
                     <div class="col-options__top">
                       <span>Расфасовка:</span>
                       <div class="price-hint">
                         <a><i class="fa fa-info"></i></a>
                         <div class="price-hint-content">
                           <div class="price-hint-content__inner">
-                            <p>+-7%<br>
-                              Вес ориентировочный и уточняеться при комплектации заказа</p>
+                            +-7%<br>
+                            Вес ориентировочный и уточняеться при комплектации заказа
                           </div>
                         </div>
                       </div>
                     </div>
-                    <select>
-                      <option>500 г</option>
-                      <option>1500 г</option>
-                      <option>2500 г</option>
-                      <option>3500 г</option>
-                    </select>
+                    <div class="select-options">
+                      <select>
+                        <option>500 г</option>
+                        <option>1500 г</option>
+                        <option>2500 г</option>
+                        <option>3500 г</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
                 <div class="single-product__promo">
@@ -282,7 +291,7 @@
                 </div>
               </div>
               <div class="single-product__counter">
-                <div class="row">
+                <div class="row align-items-center">
                   <div class="col-md-5">
                     <div class="input-counter">
                       <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
@@ -304,7 +313,7 @@
                   </div>
                 </div>
               </div>
-              <div class="single-prodcut__buttons">
+              <div class="single-product__buttons">
                 <button class="btn btn-primary add-to-cart" title="Положить в корзину">
                   <i class="appicon appicon-cart"></i>
                   В корзину
@@ -648,6 +657,60 @@
 
 <a id="scroll-top"><i class="fas fa-long-arrow-alt-up"></i>
     Наверх</a>
+
+<div class="modal fade modal-form modal-callback" id="signIn" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                Вход <span>(для розничных покупателей)</span>
+                <button class="modal-close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip"
+                    title="Закрыть">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="form-callback form-horizontal">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3"><label class="control-label">Логин</label></div>
+                            <div class="col-md-9"><input type="text" class="form-control" /></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-3"><label class="control-label">Пароль</label></div>
+                            <div class="col-md-9"><input type="password" class="form-control" /></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 offset-md-3">
+                            <div class="form-baton">
+                                <button class="btn btn-primary"><i class="fa fa-sign-in-alt"></i> Войти</button>
+                                <a href="#">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-callback__bottom">
+                        <span class="required">*</span> - Обязательно для заполнения.
+                    </div>
+                </form>
+                <div class="account-form-social">
+                    <p>Войти через</p>
+                    <div class="social-batons">
+                        <button title="vk"><i class="fa fa-vk"></i></button>
+                        <button title="facebook"><i class="fa fa-facebook"></i></button>
+                        <button title="google"><i class="fa fa-google"></i></button>
+                        <button title="odnoklasniki"><i class="fa fa-odnoklassniki"></i></button>
+                    </div>
+                </div>
+                <div class="account-form-links">
+                    <span>Или</span>
+                    <a href="#"><i class="fa fa-user-plus"></i> Регистрация</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://kit.fontawesome.com/c4c33ff97d.js" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/libs.min.js"></script>

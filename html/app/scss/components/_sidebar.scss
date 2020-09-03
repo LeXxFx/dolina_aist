@@ -170,9 +170,14 @@
                 font-size: 27px;
                 font-weight: bold;
                 color: $primary-color;
+                text-decoration: none;
 
                 i {
                     margin-right: 10px;
+                }
+
+                &:hover {
+                    color: $orange-color;
                 }
             }
         }

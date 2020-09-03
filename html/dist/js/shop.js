@@ -48,73 +48,6 @@ var Shop = function () {
 	};
 
 	var shopCatalog = function () {
-		var $itemsGallery = $('.product-item__images');
-		if ($itemsGallery.length) {
-			$.each($itemsGallery, function () {
-				var that = $(this),
-					$images = that.find('.item-image');
-
-				if ($images.length > 0) {
-					that.slick({
-						slidesToShow: 1,
-						slidesToScroll: 1,
-						autoplay: false,
-						arrows: false,
-						dots: true,
-						prevArrow: '<a class="slick-prev"><i class="fa fa-angle-left"></i></a>',
-						nextArrow: '<a class="slick-next"><i class="fa fa-angle-right"></i></a>',
-						adaptiveHeight: true
-					});
-				}
-			});
-		}
-
-		$('.link-load').on('click', function (e) {
-			e.preventDefault();
-
-			$(this).toggleClass('link-load--loading');
-		});
-
-		let $productCarousel = $('.product-carousel__list');
-		if ($productCarousel.length) {
-			$.each($productCarousel, function () {
-				const that = $(this),
-					showItems = parseInt(that.data('show-items'));
-
-				that.slick({
-					slidesToShow: showItems,
-					slidesToScroll: showItems,
-					autoplay: false,
-					arrows: true,
-					dots: false,
-					prevArrow: '<a class="slick-prev"><i class="fa fa-angle-left"></i></a>',
-					nextArrow: '<a class="slick-next"><i class="fa fa-angle-right"></i></a>',
-					responsive: [
-						{
-							breakpoint: 1200,
-							settings: {
-								slidesToShow: showItems - 1,
-								slidesToScroll: showItems - 1,
-							}
-						},
-						{
-							breakpoint: 992,
-							settings: {
-								slidesToShow: 4,
-								slidesToScroll: 4,
-							}
-						},
-						{
-							breakpoint: 478,
-							settings: {
-								slidesToShow: 2,
-								slidesToScroll: 2
-							}
-						}
-					]
-				});
-			});
-		}
 
 	};
 
@@ -140,7 +73,7 @@ var Shop = function () {
 	};
 
 	var productGallery = function (gallery) {
-		var isVertical = true,
+		var isVertical = false,
 			showSlide = 3,
 			imageItem = $('body').find('.image-list .item a');
 
@@ -156,7 +89,7 @@ var Shop = function () {
 
 		if (gallery === undefined) {
 			gallery = $('#product-gallery').find('.image-list');
-			showSlide = 6;
+			showSlide = 3;
 		}
 
 		if (gallery.data('direction') === "row")
