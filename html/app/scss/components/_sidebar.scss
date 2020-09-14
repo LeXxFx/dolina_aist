@@ -55,6 +55,10 @@
                         color: $primary-color;
                     }
 
+                    >ul {
+                        display: block;
+                    }
+
                     &.has-child {
                         >a {
 
@@ -95,6 +99,7 @@
                 }
 
                 >ul {
+                    display: none;
                     padding: 5px 0 5px 45px;
 
                     >li {
