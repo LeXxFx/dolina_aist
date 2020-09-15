@@ -1,1 +1,99 @@
-﻿
+﻿.pagination {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    background: #f1f1f1;
+
+    @include media-breakpoint('lt-md') {
+        flex-wrap: wrap;
+    }
+
+    >a,
+    span {
+        line-height: 1;
+        font: bold 16px $font-consolas;
+
+        @include media-breakpoint('lt-md') {
+            font-size: 13px;
+            padding: 7px 12px;
+        }
+    }
+
+    .link-page {
+        align-self: center;
+        color: $text-color;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        display: block;
+        padding: 3px 6px;
+        min-width: 28px;
+        cursor: pointer;
+
+        &.active {
+            color: $green-color;
+            cursor: default;
+        }
+
+        &:hover {
+            color: $second-color;
+            text-decoration: none;
+        }
+    }
+
+    &__prev,
+    &__next {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $green-color;
+        padding: 0;
+        border: none;
+
+        span {
+            display: inline-block;
+            font-size: 13px;
+            padding: 2px 0 0;
+            color: #c6c6c6;
+        }
+
+        &:hover {
+            text-decoration: none;
+            background: none;
+            color: $second-color;
+
+            span {
+                border-color: $second-color;
+            }
+        }
+    }
+
+    &__prev {
+        margin-right: 15px;
+
+        span {
+            margin-right: 10px;
+        }
+    }
+
+    &__next {
+        margin-left: 15px;
+
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    >.pagination__count {
+        border: none;
+        margin-right: 45px;
+
+        @include media-breakpoint('lt-md') {
+            flex: 0 0 100%;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+    }
+}

@@ -12,6 +12,12 @@
         .product {
             flex: 0 0 calc(20% - 14px);
             margin: 0 7px;
+
+            .product {
+                &-image {
+                    height: 190px;
+                }
+            }
         }
     }
 }

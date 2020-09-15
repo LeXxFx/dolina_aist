@@ -74,6 +74,14 @@
         margin: 0 14px 30px 14px;
         flex: 0 0 calc(33.333% - 28px);
 
+        &:hover {
+            .product-image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
         &__wrapper {
             border: none;
             padding: 0;
@@ -82,17 +90,26 @@
             .product {
                 &-image {
                     align-items: flex-start;
-                    height: 190px;
                     margin-bottom: 20px;
+                    position: relative;
+                    z-index: 1;
+                    height: 240px;
+
+                    >a {
+                        width: 100%;
+                        overflow: hidden;
+                    }
 
                     img {
                         width: 100%;
+                        transition: .3s;
                     }
                 }
 
                 &-sticker2 {
                     position: absolute;
                     top: 15px;
+                    z-index: 10;
                     left: 0;
                     color: #fff;
                     text-transform: uppercase;
@@ -134,6 +151,18 @@
                                 border-top-color: #f0c732;
                             }
                         }
+
+                        &-akcia {
+                            background: #c95d4c;
+
+                            &:before {
+                                border-left-color: #c95d4c;
+                            }
+
+                            &:after {
+                                border-top-color: #c95d4c;
+                            }
+                        }
                     }
                 }
 
@@ -141,6 +170,7 @@
                     position: absolute;
                     top: 15px;
                     right: 10px;
+                    z-index: 10;
                     display: flex;
                     flex-direction: column;
 
@@ -148,9 +178,14 @@
                         margin-bottom: 5px;
                         color: #a9a9a9;
                         text-decoration: none;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        transition: .3s;
 
                         &:hover {
-                            color: $primary-color;
+                            color: #fff;
+                            background: #ccc;
                         }
                     }
                 }
