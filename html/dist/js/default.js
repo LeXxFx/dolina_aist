@@ -6,16 +6,38 @@ var Home = function () {
 			var $item = $(this).closest('.dd-item');
 			$item.toggleClass('active').siblings().removeClass('active');
 		});
-		$(document).click(function (event) {
+		$(document).on('click', function (event) {
 			if (!$(event.target).closest('.dd-item').length) {
 				$('.dd-item').removeClass('active');
 			}
 		});
 
-		$('.link-katalog > a').on('click', function (e) {
-			e.preventDefault();
-			window.location.href = 'https://fabrikakart.ru/katalog';
+		$('.mega-menu .nav-list').slick({
+			slidesToShow: 4,
+			slidesToScroll: 4,
+			autoplay: false,
+			arrows: true,
+			dots: false,
+			prevArrow: '<a class="slick-prev"><i class="fa fa-long-arrow-alt-left"></i></a>',
+			nextArrow: '<a class="slick-next"><i class="fa fa-long-arrow-alt-right"></i></a>',
+			adaptiveHeight: true
 		});
+
+		$(".navi .menu-item.has-child").on("mouseenter", function () {
+			$(this).addClass('active');
+		}).on("mouseleave", function () {
+			$(this).removeClass('active');
+		});
+
+		$('.mega-menu__close').on('click', function (e) {
+			e.preventDefault();
+			var item = $(this).closest('.menu-item');
+
+			item.addClass('closing');
+			setTimeout(() => {
+				item.removeClass('active closing');
+			}, 1000);
+		})
 	}
 
 	var scrolling = function () {

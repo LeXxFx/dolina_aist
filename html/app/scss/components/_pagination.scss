@@ -65,7 +65,8 @@
             color: $second-color;
 
             span {
-                border-color: $second-color;
+                color: $second-color;
+                border-color: $green-color;
             }
         }
     }
