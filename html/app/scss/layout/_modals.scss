@@ -49,20 +49,21 @@
 
         .modal-header {
             color: $text-color;
-            font-size: 24px;
+            font: 24px $font-consolas;
             line-height: 1.2;
             display: block;
             padding: 0;
             border: none;
+            border-radius: 0;
             margin: 0;
-            padding: 15px 60px 15px 30px;
+            padding: 25px 50px 10px 30px;
             position: relative;
+            border-top: 3px solid $green-color;
             border-bottom: 1px solid $border-color;
 
-            p {
-                font-size: 12px;
+            span {
+                font-size: 18px;
                 line-height: 1;
-                margin: 10px 0 0;
             }
         }
 

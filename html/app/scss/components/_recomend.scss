@@ -17,6 +17,15 @@
                 &-image {
                     height: 190px;
                 }
+
+                &-buttons {
+                    margin: 0 5px;
+
+                    button {
+                        width: 110px;
+                        line-height: 28px;
+                    }
+                }
             }
         }
     }

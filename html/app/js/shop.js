@@ -59,7 +59,7 @@ var Shop = function () {
 	}
 
 	var productPreview = function () {
-		$('body').on('click', '.product-item .btn-quick-show', function (e) {
+		$('body').on('click', '.product .link-preview', function (e) {
 			e.preventDefault();
 			$('.modal-preview').modal('show');
 		});
@@ -68,6 +68,10 @@ var Shop = function () {
 			var gallery = $(this).find('.image-list:not(.slick-slider)');
 			if (gallery.length) {
 				productGallery(gallery);
+			}
+			else {
+				$(this).find('.image-list').slick('setPosition');
+				$(this).find('.product-images').addClass('opened');
 			}
 		});
 	};

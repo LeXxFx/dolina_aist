@@ -200,18 +200,6 @@
                 margin: 0 10px 0;
             }
 
-            &__info {
-                .product-price {
-                    >span {
-                        margin-right: 20px;
-
-                        &.product-price-new {
-                            color: $green-color;
-                        }
-                    }
-                }
-            }
-
             &__title {
                 color: #17618b;
                 font-size: 18px;
@@ -232,6 +220,15 @@
                     &:hover {
                         text-decoration: underline;
                     }
+                }
+            }
+
+            .product-price {
+                font-size: 21px;
+
+                &-old {
+                    font-size: 18px;
+                    margin-left: 10px;
                 }
             }
         }

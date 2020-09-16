@@ -1,0 +1,127 @@
+.modal-preview {
+    .modal {
+        &-dialog {
+            min-width: 960px;
+        }
+
+        &-body {
+            padding: 0 15px;
+        }
+
+        &-content {
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0px 0 12px rgba(0, 0, 0, 0.5);
+
+            .modal-header {
+                border: none;
+                min-height: 50px;
+            }
+
+        }
+    }
+
+    .nav-arrows {
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 42px;
+            line-height: 1;
+            top: 50%;
+            margin-top: -34px;
+            position: absolute;
+            width: 42px;
+            height: 42px;
+            color: #fff;
+            transition: .3s;
+            outline: none;
+
+            &.nav-arrows__left {
+                left: -75px;
+
+                &:hover {
+                    left: -80px;
+                }
+            }
+
+            &.nav-arrows__right {
+                right: -75px;
+
+                &:hover {
+                    right: -80px;
+                }
+            }
+
+            &:hover {
+                color: $second-color;
+            }
+        }
+    }
+}
+
+.product-preview {
+    margin: 0 20px 40px 0;
+
+    &__name {
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+        border-bottom: 1px dotted #d0cfcf;
+    }
+
+    &.single-product {
+        .product-images {
+            margin-bottom: 40px;
+            opacity: 0;
+            height: 0;
+            transition: .3s;
+
+            &.opened {
+                opacity: 1;
+                height: auto;
+            }
+        }
+
+        .post {
+            margin: 0 20px 20px;
+        }
+    }
+
+    .single-product {
+
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: none;
+            margin: 0 0 20px 0;
+            padding: 0;
+
+            .product-sticker {
+                position: inherit;
+                top: auto;
+                left: auto;
+            }
+        }
+
+        &__price {
+            margin-bottom: 25px;
+        }
+
+        &__counter {
+            padding-bottom: 15px;
+        }
+
+        &__share {
+            justify-content: flex-start;
+        }
+
+        &__tools {
+            justify-content: flex-start;
+
+            a {
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+}

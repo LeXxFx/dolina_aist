@@ -425,7 +425,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -436,7 +436,8 @@
               </div>
               <div class="product-info">
                 <div class="product-price">
-                  <span>725 &#8381;</span>
+                  <span class="product-price-new">2725 &#8381;</span>
+                  <span class="product-price-old">725 &#8381;</span>
                 </div>
                 <div class="product-buttons">
                   <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
@@ -449,7 +450,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview2.jpg" alt=""></a>
@@ -473,7 +474,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview3.jpg" alt=""></a>
@@ -497,7 +498,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview2.jpg" alt=""></a>
@@ -526,7 +527,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -555,7 +556,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -584,7 +585,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -613,7 +614,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -642,7 +643,7 @@
               <div class="product-tools">
                 <a href="#"><i class="fa fa-heart-o"></i></a>
                 <a href="#"><i class="fa fa-search"></i></a>
-                <a href="#"><i class="fas fa-expand-alt"></i></a>
+                <a class="link-preview" href="#"><i class="fas fa-expand-alt"></i></a>
               </div>
               <div class="product-image">
                 <a href="#"><img src="images/demo/products/product_preview1.jpg" alt=""></a>
@@ -780,7 +781,7 @@
 <a id="scroll-top"><i class="fas fa-long-arrow-alt-up"></i>
     Наверх</a>
 
-<div class="modal fade modal-form modal-callback" id="signIn" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade modal-form modal-signIn" id="signIn" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header text-center">
@@ -791,7 +792,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="#" class="form-callback form-horizontal">
+                <form action="#" class="form-signIn form-horizontal">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-md-3"><label class="control-label">Логин</label></div>
@@ -812,9 +813,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-callback__bottom">
-                        <span class="required">*</span> - Обязательно для заполнения.
-                    </div>
                 </form>
                 <div class="account-form-social">
                     <p>Войти через</p>
@@ -832,6 +830,179 @@
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade modal-preview" id="preview" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="nav-arrows">
+        <button class="nav-arrows__left" title="Назад">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="nav-arrows__right" title="Вперед">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="modal-header">
+        <button class="modal-close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip" title="Закрыть">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="product-preview single-product">
+          <div class="row">
+            <div class="col-md-6">
+              <div id="product-gallery" class="product-images">
+                <div class="product-images__preview image-preview">
+                  <a href="images/demo/products/product1.jpg" class="MagicZoom" id="galleryProduct1">
+                    <img src="images/demo/products/product1.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="product-images__list image-list" data-direction="row">
+                  <div class="item current" data-zoom-size="345">
+                    <a data-zoom-id="galleryProduct1" href="images/demo/products/product_thumb1.jpg"
+                      data-preview="images/demo/products/product_thumb1.jpg" data-source="image">
+                      <img src="images/demo/products/product_thumb1.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="item" data-zoom-size="345">
+                    <a data-zoom-id="galleryProduct1" href="images/demo/products/product_thumb2.jpg"
+                      data-preview="images/demo/products/product_thumb2.jpg" data-source="image">
+                      <img src="images/demo/products/product_thumb2.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="item" data-zoom-size="345">
+                    <a data-zoom-id="galleryProduct1" href="images/demo/products/product_thumb1.jpg"
+                      data-preview="images/demo/products/product_thumb1.jpg" data-source="image">
+                      <img src="images/demo/products/product_thumb1.jpg" alt="" />
+                    </a>
+                  </div>
+                  <div class="item" data-zoom-size="345">
+                    <a data-zoom-id="galleryProduct1" href="images/demo/products/product_thumb2.jpg"
+                      data-preview="images/demo/products/product_thumb2.jpg" data-source="image">
+                      <img src="images/demo/products/product_thumb2.jpg" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <p>Даже когда Вы буквально растворяетесь в чистейшем удовольствии от еды, воспользуйтесь этим
+                  моментом,
+                  чтобы с профессиональной точностью оценить вкус. В статье Вы узнаете больше об этом и в итоге
+                  научитесь разбираться в тончайших нюансах вкуса как настоящий профессионал.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-product__top">
+                <div class="product-sticker">
+                  <div class="sticker-novinka">
+                    <p><span>Новинка</span></p>
+                  </div>
+                </div>
+                <div class="product-rate">
+                  <div class="stars star-4"></div>
+                </div>
+              </div>
+              <div class="product-preview__name">
+                <div class="single-product__title">
+                  <h1 class="page-heading">Брынза 3,2 - 6 %</h1>
+                </div>
+                <p class="single-product__text">из козьего молока “КУБИКИ В РАССОЛЕ”</p>
+                <div class="single-product__code">Артикул: 00-00002508</div>
+              </div>
+              <div class="single-product__price">
+                <div class="row align-items-center">
+                  <div class="col-price col-md-7">
+                    <div class="product-price">
+                      725 <span class="product-price-currency">&#8381;</span>
+                      <span class="product-price-unit">кг</span>
+                      <span class="product-price-old">940 <span class="product-price-currency">&#8381;</span></span>
+                    </div>
+                    <div class="col-price__text">
+                      <p>10 и более: 650 руб.</p>
+                      <p>20 и более: 590 руб.</p>
+                    </div>
+                  </div>
+                  <div class="col-options col-md-5">
+                    <div class="col-options__top">
+                      <span>Расфасовка:</span>
+                      <div class="price-hint">
+                        <a><i class="fa fa-info"></i></a>
+                        <div class="price-hint-content">
+                          <div class="price-hint-content__inner">
+                            +-7%<br>
+                            Вес ориентировочный и уточняеться при комплектации заказа
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="select-options">
+                      <select>
+                        <option>500 г</option>
+                        <option>1500 г</option>
+                        <option>2500 г</option>
+                        <option>3500 г</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="single-product__promo">
+                  <strong>-10%</strong> скидка на первый заказ
+                </div>
+              </div>
+              <div class="single-product__counter">
+                <div class="row align-items-center">
+                  <div class="col-md-5">
+                    <div class="input-counter">
+                      <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
+                        -
+                      </button>
+                      <div class="input-group-text">
+                        <input type="text" name="quant[2]" class="form-control input-number input-area" value="1"
+                          data-min="1" data-max="100000" data-step="1" data-unit="">
+                      </div>
+                      <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[2]">
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-md-7">
+                    <div class="single-product__stock">
+                      <a class="in-stock"><i class="fas fa-check"></i> <span>Есть в наличии</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="single-product__buttons">
+                <button class="btn btn-primary add-to-cart" title="Положить в корзину">
+                  <i class="appicon appicon-cart"></i>
+                  В корзину
+                </button>
+                <button class="btn btn-link quick-buy" title="Купить в один клик">
+                  Купить в 1 клик
+                </button>
+              </div>
+              <div class="single-product__share">
+                <span><i class="fa fa-share-alt"></i> Поделиться</span>
+                <div class="share-list">
+                  <a href="#" title="instagram"><i class="appicon appicon-share-instagram"></i></a>
+                  <a href="#" title="facebook"><i class="appicon appicon-share-facebook"></i></a>
+                  <a href="#" title="youtube"><i class="appicon appicon-share-youtube"></i></a>
+                  <a href="#" title="twitter"><i class="appicon appicon-share-twitter"></i></a>
+                  <a href="#" title="mail"><i class="appicon appicon-share-mail"></i></a>
+                  <a href="#" title="telegram"><i class="appicon appicon-share-telegram"></i></a>
+                </div>
+              </div>
+              <div class="single-product__tools">
+                <a href="#" title="Добавить в избранное" class="btn-like"><i class="far fa-heart"></i> В избранное</a>
+                <a href="#" title="Сравнить" class="btn-compare"><i class="far fa-chart-bar"></i> Сравнить</a>
+                <a href="#" title="Читать отзывы"><i class="fas fa-quote-left"></i> Читать отзывы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://kit.fontawesome.com/c4c33ff97d.js" crossorigin="anonymous"></script>

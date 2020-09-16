@@ -1,0 +1,133 @@
+.modal-quickbuy {
+    .modal-dialog {
+        max-width: 515px;
+    }
+
+    .modal-content {
+        .modal-header {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: none;
+            padding-top: 25px;
+            border: none;
+        }
+
+        .modal-close {
+            top: 20px;
+            right: 15px;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+    }
+}
+
+.quickbuy-form {
+    padding: 0 25px 30px 25px;
+
+    &__top {
+        border-top: 2px solid $primary-color;
+        padding: 15px 0;
+        font-size: 18px;
+        line-height: 1.3;
+
+        a {
+            text-transform: uppercase;
+
+            &:hover {
+                color: $second-color;
+            }
+        }
+
+        .prices {
+            text-align: right;
+
+            strong {
+                font-size: 26px;
+            }
+
+            .price-value {
+                &__currency {
+                    font-size: .5em;
+                }
+            }
+        }
+    }
+
+    &__options {
+        border-bottom: 2px solid $primary-color;
+        padding: 15px 0;
+        margin-bottom: 15px;
+    }
+
+    .props {
+        display: flex;
+        align-items: center;
+
+        &__selected {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .prop-item {
+                margin: 0 20px 10px 0;
+                display: flex;
+                align-items: center;
+
+                span {
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
+
+                &-size {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+
+                &-color {
+                    span {
+                        img {
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__baton {
+            margin-left: auto;
+
+            button {
+                border: none;
+                background: none;
+                color: $text-color;
+                margin: 0 0 10px 0;
+                padding: 0;
+                text-decoration: underline;
+                cursor: pointer;
+
+                &:hover {
+                    color: $second-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    &__form {
+        textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        .form-checkbox {
+            text-align: center;
+        }
+    }
+
+    &__bottom {
+        font-size: 12px;
+    }
+}

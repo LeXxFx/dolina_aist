@@ -29,9 +29,24 @@
 
         &__list {
             .item {
+                a {
+                    display: block;
+                }
+
                 img {
-                    border: none;
+                    width: 100%;
+                    border: 1px solid transparent;
                     padding: 0;
+
+                    &:hover {
+                        border-color: $orange-color;
+                    }
+                }
+
+                &.current {
+                    img {
+                        border-color: $orange-color;
+                    }
                 }
             }
 
@@ -47,6 +62,10 @@
 
             &.slick-slider {
                 padding: 0 50px;
+
+                .slick-slide {
+                    margin: 0 2px;
+                }
 
                 .slick-arrow {
                     font-size: 18px;
@@ -233,46 +252,30 @@
         padding-bottom: 15px;
         margin-bottom: 15px;
 
+        .product-price {
+            font-size: 33px;
+            margin-bottom: 10px;
+        }
+
         .row {
             margin-bottom: 10px;
         }
 
         .col-price {
-            .product-price {
-                font: bold 33px $font-consolas;
-                color: $green-color;
-                justify-content: flex-start;
-
-                >span {
-                    font-size: 33px;
-                }
-
-                &-currency {
-                    margin-left: 5px;
-                    color: $green-color;
-                }
-
-                &-unit {
-                    font-weight: 400;
-                    color: #3d3d3d;
-                    margin-left: 10px;
-                }
-            }
 
             &__text {
                 color: #a8a8a8;
-                font: 14px $font-consolas;
-                ;
+                font: 14px/1.2 $font-consolas;
 
                 p {
-                    margin: 0 0 5px 0;
+                    margin: 0;
                 }
             }
         }
 
         .col-options {
             &__top {
-                margin-bottom: 5px;
+                margin: 15px 0 10px 0;
 
                 >span {
                     font: 14px $font-consolas;
