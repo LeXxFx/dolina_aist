@@ -92,7 +92,6 @@
 
 .product-list {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 -14px;
 
     .product {
@@ -113,6 +112,7 @@
             border: none;
             padding: 0;
             width: auto;
+            position: relative;
 
             .product {
                 &-image {
@@ -144,6 +144,7 @@
 
                     .stiсker {
                         padding: 0 10px;
+                        margin-bottom: 5px;
                         position: relative;
 
                         &:before,

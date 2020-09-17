@@ -1,0 +1,352 @@
+@@include('../includes/header.html', { "title": "Cart", "headerClass": "" })
+
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Кабинет</a></li>
+      <li><span>Корзина</span></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <main role="main" id="content" class="cart">
+      <div class="cart-top">
+        <div class="cart-heading">Корзина</div>
+        <div class="cart-filter">
+          <div class="cart-filter__date">
+            <span>Дата доставки заказа</span>
+            <input type="text">
+          </div>
+          <div class="cart-filter__sort">
+            <span>Сортировки</span>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">
+                По умолчанию
+                <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+                <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+                <a class="dropdown-item" href="#">По популярности</a>
+                <a class="dropdown-item" href="#">По имени</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-list">
+          <div class="cart-category">1. раздел: твердые сыры</div>
+          <div class="cart-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Наименование</th>
+                  <th>Расфасовка</th>
+                  <th>Цена</th>
+                  <th>Коробка</th>
+                  <th>Количество коробок</th>
+                  <th>Сумма</th>
+                  <th>Действие</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="cart-item">
+                  <td>
+                    <a href="#">
+                      <div class="cart-item__image"><img src="images/demo/products/thumb1.png" alt=""></div>
+                      <div class="cart-item__name">
+                        <div class="item-title">Творог “КУБИКИ В РАССОЛЕ”</div>
+                        <p>из козьего молока</p>
+                      </div>
+                    </a>
+                  </td>
+                  <td>
+                    <div class="cart-row">
+                      300 г
+                    </div>
+                    <div class="cart-row">
+                      500 г
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-row">
+                      <div class="product-price">350 &#8381;</div>
+                    </div>
+                    <div class="cart-row">
+                      <div class="product-price">1222 &#8381;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-row">
+                      6 шт
+                    </div>
+                    <div class="cart-row">
+                      3 шт
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-row">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[2]" class="form-control input-number input-area" value="1"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[2]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="cart-row">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[2]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[2]" class="form-control input-number input-area" value="1"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[2]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="cart-row">
+                      <div class="product-price">1725 &#8381;</div>
+                    </div>
+                    <div class="cart-row">
+                      <div class="product-price">3666 &#8381;</div>
+                    </div>
+                  </td>
+                  <td>
+                    <label for="product123" class="form-checkbox">
+                      <input type="checkbox" id="product123">
+                    </label>
+                    <button class="btn-cart-remove"><i class="fa fa-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section id="viewed" class="viewed-products">
+      <h2 class="section-title">Недавно просмотренные</h2>
+      <div class="viewed-list product-list">
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-sticker2">
+              <div class="stiсker-nivinka">
+                Новинка
+              </div>
+            </div>
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview1.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview3.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview1.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-sticker2">
+              <div class="stiсker stiсker-novinka">
+                Новинка
+              </div>
+            </div>
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview2.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview3.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview1.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-sticker2">
+              <div class="stiсker stiсker-novinka">
+                Новинка
+              </div>
+            </div>
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview2.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="product__wrapper">
+            <div class="product-tools">
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+              <a href="#"><i class="fa fa-search"></i></a>
+              <a class="link-preview" href="#" title="Быстрый просмотр"><i class="fas fa-expand-alt"></i></a>
+            </div>
+            <div class="product-image">
+              <img src="images/demo/products/product_preview3.jpg" alt="">
+            </div>
+            <div class="product-name"><a href="#">Брынза</a></div>
+            <div class="product-text">
+              из козьего молока<br> “КУБИКИ В РАССОЛЕ”
+            </div>
+            <div class="product-info">
+              <div class="product-price">
+                <span>725 &#8381;</span>
+              </div>
+              <div class="product-buttons">
+                <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+@@include('../includes/footer.html')

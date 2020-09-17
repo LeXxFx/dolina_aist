@@ -57,6 +57,10 @@
 
                     >ul {
                         display: block;
+                        max-height: 500px;
+                        visibility: visible;
+                        transition: 0.5s;
+                        opacity: 1;
                     }
 
                     &.has-child {
@@ -99,8 +103,12 @@
                 }
 
                 >ul {
-                    display: none;
                     padding: 5px 0 5px 45px;
+                    transition: .3s;
+                    max-height: 0;
+                    transition: 0.3s;
+                    visibility: hidden;
+                    opacity: 0;
 
                     >li {
                         margin: 0 0 10px 0;
