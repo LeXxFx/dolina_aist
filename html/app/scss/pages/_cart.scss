@@ -1,6 +1,31 @@
 .cart {
     font-family: $font-consolas;
 
+    .btn-cart-clear {
+        background: none;
+        border: none;
+        border-radius: 18px;
+        font-size: 14px;
+        line-height: 32px;
+        padding: 0 10px;
+
+        &:hover {
+            background: #f1f1f1;
+            color: #ff0000;
+
+            i {
+                color: #ff0000;
+            }
+        }
+
+        i {
+            color: #717171;
+            font-size: 14px;
+            position: relative;
+            top: 1px;
+        }
+    }
+
     .cart {
         &-top {
             background: #c9eaff;
@@ -106,6 +131,7 @@
 
                     thead {
                         th {
+                            white-space: nowrap;
                             background: #f1f1f1;
                             font-size: 18px;
                             font-weight: bold;
@@ -116,6 +142,11 @@
 
                     tbody {
                         .cart-item {
+                            &:hover {
+                                td {
+                                    background: #fdfcfc;
+                                }
+                            }
 
                             &__product {
                                 text-align: left;
@@ -157,7 +188,8 @@
                                 justify-content: center;
                             }
 
-                            &__value {
+                            &__value,
+                            &__price {
                                 font-size: 22px;
                                 word-spacing: -7px;
                             }
@@ -172,6 +204,7 @@
                             &__counter {
                                 .input-counter {
                                     display: flex;
+                                    justify-content: center;
                                     margin: 0;
 
                                     .btn {
@@ -213,6 +246,8 @@
                             }
 
                             &__actions {
+                                width: 120px;
+
                                 >div {
                                     display: flex;
                                     align-items: center;
@@ -221,7 +256,7 @@
 
                                 .checkbox {
                                     display: inline-block;
-                                    margin: 0 5px 0 0;
+                                    margin: 0 7px;
                                 }
 
                                 .btn-cart-remove {
@@ -229,6 +264,7 @@
                                     background: none;
                                     color: #3d3d3d;
                                     font-size: 18px;
+                                    margin: 0 7px;
 
                                     &:hover {
                                         color: #ff0000;
@@ -309,32 +345,7 @@
                         font-weight: bold;
                     }
 
-                    &-action {
-                        button {
-                            background: none;
-                            border: none;
-                            border-radius: 18px;
-                            font-size: 14px;
-                            line-height: 32px;
-                            padding: 0 10px;
-
-                            &:hover {
-                                background: #f1f1f1;
-                                color: #ff0000;
-
-                                i {
-                                    color: #ff0000;
-                                }
-                            }
-
-                            i {
-                                color: #717171;
-                                font-size: 14px;
-                                position: relative;
-                                top: 1px;
-                            }
-                        }
-                    }
+                    &-action {}
                 }
             }
         }
@@ -415,6 +426,7 @@
                                 color: $green-color;
                                 font-weight: bold;
                                 text-transform: uppercase;
+                                min-width: 200px;
 
                                 &:hover {
                                     background: $green-color;
@@ -425,6 +437,7 @@
                             &-primary {
                                 border: 1px solid $green-color;
                                 color: #fff;
+                                min-width: 200px;
 
                                 i {
                                     margin-right: 10px;
@@ -433,6 +446,105 @@
                         }
                     }
                 }
+            }
+        }
+    }
+
+    &-retail {
+        .cart-top {
+            background: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .cart-group__table {
+            margin-bottom: 20px;
+
+            table {
+                border: none !important;
+
+                th,
+                td {
+                    border: none !important;
+                }
+
+                tbody {
+                    td {
+                        border-bottom: 1px solid #d8d8d8 !important;
+                    }
+
+                    .cart-item {
+
+                        &__image {
+                            width: 120px;
+
+                            .item-image {
+                                position: relative;
+                                width: 100%;
+
+                                .product-sticker2 {
+                                    font-size: 9px;
+                                    line-height: 16px;
+                                    top: 0;
+                                    left: -10px;
+
+                                    .stiсker {
+                                        padding: 0 5px;
+
+                                        &:before {
+                                            border-width: 7px 0 0 5px;
+                                        }
+
+                                        &:after {
+                                            border-width: 7px 5px 0 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        &__name {
+                            text-align: left;
+                            width: 45%;
+
+                            a {
+                                font-size: 24px;
+                                font-weight: bold;
+                                color: $primary-color;
+                                margin-right: 15px;
+
+                                &:hover {
+                                    text-decoration: none;
+                                    color: $orange-color;
+                                }
+                            }
+
+                            span {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+
+                tfoot {
+                    td {
+                        border: none;
+                        font-size: 18px;
+
+                        .product-price {
+                            font-size: 22px;
+                            color: #3d3d3d;
+                        }
+                    }
+                }
+            }
+        }
+
+        .cart-checkout {
+            padding: 12px 15px;
+
+            .form-bottom {
+                padding: 0;
             }
         }
     }

@@ -1,0 +1,206 @@
+.content-account {
+    font-family: $font-consolas;
+
+    .alert {
+        &-info {
+            border: none;
+            border-radius: 0;
+            background: #c9eaff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px 20px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+
+        .form-control {
+            background: #f7f7f7;
+            border: 1px solid #d7d7d7;
+            border-radius: 0;
+        }
+    }
+
+    .form-checkbox {
+        margin: 10px 0 15px 0;
+
+        span {
+            font-size: 16px;
+            padding: 0 0 0 35px;
+        }
+    }
+
+    .form-baton {
+        margin-bottom: 20px;
+
+        .btn {
+            line-height: 42px;
+
+            &-primary {
+                border: none;
+                border-radius: 18px;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 0 20px;
+            }
+
+            &-link {
+                font-size: 18px;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.form-login {
+    max-width: 550px;
+    font-size: 18px;
+
+    &__name {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        i {
+            font-size: 32px;
+            color: $primary-color;
+            margin: 0 55px 0 10px;
+        }
+    }
+
+    .control-label {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 5px 0 0;
+    }
+
+    .form-links {
+        span {
+            display: inline-block;
+            margin: 10px 0 0;
+        }
+
+        a {
+            display: inline-block;
+            border: 1px solid $primary-color;
+            border-radius: 18px;
+            color: $primary-color;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 42px;
+            padding: 0 20px;
+            transition: .3s;
+
+            &:hover {
+                background: $primary-color;
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .form-checkbox {
+        span {
+            font-size: 18px;
+        }
+    }
+}
+
+.form-signUp {
+    &__name {
+        background: #c9eaff;
+        font-size: 22px;
+        font-weight: bold;
+        padding: 15px 20px;
+        margin-bottom: 25px;
+        text-align: center;
+
+        +p {
+            font-size: 16px;
+            text-align: center;
+            margin: 0 40px 20px 40px;
+        }
+    }
+
+    &__inner {
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    &__fields {
+        padding: 0 20px;
+
+        .control-label {
+            font-size: 16px;
+            margin: 5px 0 0;
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+    }
+
+    &__type {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0 0 0;
+        margin-bottom: 20px;
+
+        .type-item {
+            flex: 0 0 45%;
+            text-align: center;
+
+            button {
+                display: block;
+                width: 100%;
+                border: 1px solid $primary-color;
+                border-radius: 18px;
+                background: #fff;
+                color: $primary-color;
+                line-height: 42px;
+                font-size: 18px;
+                font-weight: bold;
+                margin-bottom: 10px;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                &:hover,
+                &.active {
+                    background: $primary-color;
+                    color: #fff;
+                }
+
+                &.active {
+                    cursor: default;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+
+    .form-checkbox {
+        text-align: left;
+    }
+
+    .form-baton {
+        padding-top: 10px;
+
+        .btn {
+            min-width: 240px;
+        }
+    }
+}

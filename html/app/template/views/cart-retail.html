@@ -1,0 +1,261 @@
+@@include('../includes/header.html', { "title": "Cart Retail", "headerClass": "" })
+
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Кабинет</a></li>
+      <li><span>Корзина розница</span></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <main role="main" id="content" class="cart cart-retail">
+      <div class="cart-top">
+        <div class="cart-heading">Корзина</div>
+        <div class="cart-filter">
+          <div class="cart-filter__sort">
+            <span>Сортировки</span>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">
+                По умолчанию
+                <i class="fa fa-angle-down"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+                <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+                <a class="dropdown-item" href="#">По популярности</a>
+                <a class="dropdown-item" href="#">По имени</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cart-group__table">
+        <table>
+          <thead>
+            <tr>
+              <th>Фото</th>
+              <th class="text-left">Название</th>
+              <th>Цена, шт</th>
+              <th>Количество</th>
+              <th>Стоимость</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="cart-item">
+              <td class="cart-item__image">
+                <div class="item-image">
+                  <div class="product-sticker2">
+                    <div class="stiсker stiсker-novinka">
+                      Новинка
+                    </div>
+                    <div class="stiсker stiсker-akcia">
+                      Акция
+                    </div>
+                  </div>
+                  <a href="#"><img src="images/demo/products/thumb1.png" alt=""></a>
+                </div>
+              </td>
+              <td class="cart-item__name text-left">
+                <div class="item-name">
+                  <a href="#">Творог</a><span>из козьего молока</span>
+                </div>
+              </td>
+              <td class="cart-item__value">
+                725 &#8381;
+              </td>
+              <td class="cart-item__counter">
+                <div class="input-counter">
+                  <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                    -
+                  </button>
+                  <div class="input-group-text">
+                    <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                      data-min="1" data-max="100000" data-step="1" data-unit="">
+                  </div>
+                  <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                    +
+                  </button>
+                </div>
+              </td>
+              <td class="cart-item__price">
+                <div class="product-price">1725 &#8381;</div>
+              </td>
+              <td class="cart-item__actions">
+                <div>
+                  <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                  <div class="checkbox">
+                    <input type="checkbox" id="product123">
+                    <label for="product123"></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="cart-item">
+              <td class="cart-item__image">
+                <div class="item-image">
+                  <div class="product-sticker2">
+                    <div class="stiсker stiсker-akcia">
+                      Акция
+                    </div>
+                  </div>
+                  <a href="#"><img src="images/demo/products/thumb2.png" alt=""></a>
+                </div>
+              </td>
+              <td class="cart-item__name text-left">
+                <div class="item-name">
+                  <a href="#">Молоко</a><span>из козьего молока</span>
+                </div>
+              </td>
+              <td class="cart-item__value">
+                725 &#8381;
+              </td>
+              <td class="cart-item__counter">
+                <div class="input-counter">
+                  <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                    -
+                  </button>
+                  <div class="input-group-text">
+                    <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                      data-min="1" data-max="100000" data-step="1" data-unit="">
+                  </div>
+                  <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                    +
+                  </button>
+                </div>
+              </td>
+              <td class="cart-item__price">
+                <div class="product-price">1725 &#8381;</div>
+              </td>
+              <td class="cart-item__actions">
+                <div>
+                  <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                  <div class="checkbox">
+                    <input type="checkbox" id="product123">
+                    <label for="product123"></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="cart-item">
+              <td class="cart-item__image">
+                <div class="item-image">
+                  <a href="#"><img src="images/demo/products/product_thumb1.jpg" alt=""></a>
+                </div>
+              </td>
+              <td class="cart-item__name text-left">
+                <div class="item-name">
+                  <a href="#">Йогурт</a><span>из козьего молока</span>
+                </div>
+              </td>
+              <td class="cart-item__value">
+                725 &#8381;
+              </td>
+              <td class="cart-item__counter">
+                <div class="input-counter">
+                  <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                    -
+                  </button>
+                  <div class="input-group-text">
+                    <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                      data-min="1" data-max="100000" data-step="1" data-unit="">
+                  </div>
+                  <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                    +
+                  </button>
+                </div>
+              </td>
+              <td class="cart-item__price">
+                <div class="product-price">1725 &#8381;</div>
+              </td>
+              <td class="cart-item__actions">
+                <div>
+                  <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                  <div class="checkbox">
+                    <input type="checkbox" id="product123">
+                    <label for="product123"></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="cart-item">
+              <td class="cart-item__image">
+                <div class="item-image">
+                  <div class="product-sticker2">
+                    <div class="stiсker stiсker-novinka">
+                      Новинка
+                    </div>
+                  </div>
+                  <a href="#"><img src="images/demo/products/product_thumb2.jpg" alt=""></a>
+                </div>
+              </td>
+              <td class="cart-item__name text-left">
+                <div class="item-name">
+                  <a href="#">Сыр</a><span>из козьего молока</span>
+                </div>
+              </td>
+              <td class="cart-item__value">
+                725 &#8381;
+              </td>
+              <td class="cart-item__counter">
+                <div class="input-counter">
+                  <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                    -
+                  </button>
+                  <div class="input-group-text">
+                    <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                      data-min="1" data-max="100000" data-step="1" data-unit="">
+                  </div>
+                  <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                    +
+                  </button>
+                </div>
+              </td>
+              <td class="cart-item__price">
+                <div class="product-price">1725 &#8381;</div>
+              </td>
+              <td class="cart-item__actions">
+                <div>
+                  <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                  <div class="checkbox">
+                    <input type="checkbox" id="product123">
+                    <label for="product123"></label>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-right">Всего:</td>
+              <td><strong>4</strong></td>
+              <td>
+                <div class="product-price">3725 &#8381;</div>
+              </td>
+              <td> <button class="btn-cart-clear"><i class="fa fa-close"></i> Очистить</button></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="cart-checkout">
+        <div class="cart-checkout__form">
+          <div class="form-bottom">
+            <div class="form-bottom__links">
+              <a href="#">Продолжить покупки <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="form-bottom__batons">
+              <button class="btn btn-default">Быстрый заказ</button>
+              <button class="btn btn-primary"><i class="fa fa-file-alt"></i> Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  @@include('../includes/_benefits.html')
+  @@include('../includes/_viewed-products.html')
+</div>
+@@include('../includes/_help-form.html')
+@@include('../includes/footer.html')

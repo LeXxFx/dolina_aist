@@ -152,6 +152,7 @@ button {
         position: relative;
         padding: 3px 0 0 33px;
         cursor: pointer;
+        user-select: none;
 
         a {
             color: $primary-color;
@@ -163,7 +164,10 @@ button {
         }
 
         &:hover {
-            color: $second-color;
+
+            &:before {
+                border-color: $primary-color;
+            }
         }
 
         &:after {
@@ -193,6 +197,7 @@ button {
             position: absolute;
             left: 0;
             top: 2px;
+            transition: .3s;
         }
     }
 }
@@ -211,6 +216,7 @@ button {
         min-height: 23px;
         display: flex;
         align-items: center;
+        user-select: none;
 
         &:before {
             content: "";
@@ -290,6 +296,7 @@ button {
         position: relative;
         line-height: 1;
         padding-left: 20px;
+        user-select: none;
 
         a {
             text-decoration: underline;
@@ -358,6 +365,10 @@ button {
             }
         }
     }
+}
+
+.required {
+    color: #ff0000;
 }
 
 .help-section {

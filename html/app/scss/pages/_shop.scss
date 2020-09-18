@@ -90,6 +90,12 @@
     }
 }
 
+.content-shop {
+    .product-list {
+        flex-wrap: wrap;
+    }
+}
+
 .product-list {
     display: flex;
     margin: 0 -14px;
@@ -130,67 +136,6 @@
                     img {
                         width: 100%;
                         transition: .3s;
-                    }
-                }
-
-                &-sticker2 {
-                    position: absolute;
-                    top: 15px;
-                    z-index: 10;
-                    left: 0;
-                    color: #fff;
-                    text-transform: uppercase;
-                    font: 12px/24px $font-consolas;
-
-                    .stiсker {
-                        padding: 0 10px;
-                        margin-bottom: 5px;
-                        position: relative;
-
-                        &:before,
-                        &:after {
-                            content: "";
-                            display: block;
-                            width: 0;
-                            height: 0;
-                            border-style: solid;
-                            position: absolute;
-                            right: -5px;
-                        }
-
-                        &:before {
-                            bottom: 0;
-                            border-width: 12px 0 0 5px;
-                        }
-
-                        &:after {
-                            top: 0;
-                            border-width: 12px 5px 0 0;
-                        }
-
-                        &-novinka {
-                            background: #f0c832;
-
-                            &:before {
-                                border-left-color: #f0c732;
-                            }
-
-                            &:after {
-                                border-top-color: #f0c732;
-                            }
-                        }
-
-                        &-akcia {
-                            background: #c95d4c;
-
-                            &:before {
-                                border-left-color: #c95d4c;
-                            }
-
-                            &:after {
-                                border-top-color: #c95d4c;
-                            }
-                        }
                     }
                 }
 

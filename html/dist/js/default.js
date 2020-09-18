@@ -169,7 +169,7 @@ var Home = function () {
 	}
 
 	var formSettings = function () {
-		$('.masked-phone').mask('+7 (999)-999-99-99');
+		$('.masked-phone').mask('+7 (999)-999-99-99', {selectOnFocus: true});
 
 		let localRu = {
 			"format": "DD.MM.YYYY",

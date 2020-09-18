@@ -241,4 +241,44 @@
             }
         }
     }
+
+    .nav-sidebar {
+        font: 18px $font-consolas;
+        border: 1px solid #eaebec;
+        margin: 0 0 40px 0;
+        padding: 0 0 20px 0;
+
+        &__title {
+            font-size: 22px;
+            font-weight: bold;
+            background: #f7f7f7;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin: 20px 0 10px 0;
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin: 0 0 10px 0;
+                padding: 0 15px;
+
+                span {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $second-color;
+                    }
+                }
+            }
+        }
+    }
 }
