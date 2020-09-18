@@ -168,6 +168,57 @@ var Home = function () {
 		}
 	}
 
+	var formSettings = function () {
+		$('.masked-phone').mask('+7 (999)-999-99-99');
+
+		let localRu = {
+			"format": "DD.MM.YYYY",
+			"separator": " - ",
+			"applyLabel": "Применить",
+			"cancelLabel": "Отмена",
+			"fromLabel": "От",
+			"toLabel": "До",
+			"customRangeLabel": "Свой",
+			"daysOfWeek": [
+				"Вс",
+				"Пн",
+				"Вт",
+				"Ср",
+				"Чт",
+				"Пт",
+				"Сб"
+			],
+			"monthNames": [
+				"Январь",
+				"Февраль",
+				"Март",
+				"Апрель",
+				"Май",
+				"Июнь",
+				"Июль",
+				"Август",
+				"Сентябрь",
+				"Октябрь",
+				"Ноябрь",
+				"Декабрь"
+			],
+			"firstDay": 1
+		};
+
+		$('.form-date-control').daterangepicker({
+			format: "DD.MM.YYYY",
+			locale: localRu,
+			singleDatePicker: true,
+			showDropdowns: false,
+			maxDate: moment()
+		});
+
+		$('.form-date-range').daterangepicker({
+			format: "DD.MM.YYYY",
+			locale: localRu
+		});
+	};
+
 	return {
 		init: function () {
 			initNavi();
@@ -175,11 +226,12 @@ var Home = function () {
 			shopCatalog();
 			specialList();
 			digits();
+			formSettings();
 		}
 	};
 }();
 
-$(document).ready(function ($) {
+$(function () {
 	Home.init();
 });
 

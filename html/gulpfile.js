@@ -70,6 +70,7 @@ var configPath = {
     path.nodeModules + "nouislider/distribute/nouislider.js",
     path.nodeModules + "moment/moment.js",
     path.nodeModules + "bootstrap-daterangepicker/daterangepicker.js",
+    path.nodeModules + 'jquery.maskedinput/src/jquery.maskedinput.js',
     path.plugins + "magiczoomplus/magiczoomplus.js"
   ],
   cssLibs: [

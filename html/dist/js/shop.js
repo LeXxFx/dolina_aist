@@ -48,7 +48,14 @@ var Shop = function () {
 	};
 
 	var shopCatalog = function () {
+		$('.categories').on('click', 'a', function (e) {
+			e.preventDefault();
+			var that = $(this),
+				target = that.closest('.has-child');
 
+			target.toggleClass('active');
+			target.siblings('.has-child').removeClass('active');
+		})
 	};
 
 	var productQuickBuy = function () {
@@ -349,6 +356,30 @@ var Shop = function () {
 		}
 	}
 
+	var productCarousel = function () {
+		$('.viewed-list, .recommend-list').slick({
+			slidesToShow: 5,
+			slidesToScroll: 5,
+			autoplay: false,
+			prevArrow: '<a class="slick-prev"><i class="fa fa-long-arrow-left"></i></a>',
+			nextArrow: '<a class="slick-next"><i class="fa fa-long-arrow-right"></i></a>',
+			responsive: [
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 3
+					}
+				},
+				{
+					breakpoint: 478,
+					settings: {
+						slidesToShow: 2
+					}
+				}
+			]
+		});
+	}
+
 	return {
 		init: function () {
 			inputCounter();
@@ -361,6 +392,7 @@ var Shop = function () {
 			cart();
 			wishList();
 			compareList();
+			productCarousel();
 		}
 	};
 }();
