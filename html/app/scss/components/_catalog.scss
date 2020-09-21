@@ -591,6 +591,7 @@ $product-height: 425px;
     display: inline-block;
     position: relative;
     margin-left: 5px;
+    z-index: 20;
 
     &:hover {
         .price-hint-content {
@@ -637,6 +638,7 @@ $product-height: 425px;
             font: 14px $font-consolas;
             position: relative;
             box-shadow: 0 5px 16px rgba(0, 0, 0, .2);
+            text-align: center;
 
             &:before,
             &:after {
@@ -684,6 +686,7 @@ $product-height: 425px;
                 &:hover {
                     background: $primary-color;
                     color: #fff;
+                    text-decoration: none;
                 }
             }
         }

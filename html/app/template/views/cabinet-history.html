@@ -1,0 +1,351 @@
+@@include('../includes/header.html', { "title": "Order history", "headerClass": "" })
+
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Личный кабинет</a></li>
+      <li><span>История заказов</span></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper__inner">
+      <aside id="sidebar" class="sidebar">
+        <div class="nav-sidebar nav-accordion">
+          <div class="nav-sidebar__title title-accordion" data-toggle="collapse" data-target="#collapseNav">Кабинет
+          </div>
+          <div id="collapseNav" class="content-accordion collapse show">
+            <div class="content-accordion__inner">
+              <ul>
+                <li><a href="cabinet-order.html">Сделать заказ</a></li>
+                <li class="active"><a href="cabinet-history.html">История заказов</a></li>
+                <li><a href="#">Сравнение</a></li>
+                <li><a href="#">Мои данные</a></li>
+                <li><a href="#">Промокоды</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="nav-sidebar__title title-accordion title-manager collapsed" data-toggle="collapse"
+            data-target="#collapseManager"><i class="fas fa-headphones-alt"></i> Ваш менеджер</div>
+          <div id="collapseManager" class="content-accordion collapse">
+            <div class="content-accordion__inner">
+              manager
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="content content-cabinet">
+        <div class="page-heading">История заказов</div>
+        <form id="searchOrder" class="search-order">
+          <p class="search-order__text">Поиск заказа по данным (заполните все или хотябы 1 пункт).<br>
+            Любой заказ Вы можете отредактировать и повторить</p>
+          <div class="form-row">
+            <div class="col-group">
+              <label class="control-label">Код заказа:</label>
+              <div class="col-control">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="col-group col-group--select">
+              <label class="control-label">Статус:</label>
+              <div class="col-control">
+                <select name="" id="" class="form-control">
+                  <option value="1">На согласовании</option>
+                  <option value="1">На согласовании1</option>
+                  <option value="1">На согласовании2</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-group">
+              <label class="control-label">Дата заказа:</label>
+              <div class="col-control">
+                <div class="form-date-input">
+                  <input type="text" class="form-control form-date-control">
+                </div>
+                <div class="form-date-input">
+                  <input type="text" class="form-control form-date-control">
+                </div>
+              </div>
+            </div>
+            <div class="col-batons">
+              <button class="btn btn-set">Установить</button>
+              <button class="btn btn-cancel">Снять</button>
+            </div>
+          </div>
+          <div class="form-baton">
+            <button class="btn btn-primary"><i class="fa fa-search"></i> Начать поиск</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="order-history cart">
+      <div class="order-history__top">
+        <div class="sorting">
+          <span>Сортировка</span>
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true">
+              По умолчанию
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+              <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+              <a class="dropdown-item" href="#">По популярности</a>
+              <a class="dropdown-item" href="#">По имени</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-history__table cart-group__table">
+        <table>
+          <thead>
+            <tr>
+              <th>Код заказа</th>
+              <th>Дата заказа</th>
+              <th>Сумма</th>
+              <th>Статус </th>
+              <th>Доставка</th>
+              <th>Регулярно</th>
+              <th>Повторить</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="order-item opened">
+              <td><a href="#" class="order-number">16412313</a></td>
+              <td><span>15.12.2020</span></td>
+              <td><span>18 900 руб.</span></td>
+              <td><span>Товар доставлен</span></td>
+              <td><span>15.12.2020</span></td>
+              <td class="td-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="order1">
+                  <label for="order1"></label>
+                </div>
+              </td>
+              <td>
+                <div class="price-hint">
+                  <a><i class="fas fa-shopping-bag"></i></a>
+                  <div class="price-hint-content">
+                    <div class="price-hint-content__inner">
+                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
+                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-details opened">
+              <td colspan="7">
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product1.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product1.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Сыр<span>из козьего молока</span></a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_1]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product123">
+                        <label for="product123"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview2.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview2.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_2]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_2]" class="form-control input-number input-area" value="11"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_2]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product124" checked="checked">
+                        <label for="product124"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview1.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview1.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_3]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_3]" class="form-control input-number input-area" value="3"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_3]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product125">
+                        <label for="product125"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-item">
+              <td><a href="#" class="order-number">16412313</a></td>
+              <td><span>15.12.2020</span></td>
+              <td><span>18 900 руб.</span></td>
+              <td><span>На согласовании</span></td>
+              <td><span>15.12.2020</span></td>
+              <td class="td-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="order2">
+                  <label for="order2"></label>
+                </div>
+              </td>
+              <td>
+                <div class="price-hint">
+                  <a><i class="fas fa-shopping-bag"></i></a>
+                  <div class="price-hint-content">
+                    <div class="price-hint-content__inner">
+                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
+                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-details">
+              <td colspan="7">
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview3.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview3.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Сыр<span>из козьего молока</span></a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[223_1]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[223_1]" class="form-control input-number input-area" value="6"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[223_1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product223">
+                        <label for="product223"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="order-history__bottom">
+        <button class="btn btn-save"><i class="fa fa-save"></i> Сохранить изменения</button>
+      </div>
+    </div>
+  </div>
+</div>
+@@include('../includes/footer.html')

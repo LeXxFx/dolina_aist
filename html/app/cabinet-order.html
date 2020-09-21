@@ -8,45 +8,43 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Welcome | Dolina Aistov</title>
+    <title>Order history | Dolina Aistov</title>
     <link rel="shortcut icon" href="images/favicon.png">
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header id="header" class="header front-page">
-        <div class="header-top">
+    <header id="header" class="header">
+        <div class="header-site">
             <div class="container">
-                <div class="header-top__inner">
-                    <div class="row align-items-center">
-                        <div class="col-md-4 col-delivary">
-                            <i class="appicon appicon-truck"></i> Ближайшая доставка 5 мая
+                <div class="header-site__inner">
+                    <div class="inner-row">
+                        <a class="logo" href="#"><img src="images/logo.png" alt=""></a>
+                        <div class="col-delivary">
+                            <i class="appicon appicon-truck-dark"></i> 5 мая
                         </div>
-                        <div class="col-md-5 col-phone">
-                            <span><i class="appicon appicon-phone"></i> 8-800-968-58-87</span>
+                        <div class="col-phone">
+                            <span><i class="appicon appicon-phone-dark"></i> 8-800-968-58-87</span>
                             <a href="#" class="link-callback">Заказать звонок</a>
                         </div>
-                        <div class="col-auto col-account">
+                        <div class="col-cart">
+                            <a href="#"><i class="appicon appicon-cart-dark"></i> <span>Сделать заказ</span></a>
+                        </div>
+                        <div class="col-account">
                             <ul class="socials">
                                 <li><a href="#"><i class="appicon appicon-twitter"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#" data-dismiss="modal" data-toggle="modal"
-                            data-target="#signIn"><i class="appicon appicon-user"></i> Войти</a>
+                            <a class="link-account" href="#" href="#" data-dismiss="modal" data-toggle="modal"
+                                data-target="#signInModal"><i class="appicon appicon-exit"></i> Выйти</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="header-main">
-                <div class="header-main__inner">
-                    <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
-                    <div class="site-name">Фермерские продукты из козьего молока</div>
-                </div>
-            </div>
             <div class="header-navi">
     <nav class="navi dd-item">
         <button class="toggle-menu toggle-dd"> <span class="lines"></span> </button>
@@ -248,461 +246,353 @@
     </header>
 
 <div class="container">
-  <div class="catalog">
-    <div class="catalog-nav">
-      <a class="active" href="#">
-        <div class="catalog-nav-content">
-          <div class="nav-subtitle">Йогурты и</div>
-          <div class="nav-title">Молоко</div>
-        </div>
-        <img src="images/demo/img1.jpg" alt="">
-      </a>
-      <a href="#">
-        <div class="catalog-nav-content">
-          <div class="nav-subtitle">Мягкие сыры и</div>
-          <div class="nav-title">Творог</div>
-        </div><img src="images/demo/img2.jpg" alt="">
-      </a>
-      <a href="#">
-        <div class="catalog-nav-content">
-          <div class="nav-subtitle"></div>
-          <div class="nav-title">Сыры</div>
-        </div><img src="images/demo/img3.jpg" alt="">
-      </a>
-      <a href="#">
-        <div class="catalog-nav-content">
-          <div class="nav-subtitle"></div>
-          <div class="nav-title">Деликатесы</div>
-        </div><img src="images/demo/img4.jpg" alt="">
-      </a>
-    </div>
-  </div>
-  <div class="products-top">
-    <div class="products-title">Наша продукция</div>
-    <ul class="products-filter">
-      <li><a href="#">Все</a></li>
-      <li class="active"><a href="#">Йогурты и молоко</a></li>
-      <li><a href="#">Мягкие сыры и творого</a></li>
-      <li><a href="#">Сыры</a></li>
-      <li><a href="#">Деликатесы</a></li>
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Личный кабинет</a></li>
+      <li><span>Сделать заказ</span></li>
     </ul>
   </div>
-  <div class="products swiper-container">
-    <div class="products-list swiper-wrapper">
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="stiсker-akcia">
-              <p><span>Акция</span></p>
+  <div class="wrapper">
+    <div class="wrapper__inner">
+      <aside id="sidebar" class="sidebar">
+        <div class="nav-sidebar nav-accordion">
+          <div class="nav-sidebar__title title-accordion" data-toggle="collapse" data-target="#collapseNav">Кабинет
+          </div>
+          <div id="collapseNav" class="content-accordion collapse show">
+            <div class="content-accordion__inner">
+              <ul>
+                <li class="active"><a href="cabinet-order.html">Сделать заказ</a></li>
+                <li><a href="cabinet-history.html">История заказов</a></li>
+                <li><a href="#">Сравнение</a></li>
+                <li><a href="#">Мои данные</a></li>
+                <li><a href="#">Промокоды</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
             </div>
           </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product1.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Брынза</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+          <div class="nav-sidebar__title title-accordion title-manager collapsed" data-toggle="collapse"
+            data-target="#collapseManager"><i class="fas fa-headphones-alt"></i> Ваш менеджер</div>
+          <div id="collapseManager" class="content-accordion collapse">
+            <div class="content-accordion__inner">
+              manager
             </div>
           </div>
         </div>
-      </div>
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="sticker-novinka">
-              <p><span>Новинка</span></p>
+      </aside>
+      <div class="content content-cabinet">
+        <div class="page-heading">История заказов</div>
+        <form id="searchOrder" class="search-order">
+          <p class="search-order__text">Поиск заказа по данным (заполните все или хотябы 1 пункт).<br>
+            Любой заказ Вы можете отредактировать и повторить</p>
+          <div class="form-row">
+            <div class="col-group">
+              <label class="control-label">Код заказа:</label>
+              <div class="col-control">
+                <input type="text" class="form-control">
+              </div>
             </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product2.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
+            <div class="col-group col-group--select">
+              <label class="control-label">Статус:</label>
+              <div class="col-control">
+                <select name="" id="" class="form-control">
+                  <option value="1">На согласовании</option>
+                  <option value="1">На согласовании1</option>
+                  <option value="1">На согласовании2</option>
+                </select>
               </div>
             </div>
           </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
-                  alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product3.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 858 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
+          <div class="form-row">
+            <div class="col-group">
+              <label class="control-label">Дата заказа:</label>
+              <div class="col-control">
+                <div class="form-date-input">
+                  <input type="text" class="form-control form-date-control">
+                </div>
+                <div class="form-date-input">
+                  <input type="text" class="form-control form-date-control">
                 </div>
               </div>
             </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
+            <div class="col-batons">
+              <button class="btn btn-set">Установить</button>
+              <button class="btn btn-cancel">Снять</button>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="stiсker-akcia">
-              <p><span>Акция</span></p>
-            </div>
+          <div class="form-baton">
+            <button class="btn btn-primary"><i class="fa fa-search"></i> Начать поиск</button>
           </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product1.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Брынза</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-sticker">
-            <div class="sticker-novinka">
-              <p><span>Новинка</span></p>
-            </div>
-          </div>
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product2.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 725 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product2.png"><img
-                  src="images/demo/product2.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img3.jpg"><img src="images/demo/img3.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img1.jpg"><img src="images/demo/img1.jpg"
-                  alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/img2.jpg"><img src="images/demo/img2.jpg"
-                  alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product swiper-slide">
-        <div class="product__wrapper">
-          <div class="product-tools">
-            <a href="#"><i class="fa fa-heart-o"></i></a>
-            <a href="#"><i class="fa fa-search"></i></a>
-          </div>
-          <div class="product-image">
-            <img src="images/demo/product3.png" alt="">
-          </div>
-          <div class="product-name"><a href="#">Твоврог</a></div>
-          <div class="product-text">
-            из козьего молока<br> “КУБИКИ В РАССОЛЕ”
-          </div>
-          <div class="product-price">
-            <span>до 858 руб.</span>
-            <div class="price-hint">
-              <a><i class="fa fa-info"></i></a>
-              <div class="price-hint-content">
-                <div class="price-hint-content__inner">
-                  <p>Цены оптовым покупателям доступны после авторизации</p>
-                  <a href="#" class="btn">Авторизироваться</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="product__bottom">
-            <div class="product-buttons">
-              <button><i class="appicon appicon-cart"></i> <span>Купить</span></button>
-            </div>
-            <div class="product-gallery">
-              <a class="gallery-item current" data-source="image" href="images/demo/product3.png"><img
-                  src="images/demo/product3.png" alt=""></a>
-              <a class="gallery-item" data-source="image" href="images/demo/product1.png"><img
-                  src="images/demo/product1.png" alt=""></a>
-            </div>
-            <div class="product-links">
-              <a href="#">Перейти в каталог <i class="fa fa-long-arrow-alt-right"></i></a>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
-    <div class="swiper-scrollbar"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-  <section class="section-slogan">
-    <img src="images/demo/bb1.jpg" alt="">
-    <div class="section-slogan__content">
-      <div class="slogan-heading">
-        Свежесть - превыше всего!
-      </div>
-      <div class="slogan-text">
-        все продукты изготавливаются из молока утренней дойки в день предшествующий доставке
-      </div>
-    </div>
-  </section>
-  <section class="section-special">
-    <div class="special-list">
-      <div class="special-item" style="background-image: url(images/demo/akc1.png);">
-        <div class="special-item__content">
-          <div class="special-name">
-            <div class="special-name__inner"><span>Спецпредложения</span></div>
-          </div>
-          <div class="special__content">
-            <div class="special-discont">
-              <span>-10%</span> скидка на первый заказ
-            </div>
-            <form action="" class="special-form">
-              <div class="col-text">
-                <span>оставьте свой номер и наш<br> консультант перезвонит Вам!</span>
-              </div>
-              <div class="form-input">
-                <input class="form-control" type="tel" placeholder="Ваш телефон">
-                <button>Отправить</button>
-              </div>
-            </form>
-            <div class="special-phone">
-              <span>Или позвоните по номеру:</span>
-              <a href="tel:88009685887"><i class="appicon appicon-phone-white"></i>
-                8-800-968-58-87</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="special-item" style="background-image: url(images/demo/akc1.png);">
-        <div class="special-item__content">
-          <div class="special-name">
-            <div class="special-name__inner"><span>Спецпредложения2</span></div>
-          </div>
-          <div class="special__content">
-            <div class="special-discont">
-              <span>-10%</span> скидка на первый заказ
-            </div>
-            <form action="" class="special-form">
-              <div class="col-text">
-                <span>оставьте свой номер и наш<br> консультант перезвонит Вам!</span>
-              </div>
-              <div class="form-input">
-                <input class="form-control" type="tel" placeholder="Ваш телефон">
-                <button>Отправить</button>
-              </div>
-            </form>
-            <div class="special-phone">
-              <span>Или позвоните по номеру:</span>
-              <a href="tel:88009685887"><i class="appicon appicon-phone-white"></i>
-                8-800-968-58-87</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-digits" style="background-image: url(images/demo/digits_img.jpg);">
-    <div class="digits-list">
-      <div class="digit">
-        <strong class="stat-count">128</strong>
-        <p>товаров</p>
-      </div>
-      <div class="digit">
-        <strong class="stat-count">8</strong>
-        <p>лет</p>
-      </div>
-      <div class="digit">
-        <strong class="stat-count">356</strong>
-        <p>клиентов</p>
-      </div>
-      <div class="digit">
-        <strong class="stat-count">214</strong>
-        <p>голов</p>
-      </div>
-    </div>
-    <div class="digits__content">
-      <p>На ферме вы можете<br> приобрести продукты по</p>
-      <span>оптовым ценам</span>
-    </div>
-  </section>
-</div>
 
-<section class="section-about">
-  <div class="container">
-    <div class="about-text">
-      <h2 class="about-text__heading">Путешествие по нашей ФЕРМЕ</h2>
-      <div class="post">
-        <p>ЭкоФЕРМА “Долина аистов” — это экологически чистые угодья, с собственным производством самых вкусных
-          фермерских
-          продуктов.</p>
-        <p>Мы готовим свою продукцию под заказ в небольших объемах, но при этом соблюдают все стандарты качества.
-          Дополнительный лабораторный контроль продукция проходит перед поступлением на продажу.</p>
+    <div class="order-history cart">
+      <div class="order-history__top">
+        <div class="sorting">
+          <span>Сортировка</span>
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true">
+              По умолчанию
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+              <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+              <a class="dropdown-item" href="#">По популярности</a>
+              <a class="dropdown-item" href="#">По имени</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="#">Фотогалерея <i class="fa fa-long-arrow-alt-right"></i></a>
+      <div class="order-history__table cart-group__table">
+        <table>
+          <thead>
+            <tr>
+              <th>Код заказа</th>
+              <th>Дата заказа</th>
+              <th>Сумма</th>
+              <th>Статус </th>
+              <th>Доставка</th>
+              <th>Регулярно</th>
+              <th>Повторить</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="order-item opened">
+              <td><a href="#" class="order-number">16412313</a></td>
+              <td><span>15.12.2020</span></td>
+              <td><span>18 900 руб.</span></td>
+              <td><span>Товар доставлен</span></td>
+              <td><span>15.12.2020</span></td>
+              <td class="td-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="order1">
+                  <label for="order1"></label>
+                </div>
+              </td>
+              <td>
+                <div class="price-hint">
+                  <a><i class="fas fa-shopping-bag"></i></a>
+                  <div class="price-hint-content">
+                    <div class="price-hint-content__inner">
+                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
+                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-details opened">
+              <td colspan="7">
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product1.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product1.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Сыр<span>из козьего молока</span></a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_1]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product123">
+                        <label for="product123"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview2.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview2.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_2]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_2]" class="form-control input-number input-area" value="11"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_2]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product124" checked="checked">
+                        <label for="product124"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview1.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview1.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[123_3]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[123_3]" class="form-control input-number input-area" value="3"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[123_3]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product125">
+                        <label for="product125"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-item">
+              <td><a href="#" class="order-number">16412313</a></td>
+              <td><span>15.12.2020</span></td>
+              <td><span>18 900 руб.</span></td>
+              <td><span>На согласовании</span></td>
+              <td><span>15.12.2020</span></td>
+              <td class="td-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="order2">
+                  <label for="order2"></label>
+                </div>
+              </td>
+              <td>
+                <div class="price-hint">
+                  <a><i class="fas fa-shopping-bag"></i></a>
+                  <div class="price-hint-content">
+                    <div class="price-hint-content__inner">
+                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
+                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr class="order-details">
+              <td colspan="7">
+                <div class="order-product">
+                  <div class="order-product__left">
+                    <div class="order-product-image">
+                      <a href="images/demo/products/product_preview3.jpg" class="MagicZoom"
+                        data-options="zoomWidth:220px; zoomHeight:220px">
+                        <img class="zoom-image" src="images/demo/products/product_preview3.jpg" alt="" />
+                      </a>
+                    </div>
+                    <div class="order-product-name">
+                      <a href="#">Сыр<span>из козьего молока</span></a>
+                    </div>
+                    <div class="order-product-percent">
+                      5 %
+                    </div>
+                  </div>
+                  <div class="order-product__right">
+                    <div class="order-product-price">по 725 &#8381;</div>
+                    <div class="order-product-counter">
+                      <div class="input-counter">
+                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                          data-field="quant[223_1]">
+                          -
+                        </button>
+                        <div class="input-group-text">
+                          <input type="text" name="quant[223_1]" class="form-control input-number input-area" value="6"
+                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        </div>
+                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                          data-field="quant[223_1]">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="order-product-sum">2425 &#8381;</div>
+                    <div class="order-product-actions">
+                      <div class="checkbox">
+                        <input type="checkbox" id="product223">
+                        <label for="product223"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="order-history__bottom">
+        <button class="btn btn-save"><i class="fa fa-save"></i> Сохранить изменения</button>
+      </div>
     </div>
   </div>
-  <div class="about-image">
-    <img src="images/demo/about_img.png" alt="">
-  </div>
-</section>
+</div>
 <footer id="footer" class="footer">
     <div class="footer-main">
         <div class="container">

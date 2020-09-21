@@ -380,6 +380,16 @@ var Shop = function () {
 		});
 	}
 
+	var orderHistory = function () {
+		$('.order-history').on('click', '.order-number', function (e) {
+			e.preventDefault();
+			var order = $(this).closest('.order-item');
+
+			order.toggleClass('opened');
+			order.next('.order-details').toggleClass('opened');
+		})
+	}
+
 	return {
 		init: function () {
 			inputCounter();
@@ -393,6 +403,7 @@ var Shop = function () {
 			wishList();
 			compareList();
 			productCarousel();
+			orderHistory();
 		}
 	};
 }();

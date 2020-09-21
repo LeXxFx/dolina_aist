@@ -18,6 +18,13 @@ button {
 
 .form-control {
     box-shadow: none !important;
+    border-radius: 0;
+    border: 1px solid #d7d7d7;
+    background: #f7f7f7;
+
+    &:hover {
+        border-color: $second-color;
+    }
 }
 
 .form-date-input {
@@ -31,6 +38,7 @@ button {
         font-size: 16px;
         right: 15px;
         top: 8px;
+        cursor: pointer;
     }
 
     .form-date-control {
