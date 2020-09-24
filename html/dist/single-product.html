@@ -37,8 +37,8 @@
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#" href="#" data-dismiss="modal" data-toggle="modal"
-                                data-target="#signInModal"><i class="appicon appicon-exit"></i> Выйти</a>
+                            <a class="link-account" href="#" data-dismiss="modal" data-toggle="modal"
+                                data-target="#authTypeModal"><i class="appicon appicon-exit"></i> Выйти</a>
                         </div>
                     </div>
                 </div>
@@ -186,10 +186,10 @@
         </ul>
     </nav>
     <div class="header-search">
-        <form action="">
+        <form action="" class="search-form">
             <div class="form-input">
                 <input type="text" />
-                <button><i class="appicon appicon-search"></i></button>
+                <button><i class="fa fa-search"></i></button>
             </div>
         </form>
     </div>
@@ -200,32 +200,41 @@
                 <span class="badge badge-info">0</span>
             </span>
         </a>
-        <div class="popup-content wish-popup">
+    </div>
+    <div class="short-cart popup-container">
+        <a href="#" class="header-cart">
+            <span class="icon-counter">
+                <i class="appicon appicon-cart"></i>
+                <span class="badge badge-info">2</span>
+            </span>
+            <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
+        </a>
+        <div class="popup-content cart-popup">
             <div class="popup-content__top">
                 <span>2 продукта</span>
                 <strong>725 &#8381;</strong>
             </div>
             <div class="popup-content__body">
-                <div class="wish-list">
-                    <div class="wish-item">
-                        <div class="wish-item__image">
+                <div class="cart-list">
+                    <div class="cart-item">
+                        <div class="cart-item__image">
                             <a href="product-single.html"><img src="images/demo/products/thumb1.png"></a>
                         </div>
-                        <div class="wish-item__main">
+                        <div class="cart-item__main">
                             <p>1х <span>449 руб.</span></p>
                             <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
                         </div>
-                        <a href="#" class="wish-item__remove">&times;</a>
+                        <a href="#" class="cart-item__remove">&times;</a>
                     </div>
-                    <div class="wish-item">
-                        <div class="wish-item__image">
+                    <div class="cart-item">
+                        <div class="cart-item__image">
                             <a href="product-single.html"><img src="images/demo/products/thumb2.png"></a>
                         </div>
-                        <div class="wish-item__main">
+                        <div class="cart-item__main">
                             <p>1х <span>449 руб.</span></p>
                             <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
                         </div>
-                        <a href="#" class="wish-item__remove">&times;</a>
+                        <a href="#" class="cart-item__remove">&times;</a>
                     </div>
                 </div>
             </div>
@@ -234,13 +243,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="header-cart">
-        <span class="icon-counter">
-            <i class="appicon appicon-cart"></i>
-            <span class="badge badge-info">2</span>
-        </span>
-        <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
-    </a>
 </div>
         </div>
     </header>
@@ -1000,6 +1002,32 @@
       </div>
     </div>
   </div>
+</div>
+<div class="modal fade modal-form modal-auth" id="authTypeModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                Авторизация
+                <button class="modal-close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip"
+                    title="Закрыть">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-type">
+                    <div class="auth-type__item">
+                        <p>Покупки на любую сумму</p>
+                        <button class="btn"><i class="fa fa-th-large"></i> Я розничный
+                            покупатель</button>
+                    </div>
+                    <div class="auth-type__item">
+                        <p>Оптовая закупка от 15 000 рублей</p>
+                        <button class="btn"><i class="fa fa-th"></i> Я оптовый покупатель</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://kit.fontawesome.com/c4c33ff97d.js" crossorigin="anonymous"></script>

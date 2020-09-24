@@ -254,6 +254,21 @@
                                     justify-content: center;
                                 }
 
+                                a {
+                                    font-size: 18px;
+                                    color: $primary-color;
+                                    margin: 0 7px;
+                                    cursor: pointer;
+
+                                    &:hover {
+                                        opacity: .7;
+                                    }
+
+                                    &.in-cart {
+                                        color: $orange-color;
+                                    }
+                                }
+
                                 .checkbox {
                                     display: inline-block;
                                     margin: 0 7px;
@@ -264,6 +279,7 @@
                                     background: none;
                                     color: #3d3d3d;
                                     font-size: 18px;
+                                    line-height: 1;
                                     margin: 0 7px;
 
                                     &:hover {
@@ -545,6 +561,91 @@
 
             .form-bottom {
                 padding: 0;
+            }
+        }
+    }
+}
+
+.cart-summary {
+    position: fixed;
+    left: 50%;
+    margin-left: $container-width/2;
+    bottom: 100px;
+    z-index: 101;
+
+    &-inner {
+        width: 310px;
+        background: #fff;
+        border: 1px solid #8f8f8f;
+        border-top: 3px solid $second-color;
+        box-shadow: 0 0 8px 2px rgba(0, 0, 0, .3);
+    }
+
+    .cart-summary {
+        &__header {
+            border-bottom: 1px solid #cfcfcf;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+
+            a {
+                color: #373737;
+                font-size: 16px;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+
+                i {
+                    margin-left: auto;
+                    color: #717171;
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    color: $orange-color;
+                    text-decoration: none;
+
+                    i {
+                        color: $orange-color;
+                    }
+                }
+            }
+        }
+
+        &__body {
+            padding: 20px;
+            border-bottom: 1px solid #cfcfcf;
+            font-size: 18px;
+
+            h3 {
+                margin: 0 0 5px 0;
+                color: $primary-color;
+                font-size: 24px;
+            }
+
+            p {
+                margin: 0 0 5px 0;
+            }
+
+            span {
+                color: $primary-color;
+            }
+        }
+
+        &__bottom {
+            padding: 20px;
+            text-align: center;
+
+            .btn {
+                padding: 0 15px;
+                border-radius: 22px;
+                line-height: 46px;
+                min-width: 200px;
+                border: none;
+
+                i {
+                    margin-right: 10px;
+                }
             }
         }
     }

@@ -111,38 +111,6 @@
         .header {
             &-search {
                 margin-left: auto;
-
-                .form-input {
-                    position: relative;
-
-                    input {
-                        background: #fff;
-                        border: none;
-                        height: 32px;
-                        border-radius: 16px;
-                        width: 100%;
-                        max-width: 190px;
-                        padding: 5px 40px 5px 20px;
-                        transition: .3s;
-
-                        @include media-breakpoint('lt-sm') {
-                            max-width: 145px;
-                        }
-
-                        &:focus {
-                            outline: none;
-                            background: darken(#fff, 10%);
-                        }
-                    }
-
-                    button {
-                        position: absolute;
-                        top: 5px;
-                        right: 5px;
-                        background: none;
-                        border: none;
-                    }
-                }
             }
 
             &-wish {
@@ -358,4 +326,39 @@
         }
     }
 
+}
+
+.search-form {
+    .form-input {
+        position: relative;
+        width: 100%;
+
+        input {
+            background: #fff;
+            border: none;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 190px;
+            padding: 0 40px 0 20px;
+            line-height: 32px;
+            transition: .3s;
+
+            @include media-breakpoint('lt-sm') {
+                max-width: 145px;
+            }
+
+            &:focus {
+                outline: none;
+                background: darken(#fff, 10%);
+            }
+        }
+
+        button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: none;
+            border: none;
+        }
+    }
 }

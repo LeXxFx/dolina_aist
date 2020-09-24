@@ -108,3 +108,56 @@
         }
     }
 }
+
+.modal-auth {
+    .modal-content {
+        .modal {
+            &-header {
+                background: #c9eaff;
+                padding: 20px;
+                margin: 0 1px 0 0;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                .modal-close {
+                    top: 0;
+                    right: 0;
+                }
+            }
+
+            &-body {
+                .auth-type {
+                    text-align: center;
+
+                    &__item {
+                        margin: 40px 0 60px 0;
+
+                        p {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+
+                        .btn {
+                            padding: 0 30px;
+                            font-size: 18px;
+                            line-height: 52px;
+                            width: 340px;
+                            font-weight: bold;
+                            color: #fff;
+                            background: $green-color;
+                            border-radius: 24px;
+
+                            i {
+                                margin-right: 10px;
+                            }
+
+                            &:hover {
+                                background: darken($green-color, 5%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

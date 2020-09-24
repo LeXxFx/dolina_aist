@@ -37,8 +37,8 @@
                                 <li><a href="#"><i class="appicon appicon-youtube"></i></a></li>
                                 <li><a href="#"><i class="appicon appicon-facebook"></i></a></li>
                             </ul>
-                            <a class="link-account" href="#" href="#" data-dismiss="modal" data-toggle="modal"
-                                data-target="#signInModal"><i class="appicon appicon-exit"></i> Выйти</a>
+                            <a class="link-account" href="#" data-dismiss="modal" data-toggle="modal"
+                                data-target="#authTypeModal"><i class="appicon appicon-exit"></i> Выйти</a>
                         </div>
                     </div>
                 </div>
@@ -186,10 +186,10 @@
         </ul>
     </nav>
     <div class="header-search">
-        <form action="">
+        <form action="" class="search-form">
             <div class="form-input">
                 <input type="text" />
-                <button><i class="appicon appicon-search"></i></button>
+                <button><i class="fa fa-search"></i></button>
             </div>
         </form>
     </div>
@@ -200,32 +200,41 @@
                 <span class="badge badge-info">0</span>
             </span>
         </a>
-        <div class="popup-content wish-popup">
+    </div>
+    <div class="short-cart popup-container">
+        <a href="#" class="header-cart">
+            <span class="icon-counter">
+                <i class="appicon appicon-cart"></i>
+                <span class="badge badge-info">2</span>
+            </span>
+            <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
+        </a>
+        <div class="popup-content cart-popup">
             <div class="popup-content__top">
                 <span>2 продукта</span>
                 <strong>725 &#8381;</strong>
             </div>
             <div class="popup-content__body">
-                <div class="wish-list">
-                    <div class="wish-item">
-                        <div class="wish-item__image">
+                <div class="cart-list">
+                    <div class="cart-item">
+                        <div class="cart-item__image">
                             <a href="product-single.html"><img src="images/demo/products/thumb1.png"></a>
                         </div>
-                        <div class="wish-item__main">
+                        <div class="cart-item__main">
                             <p>1х <span>449 руб.</span></p>
                             <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
                         </div>
-                        <a href="#" class="wish-item__remove">&times;</a>
+                        <a href="#" class="cart-item__remove">&times;</a>
                     </div>
-                    <div class="wish-item">
-                        <div class="wish-item__image">
+                    <div class="cart-item">
+                        <div class="cart-item__image">
                             <a href="product-single.html"><img src="images/demo/products/thumb2.png"></a>
                         </div>
-                        <div class="wish-item__main">
+                        <div class="cart-item__main">
                             <p>1х <span>449 руб.</span></p>
                             <a href="product-single.html">“КУБИКИ В РАССОЛЕ”</a>
                         </div>
-                        <a href="#" class="wish-item__remove">&times;</a>
+                        <a href="#" class="cart-item__remove">&times;</a>
                     </div>
                 </div>
             </div>
@@ -234,13 +243,6 @@
             </div>
         </div>
     </div>
-    <a href="#" class="header-cart">
-        <span class="icon-counter">
-            <i class="appicon appicon-cart"></i>
-            <span class="badge badge-info">2</span>
-        </span>
-        <span class="header-cart-sum">&#8381; 600<sup>00</sup></span>
-    </a>
 </div>
         </div>
     </header>
@@ -281,315 +283,482 @@
         </div>
       </aside>
       <div class="content content-cabinet">
-        <div class="page-heading">История заказов</div>
-        <form id="searchOrder" class="search-order">
-          <p class="search-order__text">Поиск заказа по данным (заполните все или хотябы 1 пункт).<br>
-            Любой заказ Вы можете отредактировать и повторить</p>
-          <div class="form-row">
-            <div class="col-group">
-              <label class="control-label">Код заказа:</label>
-              <div class="col-control">
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="col-group col-group--select">
-              <label class="control-label">Статус:</label>
-              <div class="col-control">
-                <select name="" id="" class="form-control">
-                  <option value="1">На согласовании</option>
-                  <option value="1">На согласовании1</option>
-                  <option value="1">На согласовании2</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="col-group">
-              <label class="control-label">Дата заказа:</label>
-              <div class="col-control">
-                <div class="form-date-input">
-                  <input type="text" class="form-control form-date-control">
+        <section class="section-special">
+          <div class="special-list">
+            <div class="special-item" style="background-image: url(images/demo/akc1.png);">
+              <div class="special-item__content">
+                <div class="special-name">
+                  <div class="special-name__inner"><span>Спецпредложения</span></div>
                 </div>
-                <div class="form-date-input">
-                  <input type="text" class="form-control form-date-control">
+                <div class="special__content">
+                  <div class="special-discont">
+                    <span>-10%</span> скидка на первый заказ
+                  </div>
+                  <form action="" class="special-form">
+                    <div class="col-text">
+                      <span>оставьте свой номер и наш<br> консультант перезвонит Вам!</span>
+                    </div>
+                    <div class="form-input">
+                      <input class="form-control" type="tel" placeholder="Ваш телефон">
+                      <button>Отправить</button>
+                    </div>
+                  </form>
+                  <div class="special-phone">
+                    <span>Или позвоните по номеру:</span>
+                    <a href="tel:88009685887"><i class="appicon appicon-phone-white"></i>
+                      8-800-968-58-87</a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-batons">
-              <button class="btn btn-set">Установить</button>
-              <button class="btn btn-cancel">Снять</button>
+            <div class="special-item" style="background-image: url(images/demo/akc1.png);">
+              <div class="special-item__content">
+                <div class="special-name">
+                  <div class="special-name__inner"><span>Спецпредложения2</span></div>
+                </div>
+                <div class="special__content">
+                  <div class="special-discont">
+                    <span>-10%</span> скидка на первый заказ
+                  </div>
+                  <form action="" class="special-form">
+                    <div class="col-text">
+                      <span>оставьте свой номер и наш<br> консультант перезвонит Вам!</span>
+                    </div>
+                    <div class="form-input">
+                      <input class="form-control" type="tel" placeholder="Ваш телефон">
+                      <button>Отправить</button>
+                    </div>
+                  </form>
+                  <div class="special-phone">
+                    <span>Или позвоните по номеру:</span>
+                    <a href="tel:88009685887"><i class="appicon appicon-phone-white"></i>
+                      8-800-968-58-87</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-baton">
-            <button class="btn btn-primary"><i class="fa fa-search"></i> Начать поиск</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div class="order-history cart">
-      <div class="order-history__top">
-        <div class="sorting">
-          <span>Сортировка</span>
-          <div class="dropdown">
-            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="true">
-              По умолчанию
-              <i class="fa fa-angle-down" aria-hidden="true"></i>
-            </button>
-            <div class="dropdown-menu">
-              <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
-              <a class="dropdown-item" href="#">От дорогих к дешевым</a>
-              <a class="dropdown-item" href="#">По популярности</a>
-              <a class="dropdown-item" href="#">По имени</a>
+        </section>
+        <div class="order-search">
+          <form action="" class="order-search__form search-form">
+            <div class="form-input">
+              <input type="text" placeholder="Поикс по названию" />
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </form>
+          <div class="sorting">
+            <span>Сортировка</span>
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="true">
+                По умолчанию
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+                <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+                <a class="dropdown-item" href="#">По популярности</a>
+                <a class="dropdown-item" href="#">По имени</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="order-history__table cart-group__table">
-        <table>
-          <thead>
-            <tr>
-              <th>Код заказа</th>
-              <th>Дата заказа</th>
-              <th>Сумма</th>
-              <th>Статус </th>
-              <th>Доставка</th>
-              <th>Регулярно</th>
-              <th>Повторить</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="order-item opened">
-              <td><a href="#" class="order-number">16412313</a></td>
-              <td><span>15.12.2020</span></td>
-              <td><span>18 900 руб.</span></td>
-              <td><span>Товар доставлен</span></td>
-              <td><span>15.12.2020</span></td>
-              <td class="td-check">
-                <div class="checkbox">
-                  <input type="checkbox" id="order1">
-                  <label for="order1"></label>
-                </div>
-              </td>
-              <td>
-                <div class="price-hint">
-                  <a><i class="fas fa-shopping-bag"></i></a>
-                  <div class="price-hint-content">
-                    <div class="price-hint-content__inner">
-                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
-                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr class="order-details opened">
-              <td colspan="7">
-                <div class="order-product">
-                  <div class="order-product__left">
-                    <div class="order-product-image">
-                      <a href="images/demo/products/product1.jpg" class="MagicZoom"
-                        data-options="zoomWidth:220px; zoomHeight:220px">
-                        <img class="zoom-image" src="images/demo/products/product1.jpg" alt="" />
-                      </a>
-                    </div>
-                    <div class="order-product-name">
-                      <a href="#">Сыр<span>из козьего молока</span></a>
-                    </div>
-                    <div class="order-product-percent">
-                      5 %
-                    </div>
-                  </div>
-                  <div class="order-product__right">
-                    <div class="order-product-price">по 725 &#8381;</div>
-                    <div class="order-product-counter">
-                      <div class="input-counter">
-                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
-                          data-field="quant[123_1]">
-                          -
-                        </button>
-                        <div class="input-group-text">
-                          <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
-                            data-min="1" data-max="100000" data-step="1" data-unit="">
+    </div>
+    <div class="order-create">
+      <div class="order-create__header">Сделать заказ</div>
+      <div id="productGroup" class="order-create__list">
+        <div class="card">
+          <div class="card-header" id="groupName1">
+            <button class="collapsed" data-toggle="collapse" data-target="#group1">
+              <span class="group-name">ЙОГУРТЫ и МОЛОКО</span>
+              <span class="heading-icon"><i class="fa fa-angle-down"></i></span>
+            </button>
+            </h5>
+          </div>
+
+          <div id="group1" class="collapse">
+            <div class="card-body">
+              ....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="groupName2">
+            <button data-toggle="collapse" data-target="#group2">
+              <span class="group-name">МЯГКИЕ СЫРЫ и ТВОРОГ</span>
+              <span class="heading-icon"><i class="fa fa-angle-down"></i></span>
+            </button>
+          </div>
+          <div id="group2" class="collapse show">
+            <div class="card-body cart">
+              <div class="cart-group__table">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Наименование</th>
+                      <th>Расфасовка</th>
+                      <th>Цена</th>
+                      <th>Коробка</th>
+                      <th>Количество коробок</th>
+                      <th>Сумма</th>
+                      <th>Действие</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="cart-item">
+                      <td class="cart-item__product">
+                        <a href="#">
+                          <div class="item-image"><img src="images/demo/products/thumb1.png" alt=""></div>
+                          <div class="item-name">
+                            <div class="item-title">Творог “КУБИКИ В РАССОЛЕ”</div>
+                            <p>из козьего молока</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="cart-item__value">
+                        <div class="cart-item__option">
+                          300 г
                         </div>
-                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
-                          data-field="quant[123_1]">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div class="order-product-sum">2425 &#8381;</div>
-                    <div class="order-product-actions">
-                      <div class="checkbox">
-                        <input type="checkbox" id="product123">
-                        <label for="product123"></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-product">
-                  <div class="order-product__left">
-                    <div class="order-product-image">
-                      <a href="images/demo/products/product_preview2.jpg" class="MagicZoom"
-                        data-options="zoomWidth:220px; zoomHeight:220px">
-                        <img class="zoom-image" src="images/demo/products/product_preview2.jpg" alt="" />
-                      </a>
-                    </div>
-                    <div class="order-product-name">
-                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
-                    </div>
-                    <div class="order-product-percent">
-                      5 %
-                    </div>
-                  </div>
-                  <div class="order-product__right">
-                    <div class="order-product-price">по 725 &#8381;</div>
-                    <div class="order-product-counter">
-                      <div class="input-counter">
-                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
-                          data-field="quant[123_2]">
-                          -
-                        </button>
-                        <div class="input-group-text">
-                          <input type="text" name="quant[123_2]" class="form-control input-number input-area" value="11"
-                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        <div class="cart-item__option">
+                          500 г
                         </div>
-                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
-                          data-field="quant[123_2]">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div class="order-product-sum">2425 &#8381;</div>
-                    <div class="order-product-actions">
-                      <div class="checkbox">
-                        <input type="checkbox" id="product124" checked="checked">
-                        <label for="product124"></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="order-product">
-                  <div class="order-product__left">
-                    <div class="order-product-image">
-                      <a href="images/demo/products/product_preview1.jpg" class="MagicZoom"
-                        data-options="zoomWidth:220px; zoomHeight:220px">
-                        <img class="zoom-image" src="images/demo/products/product_preview1.jpg" alt="" />
-                      </a>
-                    </div>
-                    <div class="order-product-name">
-                      <a href="#">Йогурт из козьего молока “КУБИКИ В РАССОЛЕ”</a>
-                    </div>
-                    <div class="order-product-percent">
-                      5 %
-                    </div>
-                  </div>
-                  <div class="order-product__right">
-                    <div class="order-product-price">по 725 &#8381;</div>
-                    <div class="order-product-counter">
-                      <div class="input-counter">
-                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
-                          data-field="quant[123_3]">
-                          -
-                        </button>
-                        <div class="input-group-text">
-                          <input type="text" name="quant[123_3]" class="form-control input-number input-area" value="3"
-                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                      </td>
+                      <td class="cart-item__price">
+                        <div class="cart-item__option">
+                          <div class="product-price">350 &#8381;</div>
                         </div>
-                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
-                          data-field="quant[123_3]">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div class="order-product-sum">2425 &#8381;</div>
-                    <div class="order-product-actions">
-                      <div class="checkbox">
-                        <input type="checkbox" id="product125">
-                        <label for="product125"></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr class="order-item">
-              <td><a href="#" class="order-number">16412313</a></td>
-              <td><span>15.12.2020</span></td>
-              <td><span>18 900 руб.</span></td>
-              <td><span>На согласовании</span></td>
-              <td><span>15.12.2020</span></td>
-              <td class="td-check">
-                <div class="checkbox">
-                  <input type="checkbox" id="order2">
-                  <label for="order2"></label>
-                </div>
-              </td>
-              <td>
-                <div class="price-hint">
-                  <a><i class="fas fa-shopping-bag"></i></a>
-                  <div class="price-hint-content">
-                    <div class="price-hint-content__inner">
-                      <p>Предыдущий заказ автоматически будет добавлен в корзину</p>
-                      <a href="#" class="btn btn-link"><i class="fas fa-shopping-bag"></i> В корзину</a>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-            <tr class="order-details">
-              <td colspan="7">
-                <div class="order-product">
-                  <div class="order-product__left">
-                    <div class="order-product-image">
-                      <a href="images/demo/products/product_preview3.jpg" class="MagicZoom"
-                        data-options="zoomWidth:220px; zoomHeight:220px">
-                        <img class="zoom-image" src="images/demo/products/product_preview3.jpg" alt="" />
-                      </a>
-                    </div>
-                    <div class="order-product-name">
-                      <a href="#">Сыр<span>из козьего молока</span></a>
-                    </div>
-                    <div class="order-product-percent">
-                      5 %
-                    </div>
-                  </div>
-                  <div class="order-product__right">
-                    <div class="order-product-price">по 725 &#8381;</div>
-                    <div class="order-product-counter">
-                      <div class="input-counter">
-                        <button type="button" class="btn btn-minus btn-number" data-type="minus"
-                          data-field="quant[223_1]">
-                          -
-                        </button>
-                        <div class="input-group-text">
-                          <input type="text" name="quant[223_1]" class="form-control input-number input-area" value="6"
-                            data-min="1" data-max="100000" data-step="1" data-unit="">
+                        <div class="cart-item__option">
+                          <div class="product-price">1222 &#8381;</div>
                         </div>
-                        <button type="button" class="btn btn-plus btn-number" data-type="plus"
-                          data-field="quant[223_1]">
-                          +
-                        </button>
-                      </div>
-                    </div>
-                    <div class="order-product-sum">2425 &#8381;</div>
-                    <div class="order-product-actions">
-                      <div class="checkbox">
-                        <input type="checkbox" id="product223">
-                        <label for="product223"></label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                      </td>
+                      <td>
+                        <div class="cart-item__option">
+                          6 шт
+                        </div>
+                        <div class="cart-item__option">
+                          3 шт
+                        </div>
+                      </td>
+                      <td class="cart-item__counter">
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_1]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_1]" class="form-control input-number input-area"
+                                value="6" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_1]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_2]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_2]" class="form-control input-number input-area"
+                                value="3" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_2]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="cart-item__sum">
+                        <div class="cart-item__option">
+                          <div class="product-price">1725 &#8381;</div>
+                        </div>
+                        <div class="cart-item__option">
+                          <div class="product-price">3666 &#8381;</div>
+                        </div>
+                      </td>
+                      <td class="cart-item__actions">
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину" class="in-cart"><i class="fas fa-shopping-bag"
+                              aria-hidden="true"></i></a>
+                          <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                        </div>
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину"><i class="fas fa-shopping-bag" aria-hidden="true"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="cart-item">
+                      <td class="cart-item__product">
+                        <a href="#">
+                          <div class="item-image"><img src="images/demo/products/product_thumb2.jpg" alt=""></div>
+                          <div class="item-name">
+                            <div class="item-title">Чизбургер</div>
+                            <p>из козьего молока</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="cart-item__value">
+                        <div class="cart-item__option">
+                          300 г
+                        </div>
+                        <div class="cart-item__option">
+                          500 г
+                        </div>
+                      </td>
+                      <td class="cart-item__price">
+                        <div class="cart-item__option">
+                          <div class="product-price">350 &#8381;</div>
+                        </div>
+                        <div class="cart-item__option">
+                          <div class="product-price">1222 &#8381;</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cart-item__option">
+                          6 шт
+                        </div>
+                        <div class="cart-item__option">
+                          3 шт
+                        </div>
+                      </td>
+                      <td class="cart-item__counter">
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_1]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_1]" class="form-control input-number input-area"
+                                value="6" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_1]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_2]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_2]" class="form-control input-number input-area"
+                                value="3" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_2]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="cart-item__sum">
+                        <div class="cart-item__option">
+                          <div class="product-price">1725 &#8381;</div>
+                        </div>
+                        <div class="cart-item__option">
+                          <div class="product-price">3666 &#8381;</div>
+                        </div>
+                      </td>
+                      <td class="cart-item__actions">
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину"><i class="fas fa-shopping-bag" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину"><i class="fas fa-shopping-bag" aria-hidden="true"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="cart-item">
+                      <td class="cart-item__product">
+                        <a href="#">
+                          <div class="item-image"><img src="images/demo/products/product_thumb1.jpg" alt=""></div>
+                          <div class="item-name">
+                            <div class="item-title">Чипсы “КУБИКИ В РАССОЛЕ”</div>
+                            <p>из бульбы</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="cart-item__value">
+                        <div class="cart-item__option">
+                          300 г
+                        </div>
+                      </td>
+                      <td class="cart-item__price">
+                        <div class="cart-item__option">
+                          <div class="product-price">350 &#8381;</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cart-item__option">
+                          6 шт
+                        </div>
+                      </td>
+                      <td class="cart-item__counter">
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_1]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_1]" class="form-control input-number input-area"
+                                value="6" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_1]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="cart-item__sum">
+                        <div class="cart-item__option">
+                          <div class="product-price">1725 &#8381;</div>
+                        </div>
+                      </td>
+                      <td class="cart-item__actions">
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину" class="in-cart"><i class="fas fa-shopping-bag"
+                              aria-hidden="true"></i></a>
+                          <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr class="cart-item">
+                      <td class="cart-item__product">
+                        <a href="#">
+                          <div class="item-image"><img src="images/demo/products/thumb2.png" alt=""></div>
+                          <div class="item-name">
+                            <div class="item-title">Йогурт</div>
+                            <p>из козьего молока</p>
+                          </div>
+                        </a>
+                      </td>
+                      <td class="cart-item__value">
+                        <div class="cart-item__option">
+                          300 г
+                        </div>
+                      </td>
+                      <td class="cart-item__price">
+                        <div class="cart-item__option">
+                          <div class="product-price">350 &#8381;</div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="cart-item__option">
+                          6 шт
+                        </div>
+                      </td>
+                      <td class="cart-item__counter">
+                        <div class="cart-item__option">
+                          <div class="input-counter">
+                            <button type="button" class="btn btn-minus btn-number" data-type="minus"
+                              data-field="quant[123_1]">
+                              -
+                            </button>
+                            <div class="input-group-text">
+                              <input type="text" name="quant[123_1]" class="form-control input-number input-area"
+                                value="6" data-min="1" data-max="100000" data-step="1" data-unit="">
+                            </div>
+                            <button type="button" class="btn btn-plus btn-number" data-type="plus"
+                              data-field="quant[123_1]">
+                              +
+                            </button>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="cart-item__sum">
+                        <div class="cart-item__option">
+                          <div class="product-price">1725 &#8381;</div>
+                        </div>
+                      </td>
+                      <td class="cart-item__actions">
+                        <div class="cart-item__option">
+                          <a href="#" title="В корзину"><i class="fas fa-shopping-bag" aria-hidden="true"></i></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="groupName3">
+            <button class="collapsed" data-toggle="collapse" data-target="#group3">
+              <span class="group-name">СЫРЫ</span>
+              <span class="heading-icon"><i class="fa fa-angle-down"></i></span>
+            </button>
+          </div>
+          <div id="group3" class="collapse">
+            <div class="card-body">
+              ....
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="groupName4">
+            <button class="collapsed" data-toggle="collapse" data-target="#group4">
+              <span class="group-name">ДЕЛИКАТЕСЫ</span>
+              <span class="heading-icon"><i class="fa fa-angle-down"></i></span>
+            </button>
+          </div>
+          <div id="group4" class="collapse">
+            <div class="card-body">
+              ....
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="order-history__bottom">
-        <button class="btn btn-save"><i class="fa fa-save"></i> Сохранить изменения</button>
+      <div class="order-create__bottom">
+        <div class="order-date">
+          <span>Дата доставки</span>
+          <div class="dropdown">
+            <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="true">
+              По группам
+              <i class="fa fa-angle-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item dropdown-active" href="#"> По группам</a>
+              <a class="dropdown-item" href="#">В один день</a>
+              <a class="dropdown-item" href="#">Дата оговаривается</a>
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-save"><i class="fa fa-save"></i> Оформить заказ</button>
       </div>
+    </div>
+  </div>
+</div>
+<div class="cart-summary">
+  <div class="cart-summary-inner">
+    <div class="cart-summary__header">
+      <a href="#">
+        <span>Свернуть корзину</span>
+        <i class="fa fa-close"></i>
+      </a>
+    </div>
+    <div class="cart-summary__body">
+      <h3>Итого:</h3>
+      <p>Количество товаров <b>10</b></p>
+      <p>Количество позиций <b>19</b></p>
+      <p>На сумму <b>13 841</b> руб.</p>
+      <p><span>Экономия</span> <b>0</b> руб.</p>
+    </div>
+    <div class="cart-summary__bottom">
+      <button class="btn btn-primary"><i class="fa fa-file-alt" aria-hidden="true"></i> Оформить заказ</button>
     </div>
   </div>
 </div>
@@ -897,6 +1066,32 @@
       </div>
     </div>
   </div>
+</div>
+<div class="modal fade modal-form modal-auth" id="authTypeModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                Авторизация
+                <button class="modal-close" data-dismiss="modal" aria-hidden="true" data-toggle="tooltip"
+                    title="Закрыть">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="auth-type">
+                    <div class="auth-type__item">
+                        <p>Покупки на любую сумму</p>
+                        <button class="btn"><i class="fa fa-th-large"></i> Я розничный
+                            покупатель</button>
+                    </div>
+                    <div class="auth-type__item">
+                        <p>Оптовая закупка от 15 000 рублей</p>
+                        <button class="btn"><i class="fa fa-th"></i> Я оптовый покупатель</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="https://kit.fontawesome.com/c4c33ff97d.js" crossorigin="anonymous"></script>

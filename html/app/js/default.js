@@ -137,10 +137,10 @@ var Home = function () {
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: false,
-			arrows: false,
+			arrows: true,
 			dots: true,
-			prevArrow: '<a class="slick-prev"><i class="fa fa-long-arrow-alt-left"></i></a>',
-			nextArrow: '<a class="slick-next"><i class="fa fa-long-arrow-alt-right"></i></a>',
+			prevArrow: '<a class="slick-prev"><i class="fa fa-angle-left"></i></a>',
+			nextArrow: '<a class="slick-next"><i class="fa fa-angle-right"></i></a>',
 			adaptiveHeight: true
 		});
 	}

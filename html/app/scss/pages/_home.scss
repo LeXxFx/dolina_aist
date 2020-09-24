@@ -66,7 +66,7 @@
             position: relative;
             font-family: $font-consolas;
             margin-top: 12px;
-            background: no-repeat center bottom;
+            background: no-repeat center top;
             background-size: cover;
         }
 
@@ -91,7 +91,8 @@
 
                 span {
                     display: block;
-                    padding: 10px 15px;
+                    padding: 0 15px;
+                    line-height: 1.6;
                     font-size: 30px;
                     font-weight: bold;
                     text-align: center;
@@ -135,6 +136,7 @@
                 width: 162px;
                 height: 127px;
                 background: url(../images/discont_bg.png) no-repeat 0 0;
+                background-size: cover;
                 font-size: 60px;
                 margin-right: 10px;
                 padding: 15px 0;
@@ -296,6 +298,25 @@
                     border: 2px solid rgba(255, 255, 255, 1);
                 }
             }
+        }
+    }
+
+    .slick-arrow {
+        display: none !important;
+        font-size: 3em;
+        color: #fff;
+        opacity: .7;
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &.slick-prev {
+            left: 10px;
+        }
+
+        &.slick-next {
+            right: 10px;
         }
     }
 }
