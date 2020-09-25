@@ -732,11 +732,11 @@ $product-height: 425px;
             background: #f0c832;
 
             &:before {
-                border-left-color: #f0c732;
+                border-color: transparent transparent transparent #f0c732;
             }
 
             &:after {
-                border-top-color: #f0c732;
+                border-color: #f0c732 transparent transparent transparent;
             }
         }
 
@@ -744,11 +744,11 @@ $product-height: 425px;
             background: #c95d4c;
 
             &:before {
-                border-left-color: #c95d4c;
+                border-color: transparent transparent transparent #c95d4c;
             }
 
             &:after {
-                border-top-color: #c95d4c;
+                border-color: #c95d4c transparent transparent transparent;
             }
         }
     }
