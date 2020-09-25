@@ -1,0 +1,179 @@
+.gallery {
+    font-family: $font-consolas;
+    padding: 20px 0;
+
+    &__nav {
+        text-align: center;
+        margin-bottom: 35px;
+
+        a {
+            color: $text-color;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 7px;
+            border-bottom: 2px solid transparent;
+            text-decoration: none;
+            margin: 0 10px;
+
+            &:hover {
+                border-color: #dadada;
+            }
+
+            &.active {
+                border-color: $second-color;
+            }
+        }
+    }
+
+    &-list {
+        margin: 0 -10px 40px -10px;
+        display: flex;
+        flex-wrap: wrap;
+
+        .show-more {
+            flex: 0 0 calc(33.333% - 20px);
+            margin: 0 10px 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                display: block;
+                font-size: 24px;
+                color: $text-color;
+
+                &:hover {
+                    color: $green-color;
+                    text-decoration: none;
+
+                    i {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                i {
+                    margin-right: 10px;
+                    font-size: 32px;
+                    color: $green-color;
+                    transition: .3s;
+                }
+            }
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(33.333% - 20px);
+            margin: 0 10px 20px 10px;
+            position: relative;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    background: #000;
+                    opacity: .58;
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                }
+            }
+
+            &__content {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                padding: 20px;
+                color: #fff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 2;
+
+                h3 {
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    position: relative;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .3s;
+                    transform: translateY(10px);
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 40px;
+                        height: 3px;
+                        background: #fff;
+                        margin: 10px auto;
+                    }
+                }
+
+                div {
+                    font: 300 16px/1.2 $font;
+                    margin-bottom: 20px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .6s;
+                    transform: translateY(10px);
+                }
+
+                >span {
+                    display: inline-block;
+                    font-size: 28px;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: .6s;
+                    transform: translateY(-10px);
+
+                    i {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+
+            &:hover {
+                a {
+                    &:after {
+                        opacity: 0.58;
+                        visibility: visible;
+                    }
+                }
+
+                .gallery-item__content {
+                    h3 {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+
+                    div {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+
+                    >span {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: none;
+                    }
+                }
+            }
+        }
+    }
+}

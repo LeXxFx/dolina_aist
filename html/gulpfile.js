@@ -71,6 +71,7 @@ var configPath = {
     path.nodeModules + "moment/moment.js",
     path.nodeModules + "bootstrap-daterangepicker/daterangepicker.js",
     path.nodeModules + 'jquery.maskedinput/src/jquery.maskedinput.js',
+    path.nodeModules + '@fancyapps/fancybox/dist/jquery.fancybox.js',
     path.plugins + "magiczoomplus/magiczoomplus.js"
   ],
   cssLibs: [
@@ -80,6 +81,7 @@ var configPath = {
     path.nodeModules + "swiper/css/swiper.css",
     path.nodeModules + "nouislider/distribute/nouislider.css",
     path.nodeModules + "bootstrap-daterangepicker/daterangepicker.css",
+    path.nodeModules + "@fancyapps/fancybox/dist/jquery.fancybox.css",
     path.plugins + "magiczoomplus/magiczoomplus.css"
   ],
   fontLibs: [path.nodeModules + "@fortawesome/fontawesome-free/webfonts/*"]

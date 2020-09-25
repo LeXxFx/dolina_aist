@@ -8,6 +8,10 @@ button {
 
     &-primary {
         background: $green-color;
+        border: none;
+        border-radius: 18px;
+        line-height: 38px;
+        padding: 0 15px;
 
         &:focus,
         &:hover {

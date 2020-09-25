@@ -169,7 +169,7 @@ var Home = function () {
 	}
 
 	var formSettings = function () {
-		$('.masked-phone').mask('+7 (999)-999-99-99', {selectOnFocus: true});
+		$('.masked-phone').mask('+7 (999)-999-99-99', { selectOnFocus: true });
 
 		let localRu = {
 			"format": "DD.MM.YYYY",
@@ -251,4 +251,24 @@ var swiper = new Swiper('.products', {
 		prevEl: '.swiper-button-prev',
 	},
 	mousewheel: true
+});
+
+var swiperGallery = new Swiper('.swiper-gallery', {
+	effect: 'coverflow',
+	grabCursor: true,
+	centeredSlides: true,
+	loop: true,
+	slideShadows: false,
+	slidesPerView: 'auto',
+	coverflowEffect: {
+		rotate: 50,
+		stretch: 0,
+		depth: 100,
+		modifier: 1,
+		slideShadows: true,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	}
 });

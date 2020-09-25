@@ -49,15 +49,12 @@ var Shop = function () {
 
 	var shopCatalog = function () {
 		$('.categories').on('click', 'a', function (e) {
-			if($(this).parent('li').hasClass('has-child')){
-				e.preventDefault();
-				var that = $(this),
+			e.preventDefault();
+			var that = $(this),
 				target = that.closest('.has-child');
 
-				target.toggleClass('active');
-				target.siblings('.has-child').removeClass('active');
-				console.log('child');
-			}
+			target.toggleClass('active');
+			target.siblings('.has-child').removeClass('active');
 		})
 	};
 

@@ -1,0 +1,79 @@
+@@include('../includes/header.html', { "title": "Contacts", "headerClass": "" })
+
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><span>Контакты</span></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <main role="main" class="content content-contacts">
+      <h1 class="page-heading">Наши контакты</h1>
+      <div class="form-inner">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contacts">
+              <div class="contact-item"><i class="fa fa-home"></i> Россия, Тверская область, Зубцовский р-н, с.Княжьи
+                Горы
+              </div>
+              <div class="contact-item"><i class="fa fa-envelope"></i> <a href="mailto:admin@dolina-aistov.ru">admin@dolina-aistov.ru</a></div>
+              <div class="contact-item"><img src="images/demo/post-index.png" alt=""></div>
+              <div class="contact-item"><i class="fa fa-phone"></i> <a href="tel:89002025377">8 (900) 202-53-77</a></div>
+              <div class="contact-item"><i class="fa fa-credit-card"></i> КФХ Касьяненко Е.А. ОГРН 1156196032519</div>
+            </div>
+            <div class="share-list">
+              <a href="#" title="instagram"><i class="appicon appicon-share-instagram"></i></a>
+              <a href="#" title="facebook"><i class="appicon appicon-share-facebook"></i></a>
+              <a href="#" title="youtube"><i class="appicon appicon-share-youtube"></i></a>
+              <a href="#" title="twitter"><i class="appicon appicon-share-twitter"></i></a>
+              <a href="#" title="mail"><i class="appicon appicon-share-mail"></i></a>
+              <a href="#" title="telegram"><i class="appicon appicon-share-telegram"></i></a>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form action="" class="form-horizontal">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input class="form-control" type="email" placeholder="Ваш E-mail">
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Текс сообщения"></textarea>
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="page-heading">Как добраться?</div>
+            <div class="post">
+              <h3>Автомобилем</h3>
+              <p>Даже когда Вы буквально растворяетесь в чистейшем удовольствии от еды, воспользуйтесь этим моментом,
+                чтобы
+                с профессиональной точностью оценить вкус. В статье Вы узнаете больше об этом и в итоге научитесь
+                разбираться в тончайших нюансах вкуса как настоящий профессионал.</p>
+              <h3>Поездом</h3>
+              <p>Через район проходят автодороги «Москва — Рига», «Вязьма — Зубцов», «Зубцов — Гагарин», железная дорога
+                «Москва — Рига».</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div id="map">
+              <img src="images/demo/map.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  @@include('../includes/_benefits.html')
+  @@include('../includes/_viewed-products.html')
+</div>
+@@include('../includes/footer.html')

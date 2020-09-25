@@ -1,0 +1,486 @@
+@@include('../includes/header.html', { "title": "Checkout", "headerClass": "" })
+
+<div class="container">
+  <div class="breadcrumbs">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><span>Контакты</span></li>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <main role="main" class="content content-checkout">
+      <div class="page-heading">Оформление заказа</div>
+      <div class="checkout">
+        <div class="checkout__left">
+          <div class="checkout-panel">
+            <div class="checkout-heading">
+              <i class="fas fa-map-marker-alt"></i>
+              Тип покупателя и регион доставки
+            </div>
+            <div class="checkout__user-type">
+              <div class="radio">
+                <input type="radio" name="customer_type" id="type1" value="1" checked="checked">
+                <label for="type1">Физическое лицо</label>
+              </div>
+              <div class="radio">
+                <input type="radio" name="customer_type" id="type2" value="2">
+                <label for="type2">Юридическое лицо</label>
+              </div>
+            </div>
+            <div class="checkout__address">
+              <div class="form-group">
+                <div class="control-label">
+                  <span class="required">*</span> Местоположение
+                </div>
+                <div class="suggest-list">
+                  <a href="#">Москва</a>
+                  <a href="#">Санкт-Петербург</a>
+                  <a href="#">Екатеринбург</a>
+                  <a href="#">Челябинск</a>
+                </div>
+                <div class="form-input autocomplete">
+                  <span class="form-input__prepend"><i class="appicon appicon-search"></i> Ваш город,</span>
+                  <input id="city" type="text" class="form-control"
+                    placeholder="выберите из списка или впишите свой город">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="control-label">
+                  <span class="required">*</span> Индекс
+                </div>
+                <div class="form-input">
+                  <span class="form-input__prepend">00000,</span>
+                  <input type="text" class="form-control" placeholder="впишите свой индекс">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout__methods">
+            <div class="checkout-panel delivary">
+              <div class="checkout-heading">
+                <i class="fa fa-truck"></i>
+                Способ доставки
+              </div>
+              <div class="delivary-list">
+                <div class="delivary-item">
+                  <div class="radio">
+                    <input type="radio" name="delivary" id="delivary1" value="1">
+                    <label for="delivary1">
+                      Доставка курьером <span>г. Москва</span>
+                      <strong>290 руб.</strong>
+                    </label>
+                  </div>
+                  <div class="delivary-item__info"></div>
+                </div>
+                <div class="delivary-item">
+                  <div class="radio">
+                    <input type="radio" name="delivary" id="delivary2" value="2">
+                    <label for="delivary2">
+                      Самовывоз из Shop-Logistics
+                      <strong>220 руб.</strong>
+                    </label>
+                  </div>
+                  <div class="delivary-item__info">
+                    <p>г. Краснодар <a class="link-change" href="#">Изменить город</a></p>
+                    <div class="post-office">
+                      <div class="dropdown">
+                        <button class="dropdown-toggle" type="button" id="routeto" data-toggle="dropdown"
+                          aria-haspopup="true" aria-expanded="false">
+                          <span>отделение №10, ул. Занковецкой 30/5, к. 150</span>
+                          <i class="fa fa-angle-down"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="routeto">
+                          <a class="dropdown-item" href="#">отделение №11</a>
+                          <a class="dropdown-item dropdown-active" href="#">отделение №12</a>
+                          <a class="dropdown-item" href="#">отделение №13</a>
+                        </div>
+                      </div>
+                      <div class="post-office__map">
+                        <a href="#"><i class="appicon appicon-map-min"></i> Карта</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="delivary-item">
+                  <div class="radio">
+                    <input type="radio" name="delivary" id="delivary3" value="3">
+                    <label for="delivary3">
+                      Самовывоз <span>c Дубнинской (г.Москва)</span>
+                      <strong>0 руб.</strong>
+                    </label>
+                  </div>
+                  <div class="delivary-item__info"></div>
+                </div>
+                <div class="delivary-item">
+                  <div class="radio">
+                    <input type="radio" name="delivary" id="delivary4" value="4">
+                    <label for="delivary4">
+                      Самовывоз <span>г.Москва</span>
+                      <strong>180 руб.</strong>
+                    </label>
+                  </div>
+                  <div class="delivary-item__info"></div>
+                </div>
+                <div class="delivary-item">
+                  <div class="radio">
+                    <input type="radio" name="delivary" id="delivary5" value="5">
+                    <label for="delivary5">
+                      Регионы
+                      <strong>индивидуально</strong>
+                    </label>
+                  </div>
+                  <div class="delivary-item__info">
+                    <p>Индивидуальный расчет менеджером</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-panel payment">
+              <div class="checkout-heading">
+                <i class="fa fa-wallet"></i>
+                Способ оплаты
+              </div>
+              <div class="payment-list">
+                <div class="radio">
+                  <input type="radio" name="payments" id="payment1" value="1">
+                  <label for="payment1">Яндекс.Деньги</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="payments" id="payment2" value="2">
+                  <label for="payment2">Банковские карты</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="payments" id="payment3" value="3">
+                  <label for="payment3">Терминалы</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="payments" id="payment4" value="4">
+                  <label for="payment4">Наличные курьеру</label>
+                </div>
+                <div class="radio">
+                  <input type="radio" name="payments" id="payment5" value="5">
+                  <label for="payment5">Сбербанк</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkout-panel kupon">
+            <span>Применить купон</span>
+            <div class="form-input">
+              <span class="form-input__prepend">00000,</span>
+              <input type="text" class="form-control" placeholder="номер купона">
+              <button><i class="far fa-arrow-alt-circle-right"></i></button>
+            </div>
+          </div>
+          <div class="checkout-panel">
+            <div class="checkout-heading">
+              <i class="fa fa-user-circle"></i>
+              Покупатель
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label"><span class="required">*</span> Ф.И.О.</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label"><span class="required">*</span> E-Mail</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label"><span class="required">*</span> Телефон</label>
+              <input type="tel" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label"><span class="required">*</span>Адрес доставки</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="" class="control-label">Комментарии к заказу:</label>
+              <textarea class="form-control"></textarea>
+            </div>
+            <p class="form-help">
+              <span class="required">*</span> Поля обязательные для заполнения
+            </p>
+          </div>
+        </div>
+        <div class="checkout__right">
+          <div class="summary checkout-panel">
+            <div class="summary__top">
+              <span>Ваш заказ</span>
+              <a href="#">Изменить</a>
+            </div>
+            <div class="summary__body">
+              <div class="summary-row">
+                <div class="summary-row__name">
+                  4 товара на:
+                </div>
+                <div class="summary-row__value">
+                  <strong>3 080.55 руб.</strong>
+                  <del>3 480 руб.</del>
+                </div>
+              </div>
+              <div class="summary-row">
+                <div class="summary-row__name">
+                  Доставка
+                </div>
+                <div class="summary-row__value">
+                  <span>500 руб.</span>
+                </div>
+              </div>
+              <div class="summary-row summary-row_economy">
+                <div class="summary-row__name">
+                  Экономия:
+                </div>
+                <div class="summary-row__value">
+                  399.45 руб.
+                </div>
+              </div>
+            </div>
+            <div class="summary__result">
+              <strong>
+                Итого:
+              </strong>
+              <strong>
+                3 580.55 руб.
+              </strong>
+            </div>
+            <button class="btn btn-checkout"><i class="fa fa-file-alt"></i> Оформить заказ</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart cart-retail">
+        <div class="cart-top">
+          <div class="cart-heading"><i class="fa fa-shopping-bag"></i> Товары в заказе</div>
+          <div class="cart-filter">
+            <div class="cart-filter__sort">
+              <span>Сортировки</span>
+              <div class="dropdown">
+                <button class="dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="true">
+                  По умолчанию
+                  <i class="fa fa-angle-down"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item dropdown-active" href="#">По умолчанию</a>
+                  <a class="dropdown-item" href="#">От дорогих к дешевым</a>
+                  <a class="dropdown-item" href="#">По популярности</a>
+                  <a class="dropdown-item" href="#">По имени</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-group__table">
+          <table>
+            <thead>
+              <tr>
+                <th>Фото</th>
+                <th class="text-left">Название</th>
+                <th>Цена, шт</th>
+                <th>Количество</th>
+                <th>Стоимость</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="cart-item">
+                <td class="cart-item__image">
+                  <div class="item-image">
+                    <div class="product-sticker2">
+                      <div class="stiсker stiсker-novinka">
+                        Новинка
+                      </div>
+                      <div class="stiсker stiсker-akcia">
+                        Акция
+                      </div>
+                    </div>
+                    <a href="#"><img src="images/demo/products/thumb1.png" alt=""></a>
+                  </div>
+                </td>
+                <td class="cart-item__name text-left">
+                  <div class="item-name">
+                    <a href="#">Творог</a><span>из козьего молока</span>
+                  </div>
+                </td>
+                <td class="cart-item__value">
+                  725 &#8381;
+                </td>
+                <td class="cart-item__counter">
+                  <div class="input-counter">
+                    <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                      -
+                    </button>
+                    <div class="input-group-text">
+                      <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                        data-min="1" data-max="100000" data-step="1" data-unit="">
+                    </div>
+                    <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="cart-item__price">
+                  <div class="product-price">1725 &#8381;</div>
+                </td>
+                <td class="cart-item__actions">
+                  <div>
+                    <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                    <div class="checkbox">
+                      <input type="checkbox" id="product123">
+                      <label for="product123"></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="cart-item">
+                <td class="cart-item__image">
+                  <div class="item-image">
+                    <div class="product-sticker2">
+                      <div class="stiсker stiсker-akcia">
+                        Акция
+                      </div>
+                    </div>
+                    <a href="#"><img src="images/demo/products/thumb2.png" alt=""></a>
+                  </div>
+                </td>
+                <td class="cart-item__name text-left">
+                  <div class="item-name">
+                    <a href="#">Молоко</a><span>из козьего молока</span>
+                  </div>
+                </td>
+                <td class="cart-item__value">
+                  725 &#8381;
+                </td>
+                <td class="cart-item__counter">
+                  <div class="input-counter">
+                    <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                      -
+                    </button>
+                    <div class="input-group-text">
+                      <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                        data-min="1" data-max="100000" data-step="1" data-unit="">
+                    </div>
+                    <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="cart-item__price">
+                  <div class="product-price">1725 &#8381;</div>
+                </td>
+                <td class="cart-item__actions">
+                  <div>
+                    <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                    <div class="checkbox">
+                      <input type="checkbox" id="product123">
+                      <label for="product123"></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="cart-item">
+                <td class="cart-item__image">
+                  <div class="item-image">
+                    <a href="#"><img src="images/demo/products/product_thumb1.jpg" alt=""></a>
+                  </div>
+                </td>
+                <td class="cart-item__name text-left">
+                  <div class="item-name">
+                    <a href="#">Йогурт</a><span>из козьего молока</span>
+                  </div>
+                </td>
+                <td class="cart-item__value">
+                  725 &#8381;
+                </td>
+                <td class="cart-item__counter">
+                  <div class="input-counter">
+                    <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                      -
+                    </button>
+                    <div class="input-group-text">
+                      <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                        data-min="1" data-max="100000" data-step="1" data-unit="">
+                    </div>
+                    <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="cart-item__price">
+                  <div class="product-price">1725 &#8381;</div>
+                </td>
+                <td class="cart-item__actions">
+                  <div>
+                    <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                    <div class="checkbox">
+                      <input type="checkbox" id="product123">
+                      <label for="product123"></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="cart-item">
+                <td class="cart-item__image">
+                  <div class="item-image">
+                    <div class="product-sticker2">
+                      <div class="stiсker stiсker-novinka">
+                        Новинка
+                      </div>
+                    </div>
+                    <a href="#"><img src="images/demo/products/product_thumb2.jpg" alt=""></a>
+                  </div>
+                </td>
+                <td class="cart-item__name text-left">
+                  <div class="item-name">
+                    <a href="#">Сыр</a><span>из козьего молока</span>
+                  </div>
+                </td>
+                <td class="cart-item__value">
+                  725 &#8381;
+                </td>
+                <td class="cart-item__counter">
+                  <div class="input-counter">
+                    <button type="button" class="btn btn-minus btn-number" data-type="minus" data-field="quant[123_1]">
+                      -
+                    </button>
+                    <div class="input-group-text">
+                      <input type="text" name="quant[123_1]" class="form-control input-number input-area" value="6"
+                        data-min="1" data-max="100000" data-step="1" data-unit="">
+                    </div>
+                    <button type="button" class="btn btn-plus btn-number" data-type="plus" data-field="quant[123_1]">
+                      +
+                    </button>
+                  </div>
+                </td>
+                <td class="cart-item__price">
+                  <div class="product-price">1725 &#8381;</div>
+                </td>
+                <td class="cart-item__actions">
+                  <div>
+                    <button class="btn-cart-remove" title="Убрать из корзины"><i class="fa fa-trash"></i></button>
+                    <div class="checkbox">
+                      <input type="checkbox" id="product123">
+                      <label for="product123"></label>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3" class="text-right">Всего:</td>
+                <td><strong>4</strong></td>
+                <td>
+                  <div class="product-price">3725 &#8381;</div>
+                </td>
+                <td> <button class="btn-cart-clear"><i class="fa fa-close"></i> Очистить</button></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  @@include('../includes/_benefits.html')
+  @@include('../includes/_viewed-products.html')
+</div>
+@@include('../includes/footer.html')
