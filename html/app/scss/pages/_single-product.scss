@@ -8,20 +8,17 @@
 
         &__preview {
             margin-bottom: 20px;
-            min-height: 320px;
-            height: 320px;
 
             a {
+                height: 360px;
                 flex: 0 0 100%;
-                height: 100%;
                 display: flex;
                 align-items: center;
-                justify-self: center;
                 justify-content: center;
 
                 img {
                     object-fit: contain;
-                    max-height: 320px;
+                    max-height: 360px !important;
                     min-width: 60%;
                 }
             }
@@ -31,20 +28,25 @@
             .item {
                 a {
                     display: block;
-                }
-
-                img {
-                    width: 100%;
+                    text-align: center;
+                    background: #f2f2f2;
                     border: 1px solid transparent;
-                    padding: 0;
 
                     &:hover {
                         border-color: $orange-color;
                     }
                 }
 
+                img {
+                    display: inline-block;
+                    height: 64px;
+                    max-width: 100%;
+                    padding: 0;
+                    border: none !important;
+                }
+
                 &.current {
-                    img {
+                    a {
                         border-color: $orange-color;
                     }
                 }
