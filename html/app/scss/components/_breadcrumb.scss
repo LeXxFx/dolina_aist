@@ -3,6 +3,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 
+    @include media-breakpoint('lt-md') {
+        overflow: auto;
+    }
+
     ul {
         margin: 0;
         padding: 0;
@@ -10,6 +14,12 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
+
+        @include media-breakpoint('lt-md') {
+            display: block;
+            white-space: nowrap;
+            padding: 0 0 10px 0;
+        }
 
         li {
             font-size: 1.1em;
@@ -19,6 +29,11 @@
             display: flex;
             align-items: center;
             white-space: nowrap;
+
+            @include media-breakpoint('lt-md') {
+                display: inline-block;
+                font-size: .9em;
+            }
 
             &:after {
                 content: ">";
@@ -37,6 +52,10 @@
                 display: block;
                 position: relative;
 
+                @include media-breakpoint('lt-md') {
+                    display: inline-block;
+                }
+        
                 &:hover {
                     color: #fff;
                 }
@@ -45,37 +64,6 @@
             &:last-of-type {
                 &:after {
                     display: none;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: $desktop) {
-    .breadcrumbs {
-        ul {
-            li {
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: $small-mobile) {
-    .breadcrumbs {
-        margin: 0 0 10px 0;
-
-        ul {
-            li {
-                font-size: 12px;
-
-                a,
-                span {
-                    margin: 0 3px;
-                }
-
-                &:after {
-                    font-size: 12px;
                 }
             }
         }

@@ -5,12 +5,21 @@
     margin-bottom: 40px;
     background: #f1f1f1;
 
+    @include media-breakpoint('lt-sm') {
+        padding: 5px;
+        flex-wrap: wrap;
+    }
+
     .benefit-item {
         flex: 0 0 20%;
         padding: 15px;
         background: #fff;
         border-right: 1px solid #e6e6e6;
         text-align: center;
+
+        @include media-breakpoint('lt-sm') {
+            flex: 0 0 50%;
+        }
 
         &__icon {
             display: flex;
@@ -36,6 +45,10 @@
         background: $green-color;
         text-align: center;
         color: #fff;
+
+        @include media-breakpoint('lt-sm') {
+            flex: 0 0 100%;
+        }
 
         p {
             font: bold 24px/1.2 $font-segoe;

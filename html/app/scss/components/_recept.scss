@@ -10,10 +10,19 @@
     .recept-item {
         display: flex;
 
+        @include media-breakpoint('lt-md') {
+            flex-wrap: wrap;
+        }
+
         &__image {
             flex: 0 0 290px;
             margin-right: 30px;
             text-align: center;
+
+            @include media-breakpoint('lt-md') {
+                flex: 0 0 100%;
+                margin: 0 0 30px 0;
+            }
 
             img {
                 margin-bottom: 15px;
@@ -43,6 +52,10 @@
 
         &__text {
             flex: 0 1 auto;
+
+            @include media-breakpoint('lt-md') {
+                flex: 0 0 100%;
+            }
         }
     }
 }

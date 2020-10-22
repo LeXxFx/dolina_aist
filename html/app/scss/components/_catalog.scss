@@ -121,7 +121,11 @@ $product-height: 425px;
                     transition: .3s;
 
                     @include media-breakpoint('lt-lg') {
-                        font-size: 20px;
+                        font-size: 1.6em;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
+                        font-size: 1em;
                     }
                 }
             }
@@ -214,6 +218,10 @@ $product-height: 425px;
                     line-height: 1.2;
                     white-space: nowrap;
                     padding: 5px;
+                }
+
+                @include media-breakpoint('lt-sm') {
+                    white-space: normal;
                 }
 
                 &:hover {

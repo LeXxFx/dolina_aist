@@ -1,10 +1,18 @@
 .single-product {
+    @include media-breakpoint('lt-sm') {
+        padding: 0 10px;
+    }
+
     .product-sticker {
         z-index: 10;
     }
 
     .product-images {
         margin-bottom: 10px;
+
+        @include media-breakpoint('lt-sm') {
+            margin-bottom: 20px;
+        }
 
         &__preview {
             margin-bottom: 20px;
@@ -21,6 +29,15 @@
                     max-height: 360px !important;
                     min-width: 60%;
                 }
+
+                @include media-breakpoint('lt-sm') {
+                    height: 180px;
+
+                    img {
+                        max-height: 180px !important;
+                    }
+                }
+
             }
         }
 
@@ -43,6 +60,10 @@
                     max-width: 100%;
                     padding: 0;
                     border: none !important;
+
+                    @include media-breakpoint('lt-sm') {
+                        height: 38px;
+                    }
                 }
 
                 &.current {
@@ -141,12 +162,24 @@
         justify-content: center;
         margin-bottom: 20px;
 
+        @include media-breakpoint('lt-md') {
+            flex-wrap: wrap;
+        }
+
+        @include media-breakpoint('lt-sm') {
+            margin: 0;
+        }
+
         a {
             margin: 0 20px;
             display: flex;
             align-items: center;
             color: $text-color;
             text-decoration: none;
+
+            @include media-breakpoint('lt-md') {
+                margin: 0 10px 15px 10px;
+            }
 
             &:hover {
                 color: $orange-color;
@@ -176,6 +209,15 @@
             }
         }
 
+        @include media-breakpoint('lt-sm') {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            >span {
+                margin: 0 0 10px 0;
+            }
+        }
+
         .share-list {
             display: flex;
             flex-wrap: wrap;
@@ -200,6 +242,11 @@
         margin-bottom: 40px;
 
         .nav-item {
+            @include media-breakpoint('lt-sm') {
+                flex: 0 0 50%;
+                text-align: center;
+            }
+
             .nav-link {
                 font: 14px/1 $font-consolas;
                 color: #373737;
@@ -236,6 +283,10 @@
             font-size: 30px;
             margin-right: 10px;
             margin-bottom: 5px;
+
+            @include media-breakpoint('lt-sm') {
+                font-size: 24px;
+            }
         }
     }
 
@@ -350,6 +401,14 @@
         strong {
             font-size: 30px;
         }
+
+        @include media-breakpoint('lt-sm') {
+            font-size: 16px;
+
+            strong {
+                font-size: 22px;
+            }
+        }
     }
 
     &__counter {
@@ -365,6 +424,11 @@
             justify-content: space-between;
             padding: 5px;
             margin-bottom: 10px;
+
+            @include media-breakpoint('lt-sm') {
+                max-width: 180px;
+                margin: 0 auto 20px auto;
+            }
 
             .btn {
                 flex: 0 0 25px;
@@ -430,6 +494,11 @@
         margin: 0 0 10px 0;
         text-decoration: none;
 
+        @include media-breakpoint('lt-sm') {
+            text-align: center;
+            justify-content: center;
+        }
+
         i {
             margin: 0 10px 0 0;
         }
@@ -478,15 +547,29 @@
         justify-content: space-between;
         margin-bottom: 30px;
 
+        @include media-breakpoint('lt-sm') {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
         .btn {
             font: 18px/32px $font-consolas;
             border-radius: 32px;
+
+            @include media-breakpoint('lt-sm') {
+                font-size: 16px;
+            }
 
             &-primary {
                 display: flex;
                 align-items: center;
                 padding: 0 25px;
                 border: none;
+
+                @include media-breakpoint('lt-md') {
+                    padding: 0 15px;
+                    font-size: 16px;
+                }
 
                 i {
                     margin-right: 15px;
@@ -496,6 +579,10 @@
             &-link {
                 color: $green-color;
                 text-decoration: underline;
+
+                @include media-breakpoint('lt-md') {
+                    font-size: 16px;
+                }
 
                 &:hover {
                     background: #f7f7f7;
@@ -518,10 +605,20 @@
                 &:first-of-type {
                     margin-right: 30px;
                     text-align: right;
+
+                    @include media-breakpoint('lt-sm') {
+                        margin-right: 15px;
+                    }
+
                 }
 
                 &:last-of-type {
                     margin-left: 30px;
+
+                    @include media-breakpoint('lt-sm') {
+                        margin-left: 15px;
+                    }
+
                 }
 
                 .nav-link {
@@ -529,6 +626,12 @@
                     border: none;
                     font: 30px/1.5 $font-segoe;
                     color: #3d3d3d;
+
+                    @include media-breakpoint('lt-sm') {
+                        font-size: 16px;
+                        white-space: nowrap;
+                        text-align: center;
+                    }
 
                     &.active,
                     &:hover {

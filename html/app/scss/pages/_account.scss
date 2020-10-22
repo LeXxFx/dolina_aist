@@ -10,11 +10,19 @@
             font-weight: bold;
             padding: 15px 20px;
             margin-bottom: 25px;
+
+            @include media-breakpoint('lt-sm') {
+                padding: 10px 15px;
+            }
         }
     }
 
     .form-group {
         margin-bottom: 10px;
+
+        @include media-breakpoint('lt-md') {
+            margin: 0 10px 10px;
+        }
 
         .form-control {
             background: #f7f7f7;
@@ -34,6 +42,11 @@
 
     .form-baton {
         margin-bottom: 20px;
+
+        @include media-breakpoint('lt-md') {
+            text-align: center;
+            margin-bottom: 0;
+        }
 
         .btn {
             line-height: 42px;
@@ -72,6 +85,11 @@
             font-size: 32px;
             color: $primary-color;
             margin: 0 55px 0 10px;
+
+            @include media-breakpoint('lt-md') {
+                margin: 0 25px 0 10px;
+            }
+
         }
     }
 
@@ -82,9 +100,17 @@
     }
 
     .form-links {
+        @include media-breakpoint('lt-md') {
+            text-align: center;
+        }
+
         span {
             display: inline-block;
             margin: 10px 0 0;
+
+            @include media-breakpoint('lt-md') {
+                margin-bottom: 15px;
+            }
         }
 
         a {
@@ -122,10 +148,19 @@
         margin-bottom: 25px;
         text-align: center;
 
+        @include media-breakpoint('lt-md') {
+            padding: 15px 0;
+        }
+
         +p {
             font-size: 16px;
             text-align: center;
             margin: 0 40px 20px 40px;
+
+            @include media-breakpoint('lt-md') {
+                margin: 0 0 20px 0;
+            }
+
         }
     }
 
@@ -136,6 +171,10 @@
 
     &__fields {
         padding: 0 20px;
+
+        @include media-breakpoint('lt-md') {
+            padding: 0;
+        }
 
         .control-label {
             font-size: 16px;
@@ -153,9 +192,17 @@
         padding: 20px 0 0 0;
         margin-bottom: 20px;
 
+        @include media-breakpoint('lt-md') {
+            flex-wrap: wrap;
+        }
+
         .type-item {
             flex: 0 0 45%;
             text-align: center;
+
+            @include media-breakpoint('lt-md') {
+                flex: 0 0 100%;
+            }
 
             button {
                 display: block;
@@ -168,6 +215,10 @@
                 font-size: 18px;
                 font-weight: bold;
                 margin-bottom: 10px;
+
+                @include media-breakpoint('lt-md') {
+                    margin-bottom: 5px;
+                }
 
                 i {
                     margin-right: 10px;
@@ -188,6 +239,10 @@
                 font-size: 16px;
                 font-weight: bold;
                 margin: 0;
+
+                @include media-breakpoint('lt-md') {
+                    margin: 0 0 20px 0;
+                }
             }
         }
     }

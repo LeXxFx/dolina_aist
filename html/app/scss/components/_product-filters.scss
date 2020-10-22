@@ -294,10 +294,19 @@
             &__slider {
                 display: flex;
 
+                @include media-breakpoint('lt-md') {
+                    display: block;
+                }
+
                 >span {
-                    flex: 0 0 55px;
+                    flex: 0 1 55px;
                     font-size: 16px;
                     color: #a9a9a9;
+
+                    @include media-breakpoint('lt-md') {
+                        display: block;
+                        margin: 0 0 10px 0;
+                    }
                 }
 
                 .slider-wrapper {
@@ -381,7 +390,8 @@
                 .noUi-handle {
                     width: 13px;
                     height: 13px;
-                    left: 14px;
+                    right: -6px;
+                    left: auto;
                     top: -6px;
                     background: #679cba;
                     border: none;

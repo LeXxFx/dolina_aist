@@ -2,6 +2,11 @@
     .modal {
         &-dialog {
             min-width: 960px;
+
+            @include media-breakpoint('lt-md') {
+                min-width: 90%;
+                width: 90%;
+            }
         }
 
         &-body {
@@ -37,19 +42,68 @@
             transition: .3s;
             outline: none;
 
+            @include media-breakpoint('lt-md') {
+                z-index: 100;
+                width: 32px;
+                height: 32px;
+                font-size: 36px;
+            }
+
+            @include media-breakpoint('lt-sm') {
+                top: auto;
+                margin-top: 0;
+                bottom: 10px;
+                color: #ccc;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                font-size: 22px;
+            }
+
             &.nav-arrows__left {
                 left: -75px;
 
+                @include media-breakpoint('lt-md') {
+                    left: -35px;
+                }
+
+                @include media-breakpoint('lt-sm') {
+                    left: 10px;
+                }
+
                 &:hover {
                     left: -80px;
+
+                    @include media-breakpoint('lt-md') {
+                        left: -40px;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
+                        left: 5px;
+                    }
                 }
             }
 
             &.nav-arrows__right {
                 right: -75px;
 
+                @include media-breakpoint('lt-md') {
+                    right: -35px;
+                }
+
+                @include media-breakpoint('lt-sm') {
+                    right: 10px;
+                }
+
                 &:hover {
                     right: -80px;
+
+                    @include media-breakpoint('lt-md') {
+                        right: -40px;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
+                        right: 5px;
+                    }
                 }
             }
 
@@ -63,6 +117,10 @@
 .product-preview {
     margin: 0 20px 40px 0;
 
+    @include media-breakpoint('lt-sm') {
+        margin: 0 0 50px 0;
+    }
+
     &__name {
         padding-bottom: 15px;
         margin-bottom: 25px;
@@ -70,6 +128,10 @@
     }
 
     &.single-product {
+        @include media-breakpoint('lt-sm') {
+            padding: 0;
+        }
+
         .product-images {
             margin-bottom: 40px;
             opacity: 0;
@@ -84,6 +146,10 @@
 
         .post {
             margin: 0 20px 20px;
+
+            @include media-breakpoint('lt-sm') {
+                margin: 0 0 40px;
+            }
         }
     }
 
@@ -114,6 +180,11 @@
 
         &__share {
             justify-content: flex-start;
+
+            @include media-breakpoint('lt-sm') {
+                justify-content: center;
+                margin-bottom: 40px;
+            }
         }
 
         &__tools {
@@ -121,6 +192,12 @@
 
             a {
                 margin: 0 20px 0 0;
+
+                @include media-breakpoint('lt-md') {
+                    margin: 0 20px 15px 0;
+                    font-size: 14px;
+                }
+
             }
         }
     }

@@ -13,6 +13,10 @@
     background: #fff;
     margin-bottom: 75px;
 
+    @include media-breakpoint('lt-sm') {
+        padding: 5px;
+    }
+
     .recomend-list,
     .viewed-list {
         display: flex;
@@ -52,6 +56,10 @@
                 line-height: 26px;
                 background: #fff;
 
+                @include media-breakpoint('lt-md') {
+                    display: none !important;
+                }
+
                 &:hover {
                     color: $second-color;
                     border-color: $second-color;
@@ -69,9 +77,19 @@
             margin: 0 7px;
             overflow: hidden;
 
+            @include media-breakpoint('lt-sm') {
+                flex: 0 0 calc(50% - 14px);
+                margin-bottom: 10px;
+            }
+
             .product {
                 &-image {
                     height: 190px;
+
+                    @include media-breakpoint('lt-sm') {
+                        height: 120px;
+                    }
+
                 }
 
                 &-buttons {

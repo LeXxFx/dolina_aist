@@ -52,6 +52,10 @@
         padding: 0;
         border: none;
 
+        @include media-breakpoint('lt-sm') {
+            display: none;
+        }
+
         span {
             display: inline-block;
             font-size: 13px;

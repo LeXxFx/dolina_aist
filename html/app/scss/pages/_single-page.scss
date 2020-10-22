@@ -4,6 +4,10 @@
         color: $primary-color;
         text-align: center;
         margin: 0 0 20px 0;
+
+        @include media-breakpoint('lt-md') {
+            font-size: 24px;
+        }
     }
 
     .img {
@@ -17,8 +21,16 @@
     font-family: $font-consolas;
     background: url(../images/cheese.png) no-repeat center 50px;
 
+    @include media-breakpoint('lt-md') {
+        flex-wrap: wrap;
+    }
+
     &__col {
         flex: 0 0 290px;
+
+        @include media-breakpoint('lt-md') {
+            flex: 0 0 100%;
+        }
 
         +.super__col {
             text-align: right;
@@ -173,6 +185,10 @@
 
     .swiper-slide {
         width: 33.33%;
+
+        @include media-breakpoint('lt-md') {
+            width: 100%;
+        }
 
         img {
             width: 100%;

@@ -33,12 +33,21 @@
             margin-bottom: 10px;
             display: flex;
             align-items: center;
+
+            @include media-breakpoint('lt-md') {
+                flex-wrap: wrap;
+            }
         }
 
         &-heading {
             font-size: 26px;
             color: #222;
             text-transform: uppercase;
+
+            @include media-breakpoint('lt-md') {
+                margin-bottom: 10px;
+                flex: 0 0 100%;
+            }
         }
 
         &-filter {
@@ -47,9 +56,17 @@
             align-items: center;
             justify-content: space-between;
 
+            @include media-breakpoint('lt-md') {
+                flex-wrap: wrap;
+            }
+
             >div {
                 display: flex;
                 align-items: center;
+
+                @include media-breakpoint('lt-md') {
+                    flex-wrap: wrap;
+                }
 
                 >span {
                     margin-right: 10px;
@@ -58,6 +75,11 @@
             }
 
             &__date {
+                @include media-breakpoint('lt-md') {
+                    flex: 0 0 100%;
+                    margin-bottom: 10px;
+                }
+
                 >span {
                     color: #3d3d3d;
                     font-size: 18px;
@@ -74,6 +96,18 @@
                 >span {
                     color: #919191;
                     font-size: 16px;
+                }
+
+                @include media-breakpoint('lt-md') {
+                    flex: 0 0 100%;
+                    margin-left: 0;
+                    margin-bottom: 10px;
+
+                    >span {
+                        color: #3d3d3d;
+                        font-size: 18px;
+                    }
+
                 }
 
                 .dropdown {
@@ -108,10 +142,16 @@
 
             &__table {
                 overflow: auto;
+                border: 1px solid #d2d2d2;
 
                 table {
                     width: 100%;
                     border: 1px solid #d2d2d2;
+
+                    @include media-breakpoint('lt-md') {
+                        min-width: 680px;
+                        border: none;
+                    }
 
                     th,
                     td {
@@ -155,6 +195,10 @@
                                     display: flex;
                                     text-decoration: none;
                                     color: #17619e;
+
+                                    @include media-breakpoint('lt-md') {
+                                        width: 180px;
+                                    }
 
                                     &:hover {
                                         color: $orange-color;
@@ -311,20 +355,42 @@
                         align-items: center;
                         border-right: 1px solid #d2d2d2;
 
+                        @include media-breakpoint('lt-md') {
+                            flex-wrap: wrap;
+                            text-align: center;
+                            display: block;
+                            flex: 0 0 100%;
+                            border: none;
+                        }
+
                         >span {
                             color: #3d3d3d;
                             font-size: 18px;
                             margin-right: 10px;
+
+                            @include media-breakpoint('lt-md') {
+                                display: block;
+                                margin: 0 0 10px 0;
+                            }
                         }
 
                         .form-date-input {
                             width: 190px;
+
+                            @include media-breakpoint('lt-md') {
+                                margin: 0 auto;
+                            }
                         }
                     }
 
                     &-status {
                         flex: 0 1 220px;
                         border-right: 1px solid #d2d2d2;
+
+                        @include media-breakpoint('lt-md') {
+                            flex: 0 0 100%;
+                            border: none;
+                        }
 
                         a {
                             display: flex;
@@ -350,18 +416,32 @@
                     }
 
                     &-counter {
+                        @include media-breakpoint('lt-md') {
+                            flex: 0 0 100%;
+                            text-align: center;
+                        }
+
                         strong {
                             font-size: 24px;
                         }
                     }
 
                     &-sum {
-                        margin-left: auto;
                         font-size: 24px;
                         font-weight: bold;
+
+                        @include media-breakpoint('lt-md') {
+                            flex: 0 0 50%;
+                            text-align: center;
+                        }
                     }
 
-                    &-action {}
+                    &-action {
+                        @include media-breakpoint('lt-md') {
+                            flex: 0 0 50%;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
@@ -370,6 +450,11 @@
             background: #f1f1f1;
             padding: 30px 25px;
             margin-bottom: 60px;
+
+            @include media-breakpoint('lt-md') {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
 
             &__form {
                 .control-label {
@@ -397,6 +482,10 @@
                     flex-wrap: wrap;
                     align-items: center;
 
+                    @include media-breakpoint('lt-md') {
+                        justify-content: center;
+                    }
+
                     &__links {
                         a {
                             display: inline-block;
@@ -407,6 +496,10 @@
                             color: #3d3d3d;
                             text-transform: uppercase;
                             border-radius: 18px;
+
+                            @include media-breakpoint('lt-md') {
+                                margin-bottom: 10px;
+                            }
 
                             &:hover {
                                 text-decoration: none;
@@ -422,11 +515,19 @@
                     &__batons {
                         margin-left: auto;
 
+                        @include media-breakpoint('lt-md') {
+                            text-align: center;
+                        }
+
                         .btn {
                             line-height: 40px;
                             height: auto;
                             border-radius: 22px;
                             padding: 0 20px;
+
+                            @include media-breakpoint('lt-md') {
+                                margin-bottom: 10px;
+                            }
 
                             &-link {
                                 color: #3d3d3d;

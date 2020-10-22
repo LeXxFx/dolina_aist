@@ -43,19 +43,38 @@ img {
     margin-bottom: 40px;
     background: #fff;
 
+    @include media-breakpoint('lt-sm') {
+        padding: 20px 10px;
+    }
+
     &__inner {
         display: flex;
+
+        @include media-breakpoint('lt-md') {
+            flex-wrap: wrap;
+        }
     }
 
     .sidebar {
         flex: 0 0 280px;
         margin-right: 35px;
         margin-bottom: 15px;
+
+        @include media-breakpoint('lt-md') {
+            flex: 0 1 100%;
+            order: 1;
+            margin: 0 10px 40px 10px;
+        }
     }
 
     .content {
         flex: 1 1 auto;
         margin-bottom: 15px;
+
+        @include media-breakpoint('lt-md') {
+            order: 0;
+            margin: 0 0 20px 0;
+        }
     }
 }
 

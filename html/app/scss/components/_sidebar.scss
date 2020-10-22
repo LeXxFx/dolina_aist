@@ -248,6 +248,10 @@
         margin: 0 0 40px 0;
         padding: 0 0 20px 0;
 
+        @include media-breakpoint('lt-md') {
+            margin-bottom: 0;
+        }
+
         &.nav-accordion {
             padding-bottom: 0;
         }

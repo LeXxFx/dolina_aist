@@ -2,6 +2,10 @@
     display: flex;
     margin-bottom: 40px;
 
+    @include media-breakpoint('lt-md') {
+        margin-bottom: 20px;
+    }
+
     &-heading {
         font-size: 19px;
         line-height: 1.2;
@@ -9,6 +13,10 @@
         margin-bottom: 20px;
         padding-left: 40px;
         position: relative;
+
+        @include media-breakpoint('lt-md') {
+            font-size: 16px;
+        }
 
         i {
             position: absolute;
@@ -149,8 +157,16 @@
     &__user-type {
         display: flex;
 
+        @include media-breakpoint('lt-md') {
+            flex-wrap: wrap;
+        }
+
         .radio {
             margin: 0 45px 20px 0;
+
+            @include media-breakpoint('lt-md') {
+                margin: 0 0 20px 0;
+            }
 
             label {
                 margin: 0;

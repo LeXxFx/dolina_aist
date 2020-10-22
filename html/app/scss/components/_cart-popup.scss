@@ -20,6 +20,10 @@
     visibility: hidden;
     opacity: 0;
 
+    @include media-breakpoint('lt-sm') {
+        width: 100%;
+    }
+
     &__top {
         border-top: 3px solid $green-color;
         border-bottom: 1px solid #cfcfcf;

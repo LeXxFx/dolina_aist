@@ -20,7 +20,30 @@ var Home = function () {
 			dots: false,
 			prevArrow: '<a class="slick-prev"><i class="fa fa-long-arrow-alt-left"></i></a>',
 			nextArrow: '<a class="slick-next"><i class="fa fa-long-arrow-alt-right"></i></a>',
-			adaptiveHeight: true
+			adaptiveHeight: true,
+			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3
+					}
+				},
+				{
+					breakpoint: 992,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 2
+					}
+				},
+				{
+					breakpoint: 500,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1
+					}
+				}
+			]
 		});
 
 		$(".navi .menu-item.has-child").on("mouseenter", function () {

@@ -17,6 +17,10 @@
             left: -100px;
             top: -140px;
             z-index: 0;
+
+            @include media-breakpoint('lt-sm') {
+                display: none;
+            }
         }
 
         >div {
@@ -86,6 +90,11 @@
             left: -120px;
             bottom: -80px;
             z-index: 0;
+
+            @include media-breakpoint('lt-sm') {
+                max-width: calc(100% + 30px);
+                left: -15px;
+            }
         }
 
         .site-name {
@@ -319,6 +328,14 @@
                     display: block;
                     margin-right: 50px;
 
+                    @include media-breakpoint('lt-lg') {
+                        margin-right: 30px;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
+                        flex: 0 0 90px;
+                    }
+
                     img {
                         height: 55px;
                     }
@@ -327,21 +344,45 @@
                 .col-delivary {
                     color: $primary-color;
                     margin-right: 50px;
+                    white-space: nowrap;
+
+                    @include media-breakpoint('lt-lg') {
+                        margin-right: 30px;
+                    }
                 }
 
                 .col-phone {
                     margin-right: 50px;
 
+                    @include media-breakpoint('lt-lg') {
+                        margin-right: 30px;
+                    }
+
                     .link-callback {
                         color: $primary-color;
+
+                        @include media-breakpoint('lt-md') {
+                            display: none;
+                        }
                     }
                 }
 
                 .col-cart {
+                    @include media-breakpoint('lt-sm') {
+                        flex: 0 0 auto;
+                        margin-left: auto;
+                        display: none;
+                    }
+
                     a {
                         display: flex;
                         align-items: center;
                         text-decoration: underline;
+                        white-space: nowrap;
+
+                        @include media-breakpoint('lt-lg') {
+                            margin-right: 20px;
+                        }
 
                         &:hover {
                             text-decoration: none;
@@ -354,9 +395,21 @@
                 }
 
                 .col-account {
+                    @include media-breakpoint('lt-sm') {
+                        flex: 0 0 auto;
+                        margin-left: 0;
+                    }
+
                     .link-account {
                         color: $primary-color;
                     }
+
+                    @include media-breakpoint('lt-md') {
+                        .socials {
+                            display: none;
+                        }
+                    }
+
                 }
             }
         }
