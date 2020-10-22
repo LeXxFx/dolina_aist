@@ -111,9 +111,9 @@
         &__content {
             padding: 60px 90px 60px 90px;
 
-            @include media-breakpoint('lt-sm') {
+            @include media-breakpoint('lt-md') {
                 position: inherit;
-                padding: 40px 15px 20px 15px;
+                padding: 40px 15px 40px 15px;
             }
         }
 
@@ -140,18 +140,17 @@
                 font-size: 60px;
                 margin-right: 10px;
                 padding: 15px 0;
-
-                @include media-breakpoint('lt-sm') {
-                    margin: 0 auto;
-                }
             }
         }
 
         &-form {
             margin-bottom: 15px;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
+
+            @include media-breakpoint('lt-sm') {
+                flex-wrap: wrap;
+            }
 
             .col-text {
                 font-size: 22px;
@@ -159,6 +158,10 @@
                 color: #fff;
                 margin-bottom: 15px;
                 margin-right: 35px;
+
+                @include media-breakpoint('lt-md') {
+                    font-size: 18px;
+                }
 
                 @include media-breakpoint('lt-sm') {
                     font-size: 16px;
@@ -189,6 +192,10 @@
                     transition: .3s;
                     outline: none;
 
+                    @include media-breakpoint('lt-md') {
+                        font-size: 14px;
+                    }
+
                     @include media-breakpoint('lt-sm') {
                         padding-right: 130px;
                     }
@@ -213,7 +220,7 @@
                     color: #fff;
                     transition: .3s;
 
-                    @include media-breakpoint('lt-sm') {
+                    @include media-breakpoint('lt-md') {
                         width: 120px;
                         height: 48px;
                         font-size: 14px;
@@ -337,7 +344,7 @@
             align-items: center;
             justify-content: center;
 
-            @include media-breakpoint('lt-sm') {
+            @include media-breakpoint('lt-md') {
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
@@ -354,7 +361,7 @@
                 color: #fff;
                 border-radius: 6px;
 
-                @include media-breakpoint('lt-sm') {
+                @include media-breakpoint('lt-md') {
                     flex: 0 0 calc(50% - 20px);
                     margin: 0 10px 10px 10px;
                 }
@@ -363,7 +370,7 @@
                     font-size: 48px;
                     line-height: 1;
 
-                    @include media-breakpoint('lt-sm') {
+                    @include media-breakpoint('lt-md') {
                         font-size: 36px;
                     }
                 }
@@ -372,7 +379,7 @@
                     font-size: 27px;
                     margin: 0;
 
-                    @include media-breakpoint('lt-sm') {
+                    @include media-breakpoint('lt-md') {
                         font-size: 20px;
                     }
                 }
@@ -388,7 +395,7 @@
             text-align: center;
             padding: 150px 15px 60px 460px;
 
-            @include media-breakpoint('lt-sm') {
+            @include media-breakpoint('lt-md') {
                 padding: 220px 15px 40px 15px;
             }
 
@@ -396,7 +403,7 @@
                 font: 30px/1.2 $font-segoe;
                 margin-bottom: 15px;
 
-                @include media-breakpoint('lt-sm') {
+                @include media-breakpoint('lt-md') {
                     font-size: 22px;
                 }
 
@@ -407,7 +414,7 @@
                 font-size: 38px;
                 text-transform: uppercase;
 
-                @include media-breakpoint('lt-sm') {
+                @include media-breakpoint('lt-md') {
                     font-size: 32px;
                 }
             }
@@ -420,8 +427,11 @@
     background: url(../images/about_bg.png) no-repeat calc(50% - 50px) top;
     position: relative;
 
-    @include media-breakpoint('lt-sm') {
+    @include media-breakpoint('lt-lg') {
         height: auto;
+    }
+
+    @include media-breakpoint('lt-sm') {
         background: #fff;
         border-radius: 32px 32px 0 0;
         margin: 0 15px;
@@ -432,6 +442,10 @@
             position: relative;
             z-index: 10;
             padding: 120px 550px 0 25px;
+
+            @include media-breakpoint('lt-lg') {
+                padding: 100px 450px 0 25px;
+            }
 
             @include media-breakpoint('lt-sm') {
                 padding: 20px 15px;
@@ -455,6 +469,11 @@
             >a {
                 font-family: $font-consolas;
                 color: $second-color;
+                display: inline-block;
+
+                @include media-breakpoint('lt-lg') {
+                    margin-bottom: 25px;
+                }
 
                 i {
                     margin-left: 5px;

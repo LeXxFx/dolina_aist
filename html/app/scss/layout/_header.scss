@@ -62,13 +62,15 @@
             justify-content: space-between;
             align-items: center;
 
+            @include media-breakpoint('lt-lg') {
+                img {
+                    max-height: 90px;
+                }
+            }
+
             @include media-breakpoint('lt-sm') {
                 .logo {
                     margin-right: 20px;
-                }
-
-                img {
-                    max-height: 90px;
                 }
             }
 
@@ -92,6 +94,12 @@
             text-transform: uppercase;
             color: $primary-color;
 
+            @include media-breakpoint('lt-lg') {
+                font-size: 24px;
+                text-align: center;
+                margin: 0 auto;
+            }
+
             @include media-breakpoint('lt-sm') {
                 font-size: 15px;
                 text-align: center;
@@ -111,6 +119,11 @@
         .header {
             &-search {
                 margin-left: auto;
+
+                @include media-breakpoint('lt-md') {
+                    display: none;
+                }
+
             }
 
             &-wish {
@@ -150,6 +163,7 @@
                 &-sum {
                     font-size: 18px;
                     font-weight: bold;
+                    white-space: nowrap;
                 }
 
                 .icon-counter {
@@ -187,7 +201,11 @@
         display: flex;
         align-items: center;
 
-        @include media-breakpoint('lt-sm') {
+        @include media-breakpoint('lt-lg') {
+            font-size: 18px;
+        }
+
+        @include media-breakpoint('lt-md') {
             display: none;
         }
 
@@ -201,6 +219,16 @@
         display: flex;
         align-items: center;
 
+        @include media-breakpoint('lt-lg') {
+            flex-wrap: wrap;
+        }
+
+        @include media-breakpoint('lt-md') {
+            width: auto;
+            max-width: 100%;
+            flex: 1 auto;
+        }
+
         @include media-breakpoint('lt-sm') {
             display: none;
         }
@@ -209,6 +237,10 @@
             font-size: 26px;
             display: flex;
             align-items: center;
+
+            @include media-breakpoint('lt-lg') {
+                font-size: 22px;
+            }
 
             i {
                 margin-right: 7px;
@@ -220,6 +252,10 @@
             font-size: 15px;
             color: #90bd0f;
             text-decoration: underline;
+
+            @include media-breakpoint('lt-lg') {
+                font-size: 14px;
+            }
 
             &:hover {
                 text-decoration: none;

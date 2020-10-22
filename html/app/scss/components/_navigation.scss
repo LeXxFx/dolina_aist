@@ -1,6 +1,11 @@
 ﻿.navi {
     padding: 0 17px;
 
+    @include media-breakpoint('lt-md') {
+        padding: 0 10px;
+        flex: 1 auto;
+    }
+
     .toggle-menu {
         display: none;
     }
@@ -30,8 +35,9 @@
             left: 0;
             top: 100%;
             background: $primary-color;
-            padding: 10px 0;
+            padding: 10px 0 0;
             box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.3);
+            width: 100%;
         }
 
         >li {
@@ -39,14 +45,14 @@
             margin-right: 15px;
 
             @include media-breakpoint('md') {
-                margin-right: 30px;
-            }
-
-            @include media-breakpoint('sm') {
-                margin-right: 10px;
+                margin-right: 20px;
             }
 
             @include media-breakpoint('lt-md') {
+                margin-right: 10px;
+            }
+
+            @include media-breakpoint('lt-sm') {
                 margin: 0;
                 padding: 0;
             }
@@ -63,6 +69,10 @@
                     transition: .1s;
 
                     @include media-breakpoint('lt-md') {
+                        font-size: 12px;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
                         top: 5px;
                         right: 10px;
                         font-size: 14px;
@@ -88,12 +98,17 @@
                     text-decoration: none;
                 }
 
-                @include media-breakpoint('md') {
-                    font-size: 15px;
+                @include media-breakpoint('lt-lg') {
+                    font-size: 18px;
+                    padding: 14px 3px;
                 }
 
                 @include media-breakpoint('lt-md') {
-                    font-size: 14px;
+                    font-size: 15px;
+                }
+
+                @include media-breakpoint('lt-sm') {
+                    font-size: 16px;
                     white-space: normal;
                     padding: 7px 10px;
                     height: auto;
@@ -124,6 +139,10 @@
                         right: 0;
                         opacity: 1;
                         visibility: visible;
+
+                        @include media-breakpoint('lt-sm') {
+                            display: none !important;
+                        }
                     }
                 }
 
@@ -131,6 +150,10 @@
                     opacity: 1;
                     visibility: visible;
                     transform: translateY(3px);
+
+                    @include media-breakpoint('lt-sm') {
+                        transform: none;
+                    }
                 }
             }
 
@@ -157,7 +180,7 @@
                     left: -15px;
                 }
 
-                @include media-breakpoint('lt-md') {
+                @include media-breakpoint('lt-sm') {
                     position: static;
                     visibility: visible;
                     opacity: 1;
@@ -189,6 +212,11 @@
                             padding: 5px 0;
                         }
 
+                        @include media-breakpoint('lt-sm') {
+                            font-size: 16px;
+                            padding: 10px 0;
+                        }
+
                         &:hover {
                             text-decoration: none;
                             color: $second-color;
@@ -201,6 +229,14 @@
                     padding: 0;
                     background: #fff;
                     box-shadow: 5px 0 68px rgba(0, 0, 0, .78);
+
+                    @include media-breakpoint('lt-lg') {
+                        width: 580px;
+                    }
+
+                    @include media-breakpoint('lt-sm') {
+                        width: 100%;
+                    }
                 }
 
                 .mega-menu {
@@ -220,11 +256,16 @@
                         &:hover {
                             color: $orange-color;
                         }
+
+                        @include media-breakpoint('lt-sm') {
+                            display: none;
+                        }
                     }
 
                     .nav {
                         &-list {
                             display: flex;
+                            flex-wrap: wrap;
 
                             .slick {
                                 &-list {
@@ -252,6 +293,10 @@
                                     font-size: 18px;
                                     line-height: 34px;
 
+                                    @include media-breakpoint('lt-sm') {
+                                        top: 90%;
+                                    }
+
                                     &:hover {
                                         border-color: $green-color;
                                         color: $green-color;
@@ -259,10 +304,18 @@
 
                                     &.slick-next {
                                         right: -17px;
+
+                                        @include media-breakpoint('lt-sm') {
+                                            right: 5px;
+                                        }
                                     }
 
                                     &.slick-prev {
                                         left: -17px;
+
+                                        @include media-breakpoint('lt-sm') {
+                                            left: 5px;
+                                        }
                                     }
                                 }
                             }
@@ -270,9 +323,14 @@
 
                         &-item {
                             flex: 0 0 25%;
+                            height: 520px;
                             background: #fefefe no-repeat right bottom fixed;
                             background-size: cover;
                             position: relative;
+
+                            @include media-breakpoint('lt-sm') {
+                                height: auto;
+                            }
 
                             &:nth-child(2n + 2) {
                                 background-color: #f0efec;
@@ -282,6 +340,10 @@
                                 position: relative;
                                 z-index: 1;
                                 padding: 50px 20px 160px 25px;
+
+                                @include media-breakpoint('lt-sm') {
+                                    padding: 20px 20px 160px 20px;
+                                }
                             }
 
                             &__image {
@@ -317,7 +379,7 @@
                             }
 
                             a {
-                                font-size: 18px;
+                                font-size: 1.2em;
                                 position: relative;
                                 display: inline-block;
 
@@ -368,8 +430,9 @@
 
                             &__link {
                                 a {
-                                    padding-right: 30px;
+                                    padding-right: 25px;
                                     color: $second-color;
+                                    word-spacing: -2px;
 
                                     &:before {
                                         right: 0;

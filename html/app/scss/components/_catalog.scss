@@ -10,7 +10,7 @@ $product-height: 425px;
         margin: 0 -8px;
         height: calc(#{$image-height} + 32px);
 
-        @include media-breakpoint('lt-sm') {
+        @include media-breakpoint('lt-lg') {
             flex-wrap: wrap;
             height: auto;
         }
@@ -22,6 +22,10 @@ $product-height: 425px;
             height: $image-height;
             overflow: hidden;
             transition: .2s;
+
+            @include media-breakpoint('lt-lg') {
+                height: auto;
+            }
 
             @include media-breakpoint('lt-sm') {
                 flex: 0 0 calc(50% - 16px);
@@ -116,7 +120,7 @@ $product-height: 425px;
                     text-transform: uppercase;
                     transition: .3s;
 
-                    @include media-breakpoint('lt-sm') {
+                    @include media-breakpoint('lt-lg') {
                         font-size: 20px;
                     }
                 }
@@ -128,6 +132,7 @@ $product-height: 425px;
 .products {
     margin-top: -10px;
     position: relative;
+    z-index: 101 !important;
 
     @include media-breakpoint('lt-sm') {
         margin-top: 0;
@@ -143,7 +148,7 @@ $product-height: 425px;
         justify-content: space-between;
         align-items: center;
 
-        @include media-breakpoint('lt-sm') {
+        @include media-breakpoint('lt-md') {
             display: block;
         }
     }
@@ -156,7 +161,11 @@ $product-height: 425px;
         color: #fff;
         border-radius: 0 40px 0 0;
 
-        @include media-breakpoint('lt-sm') {
+        @include media-breakpoint('lt-lg') {
+            font-size: 18px;
+        }
+
+        @include media-breakpoint('lt-md') {
             border-radius: 0 20px 0 0;
             margin-bottom: 10px;
             font-size: 18px;
@@ -169,7 +178,7 @@ $product-height: 425px;
         padding: 0;
         display: flex;
 
-        @include media-breakpoint('lt-sm') {
+        @include media-breakpoint('lt-md') {
             flex-wrap: wrap;
             justify-content: space-between;
         }
@@ -177,13 +186,16 @@ $product-height: 425px;
         li {
             margin-left: 20px;
 
-            @include media-breakpoint('lt-sm') {
+            @include media-breakpoint('lt-md') {
                 margin: 0 0 10px 0;
-                flex: 0 0 calc(50% - 5px);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+            }
+
+            @include media-breakpoint('lt-sm') {
+                flex: 0 0 calc(50% - 5px);
                 border: 1px solid #fff;
             }
 
@@ -197,9 +209,10 @@ $product-height: 425px;
                 text-decoration: none;
                 text-shadow: 0 0 16px #fff;
 
-                @include media-breakpoint('lt-sm') {
+                @include media-breakpoint('lt-lg') {
                     font-size: 16px;
                     line-height: 1.2;
+                    white-space: nowrap;
                     padding: 5px;
                 }
 
@@ -314,6 +327,10 @@ $product-height: 425px;
     .product {
         flex: 0 0 310px;
         height: $product-height;
+
+        @include media-breakpoint('lt-sm') {
+            height: auto;
+        }
 
         &-price {
             display: flex;
