@@ -402,6 +402,7 @@ $product-height: 425px;
             .product {
                 &__wrapper {
                     box-shadow: 8px 0 19px rgba(0, 0, 0, .19);
+                    height: auto;
                 }
 
                 &-price {
@@ -410,6 +411,11 @@ $product-height: 425px;
                         font-weight: bold;
                         font-size: 18px;
                     }
+                }
+                &-name {
+                    white-space: normal;
+                    overflow: inherit;
+                    height: auto;
                 }
 
                 &__bottom {
@@ -427,6 +433,8 @@ $product-height: 425px;
         background: #fff;
         padding: 15px;
         width: 310px;
+        height: 410px;
+        overflow: hidden;
     }
 
     &__bottom {
@@ -522,6 +530,11 @@ $product-height: 425px;
 
     &-name {
         font-size: 27px;
+        line-height: 1.2;
+        white-space: nowrap;
+        height: 30px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &-text {
