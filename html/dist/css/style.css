@@ -184,7 +184,7 @@
     -webkit-transform: translate(0) scale(1);
             transform: translate(0) scale(1); } }
 
-.navi .dd > li.has-child:after, .navi .dd > li .sub-menu .mega-menu .nav-item a:before, .sidebar .categories ul > li.has-child > a:after, .sidebar .categories ul > li > ul > li > a:after, .sidebar .nav-sidebar__title.title-accordion:after, .form-date-input:after, .filters .filter-collapsable .filter__top:after, .filters .filter-list__list li > a:after, .single-product__price .col-options .select-options:after, .order-history .order-history__table .order-number:after {
+.navi .dd > li.has-child:after, .navi .dd > li .sub-menu .mega-menu .nav-item a:before, .sidebar .categories ul > li.has-child > a:after, .sidebar .categories ul > li > ul > li > a:after, .sidebar .nav-sidebar__title.title-accordion:after, .form-date-input:after, .filters .filter-collapsable .filter__top:after, .filters .filter-list__list li > a:after, .col-options .select-options:after, .order-history .order-history__table .order-number:after {
   font-family: "Font Awesome 5 Free";
   font-size: 32px;
   font-weight: bold; }
@@ -1205,10 +1205,13 @@
       color: #5e9423;
       font-weight: bold;
       font-size: 18px; }
+    .product.swiper-slide-active:hover .product-image, .product.swiper-slide-next:hover .product-image, .product.swiper-slide-prev:hover .product-image {
+      height: 180px; }
     .product.swiper-slide-active:hover .product-name, .product.swiper-slide-next:hover .product-name, .product.swiper-slide-prev:hover .product-name {
       white-space: normal;
       overflow: inherit;
-      height: auto; }
+      height: auto;
+      font-size: 20px; }
     .product.swiper-slide-active:hover .product__bottom, .product.swiper-slide-next:hover .product__bottom, .product.swiper-slide-prev:hover .product__bottom {
       height: auto;
       overflow: initial; }
@@ -1270,11 +1273,12 @@
       margin: 0 4px; }
   .product-image {
     margin-bottom: 10px;
-    height: 250px;
+    height: 220px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
-        justify-content: center; }
+        justify-content: center;
+    transition: .1s; }
     .product-image.image-preview--loading {
       background: url(../images/ajax-loader.gif) no-repeat center center; }
     .product-image.image-preview--init img {
@@ -1284,7 +1288,7 @@
       max-height: 100%;
       max-width: 100%; }
   .product-name {
-    font-size: 27px;
+    font-size: 24px;
     line-height: 1.2;
     white-space: nowrap;
     height: 30px;
@@ -1356,6 +1360,10 @@
     color: #135992; }
     .product-link i {
       margin-left: 10px; }
+  .product .col-options {
+    margin: 10px 15px; }
+    .product .col-options .select-options {
+      margin-bottom: 15px; }
 
 .price-hint {
   display: inline-block;
@@ -4439,43 +4447,6 @@ img {
     font: 14px/1.2 "Consolas"; }
     .single-product__price .col-price__text p {
       margin: 0; }
-  .single-product__price .col-options__top {
-    margin: 15px 0 10px 0; }
-    .single-product__price .col-options__top > span {
-      font: 14px "Consolas"; }
-    .single-product__price .col-options__top .price-hint-content {
-      text-align: center;
-      line-height: 1.3; }
-  .single-product__price .col-options .select-options {
-    position: relative; }
-    .single-product__price .col-options .select-options:after {
-      content: "\f107";
-      display: block;
-      position: absolute;
-      right: 15px;
-      top: 12px;
-      font-size: 16px;
-      line-height: 1;
-      color: #272727; }
-    .single-product__price .col-options .select-options select {
-      width: 100%;
-      font: bold 16px/1.3 "Consolas";
-      -webkit-appearance: none;
-      -moz-appearance: none;
-           appearance: none;
-      color: #272727;
-      border: 1px solid #dadada;
-      line-height: 1;
-      outline: 0;
-      padding: 0.65em 2.5em 0.55em 0.75em;
-      border-radius: 22px;
-      background: #f7f7f7; }
-      .single-product__price .col-options .select-options select:hover {
-        border-color: #cdcdcd;
-        background: #eaeaea; }
-      .single-product__price .col-options .select-options select:active {
-        border-color: #cdcdcd;
-        background: #eaeaea; }
 
 .single-product__promo {
   color: #fca207;
@@ -4797,6 +4768,7 @@ img {
       border: none;
       padding: 0;
       width: auto;
+      height: auto;
       position: relative; }
       .product-list .product__wrapper .product-image {
         -ms-flex-align: start;
@@ -4905,6 +4877,49 @@ img {
           display: block; }
           .product-list .product__wrapper .product-price > span.product-price-old {
             font-size: 21px; }
+      .product-list .product__wrapper .col-options {
+        margin: 10px 15px; }
+        .product-list .product__wrapper .col-options .select-options {
+          margin-bottom: 15px; }
+
+.col-options__top {
+  margin: 15px 0 10px 0; }
+  .col-options__top > span {
+    font: 14px "Consolas"; }
+  .col-options__top .price-hint-content {
+    text-align: center;
+    line-height: 1.3; }
+
+.col-options .select-options {
+  position: relative; }
+  .col-options .select-options:after {
+    content: "\f107";
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    font-size: 16px;
+    line-height: 1;
+    color: #272727; }
+  .col-options .select-options select {
+    width: 100%;
+    font: bold 16px/1.3 "Consolas";
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+    color: #272727;
+    border: 1px solid #dadada;
+    line-height: 1;
+    outline: 0;
+    padding: 0.65em 2.5em 0.55em 0.75em;
+    border-radius: 22px;
+    background: #f7f7f7; }
+    .col-options .select-options select:hover {
+      border-color: #cdcdcd;
+      background: #eaeaea; }
+    .col-options .select-options select:active {
+      border-color: #cdcdcd;
+      background: #eaeaea; }
 
 .cart {
   font-family: "Consolas"; }
