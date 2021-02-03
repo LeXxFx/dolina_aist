@@ -4891,7 +4891,10 @@ img {
     line-height: 1.3; }
 
 .col-options .select-options {
-  position: relative; }
+  position: relative;
+  background: #f7f7f7;
+  border-radius: 22px;
+  overflow: hidden; }
   .col-options .select-options:after {
     content: "\f107";
     display: block;
@@ -4900,7 +4903,8 @@ img {
     top: 12px;
     font-size: 16px;
     line-height: 1;
-    color: #272727; }
+    color: #272727;
+    z-index: 0; }
   .col-options .select-options select {
     width: 100%;
     font: bold 16px/1.3 "Consolas";
@@ -4908,18 +4912,22 @@ img {
     -moz-appearance: none;
          appearance: none;
     color: #272727;
-    border: 1px solid #dadada;
     line-height: 1;
     outline: 0;
     padding: 0.65em 2.5em 0.55em 0.75em;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #dadada;
     border-radius: 22px;
-    background: #f7f7f7; }
+    background: none; }
     .col-options .select-options select:hover {
-      border-color: #cdcdcd;
-      background: #eaeaea; }
+      border-color: #cdcdcd; }
     .col-options .select-options select:active {
-      border-color: #cdcdcd;
-      background: #eaeaea; }
+      border-color: #cdcdcd; }
+  .col-options .select-options:hover {
+    background: #eaeaea; }
+    .col-options .select-options:hover select {
+      border-color: #cdcdcd; }
 
 .cart {
   font-family: "Consolas"; }
