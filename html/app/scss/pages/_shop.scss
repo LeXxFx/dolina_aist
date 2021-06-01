@@ -187,9 +187,11 @@
                 }
 
                 &-name {
-                    @include media-breakpoint('lt-sm') {
-                        font-size: 1.4em;
-                    }
+                    height: 72px;
+                    white-space: normal;
+                    font-size: 1.4em;
+
+                    @include media-breakpoint('lt-sm') {}
                 }
 
                 &-tools {
@@ -264,14 +266,6 @@
                         margin: 0;
                         font-size: 12px;
                         line-height: 36px;
-
-                        &.btn-inCart {
-                            background: $orange-color;
-                        }
-
-                        &.btn-outOfStock {
-                            background: #f52e2e;
-                        }
 
                         @include media-breakpoint('lt-sm') {
                             width: auto;
@@ -381,5 +375,15 @@
         }
 
 
+    }
+}
+
+button {
+    &.btn-inCart {
+        background: $orange-color;
+    }
+
+    &.btn-outOfStock {
+        background: #f52e2e;
     }
 }
