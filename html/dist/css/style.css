@@ -4927,10 +4927,18 @@ img {
       border-color: #cdcdcd; }
 
 button.btn-inCart {
-  background: #fca207; }
+  background: #fca207 !important; }
+  button.btn-inCart:hover {
+    background: #dd8d03 !important; }
+  button.btn-inCart:focus {
+    background: #ce8302 !important; }
 
 button.btn-outOfStock {
-  background: #f52e2e; }
+  background: #f52e2e !important; }
+  button.btn-outOfStock:hover {
+    background: #f30c0c !important; }
+  button.btn-outOfStock:focus {
+    background: #e50b0b !important; }
 
 .cart {
   font-family: "Consolas"; }

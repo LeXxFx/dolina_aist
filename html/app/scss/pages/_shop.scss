@@ -380,10 +380,26 @@
 
 button {
     &.btn-inCart {
-        background: $orange-color;
+        background: $orange-color !important;
+
+        &:hover {
+            background: darken($orange-color, 7%) !important;
+        }
+
+        &:focus {
+            background: darken($orange-color, 10%) !important;
+        }
     }
 
     &.btn-outOfStock {
-        background: #f52e2e;
+        background: #f52e2e !important;
+
+        &:hover {
+            background: darken(#f52e2e, 7%) !important;
+        }
+
+        &:focus {
+            background: darken(#f52e2e, 10%) !important;
+        }
     }
 }
